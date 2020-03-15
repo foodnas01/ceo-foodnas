@@ -11,6 +11,12 @@
 |
 */
 
+$isProduction = config()['app']['env'] === 'production';
+
+if ($isProduction) {
+    \URL::forceSchema('https');
+}
+
 Route::get('/', function () {
     return view('welcome');
 });
