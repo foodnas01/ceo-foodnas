@@ -17,6 +17,8 @@ if ($isProduction) {
     \URL::forceSchema('https');
 }
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.dashboard');
 });
