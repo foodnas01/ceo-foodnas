@@ -21,9 +21,15 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/fronticons.css')}}">
    
     <!-- BASE CSS -->
-    <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/bootstrap-rtl.min.css')}}" rel="stylesheet">
+
+    <link href="{{asset('frontend/css/mystyle.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/style-rtl.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/vendors.css')}}" rel="stylesheet">
+
+
+ 
 
     <!-- YOUR CUSTOM CSS -->
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
@@ -103,7 +109,7 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
     
     <!-- COMMON SCRIPTS -->
     <script src="{{asset('frontend/js/common_scripts.js')}}"></script>
-    <script src="{{asset('frontend/js/main.js')}}"></script>
+    <script src="{{asset('frontend/js/main_rtl.js')}}"></script>
     <script src="{{asset('frontend/js/validate.js')}}"></script>
     
     <!-- DATEPICKER  -->

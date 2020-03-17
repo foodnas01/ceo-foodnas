@@ -2322,9 +2322,10 @@ video {
 }
 .hero_single.version_2 {
   height: 620px;
+  background: url(../img/Group140.png) center center no-repeat;
 }
 .hero_single.version_2:before {
-  background: url(../img/home_section_1.jpg) center center no-repeat;
+  background: url(../img/Group140.png) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

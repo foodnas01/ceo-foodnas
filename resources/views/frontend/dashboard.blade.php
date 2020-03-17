@@ -11,41 +11,48 @@
     <main>
         <section class="hero_single version_2">
             <div class="wrapper">
-                <div class="container">
-                    <h3>Book unique experiences</h3>
-                    <p>Expolore top rated tours, hotels and restaurants around the world</p>
+                <div class="col-lg-8">
+                    <h3> {!! __('messages.BOOK_UNIQUE_EXPERIENCES') !!} <br />
+                         {!! __('messages.BOOK_UNIQUE_EXPERIENCES1') !!} <br />
+                         {!! __('messages.BOOK_UNIQUE_EXPERIENCES2') !!}
+                     </h3>
+
+                    <p>{{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world1') }}<br />
+                    {{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world2') }}</p>
+                  
                     <form>
                         <div class="row no-gutters custom-search-input-2">
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Hotel, City...">
+                                    <input class="form-control" type="text" placeholder="{{ __('messages.Hotel_City') }}">
                                     <i class="icon_pin_alt"></i>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="form-group">
-                                    <input class="form-control" type="text" name="dates" placeholder="When..">
+                                    <input class="form-control" type="text" name="dates" placeholder="{{ __('messages.When') }}">
                                     <i class="icon_calendar"></i>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="panel-dropdown">
-                                    <a href="#">Guests <span class="qtyTotal">1</span></a>
+                                    <a href="#">{{ __('messages.Guests') }} <span class="qtyTotal">1</span></a>
                                     <div class="panel-dropdown-content">
                                         <!-- Quantity Buttons -->
                                         <div class="qtyButtons">
-                                            <label>Adults</label>
+                                            <label>{{ __('messages.Adults') }}</label>
                                             <input type="text" name="qtyInput" value="1">
                                         </div>
                                         <div class="qtyButtons">
-                                            <label>Childrens</label>
+                                            <label>{{ __('messages.Childrens') }}</label>
                                             <input type="text" name="qtyInput" value="0">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-2">
-                                <input type="submit" class="btn_search" value="Search">
+                              <!--   <img src = "{{ asset('frontend/img/Group132.png')}}" /> -->
+                                <input type="submit" class="btn_search" value="Go">
                             </div>
                         </div>
                         <!-- /row -->
