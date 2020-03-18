@@ -3,7 +3,7 @@
     <style type="text/css">
 
         #headerText{
-            padding-top: 120px;
+            padding-top: 85px;
         }
 
     </style>
@@ -23,7 +23,7 @@
 
                     <p>{{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world1') }}<br />
                     {{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world2') }}</p>
-                  
+
                     <form>
                         <div class="row no-gutters custom-search-input-2">
                             <div class="col-lg-4">
@@ -193,7 +193,7 @@
             <hr class="large">
         </div>
         <!-- /container -->
-        
+
         <div class="container container-custom margin_30_95">
             <section class="add_bottom_45">
                 <div class="main_title_3">
@@ -259,7 +259,7 @@
                 <a href="hotels-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a>
             </section>
             <!-- /section -->
-            
+
             <section class="add_bottom_45">
                 <div class="main_title_3">
                     <span><em></em></span>
@@ -425,7 +425,7 @@
         </div>
         <!--/call_section-->
     </main>
-            
+
     <!-- Conent Section end -->
 @endsection
 
