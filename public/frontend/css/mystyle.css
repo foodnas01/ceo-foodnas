@@ -1,4 +1,13 @@
 .registerHost:hover {
     background-color: #FFC107;
     color: #222;
+    border-radius: 15px;
+
 }
+
+  .main-menu > ul > li.registerHost span > a {
+    color: #fff;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }

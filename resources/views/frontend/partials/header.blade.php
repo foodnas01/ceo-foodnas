@@ -4,8 +4,8 @@
         <div id="preloader"><div data-loader="circle-side"></div></div><!-- /Page Preload -->
         <div id="logo">
             <a href="index.html">
-                <img src="{{asset('frontend/img/Group130.png')}}" width="150" height="36" alt="" class="logo_normal">
-                <img src="{{asset('frontend/img/Group130.png')}}" width="150" height="36" alt="" class="logo_sticky">
+                <img src="{{asset('frontend/img/Group130.png')}}" width="170" height="50" alt="" class="logo_normal">
+                <img src="{{asset('frontend/img/Group130.png')}}" width="170" height="50" alt="" class="logo_sticky">
             </a>
         </div>
         <!-- <ul id="top_menu">
@@ -44,6 +44,15 @@
                         <li><a href="hamburgers.html">Animated Hamburgers</a></li>
                     </ul> -->
                 </li>
+                <li class="registerHost"><span ><a href="#0" >{{ __('messages.AboutFoodnas') }}</a></span></li>
+                <li class="registerHost"><span ><a href="#0" >{{ __('messages.HowItWorks') }}</a></span></li>
+                <li class="registerHost"><span ><a href="#0" >{{ __('messages.JoinAsHost') }}</a></span></li>
+                <li class="registerHost"><span ><a href="#0" >{{ __('messages.TermsConditions') }}</a></span></li>
+                <li class="registerHost"><span ><a href="#0" >{{ __('messages.PrivacySafetyPolicy') }}</a></span></li>
+                <li class="registerHost"><span ><a href="#0" >{{ __('messages.ContactUs') }}</a></span></li>
+                <li class="registerHost"><span ><a href="#0" >{{ __('messages.Trust') }}</a></span></li>
+                <li class="registerHost"><span ><a href="#0" >{{ __('messages.Jobs') }}</a></span></li>
+                <li class="registerHost"><span ><a href="#0" >{{ __('messages.FAQ') }}</a></span></li>
                 <li class="registerHost"><span ><a href="#0" >{{ __('messages.RegisterHost') }}</a></span></li>
             </ul>
         </nav>

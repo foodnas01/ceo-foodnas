@@ -2,6 +2,10 @@
 @section('style')
     <style type="text/css">
 
+        #headerText{
+            padding-top: 120px;
+        }
+
     </style>
 @stop
 @section('content')
@@ -11,7 +15,7 @@
     <main>
         <section class="hero_single version_2">
             <div class="wrapper">
-                <div class="col-lg-8">
+                <div class="col-lg-8" id="headerText">
                     <h3> {!! __('messages.BOOK_UNIQUE_EXPERIENCES') !!} <br />
                          {!! __('messages.BOOK_UNIQUE_EXPERIENCES1') !!} <br />
                          {!! __('messages.BOOK_UNIQUE_EXPERIENCES2') !!}
@@ -411,9 +415,9 @@
                     <div class="block-reveal">
                         <div class="block-vertical"></div>
                         <div class="box_1">
-                            <h3>Enjoy a GREAT travel with us</h3>
-                            <p>Ius cu tamquam persequeris, eu veniam apeirian platonem qui, id aliquip voluptatibus pri. Ei mea primis ornatus disputationi. Menandri erroribus cu per, duo solet congue ut. </p>
-                            <a href="#0" class="btn_1 rounded">Read more</a>
+                            <h3>{{ __('messages.EnjoyTrail')}}</h3>
+                            <p>{{ __('messages.LoremIpsam')}}</p>
+                            <a href="#0" class="btn_1 rounded">{{ __('messages.ReadMore')}}</a>
                         </div>
                     </div>
                 </div>
