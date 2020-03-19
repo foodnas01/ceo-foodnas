@@ -5,7 +5,7 @@
         <div id="logo">
             <a href="index.html">
                 <img src="{{asset('frontend/img/Group130.png')}}" width="185" height="50" alt="" class="logo_normal">
-                <img src="{{asset('frontend/img/Group130.png')}}" width="185" height="50" alt="" class="logo_sticky">
+                <img src="{{asset('frontend/img/Group101.png')}}" width="185" height="50" alt="" class="logo_sticky">
             </a>
         </div>
         <!-- <ul id="top_menu">
