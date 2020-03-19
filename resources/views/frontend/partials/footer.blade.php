@@ -16,7 +16,7 @@
                 <div class="col-lg-3 col-md-6 ml-lg-auto">
                     <h5>{{ __('messages.UsefulLinks') }}</h5>
                     <ul class="links">
-                        <li><a href="about.html">{{ __('messages.AboutFoodnas') }}</a></li>
+                        <li><a href="{{URL('about')}}">{{ __('messages.AboutFoodnas') }}</a></li>
                         <li><a href="about.html">{{ __('messages.HowItWorks') }}</a></li>
                         <li><a href="about.html">{{ __('messages.JoinAsHost') }}</a></li>
                         <li><a href="about.html">{{ __('messages.TermsConditions') }}</a></li>

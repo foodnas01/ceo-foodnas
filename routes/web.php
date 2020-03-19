@@ -22,3 +22,6 @@ if ($isProduction) {
 Route::get('/', function () {
     return view('frontend.dashboard');
 });
+
+
+Route::get('/about', 'AboutController@index');

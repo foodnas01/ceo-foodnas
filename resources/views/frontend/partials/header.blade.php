@@ -23,34 +23,16 @@
         </a>
         <nav id="menu" class="main-menu">
             <ul>
-                <li class="registerHost"><span><a href="#0">{{ __('messages.Entry') }}</a></span>
-                    <!-- <ul>
-                        <li><a href="menu-options.html">Menu Position Options</a></li>
-                        <li><a href="tour-detail-singlemonth-datepicker.html">Single month Datepicker</a></li>
-                        <li><a href="404.html">404 Error page</a></li>
-                        <li><a href="cart-1.html">Cart page 1</a></li>
-                        <li><a href="cart-2.html">Cart page 2</a></li>
-                        <li><a href="cart-3.html">Cart page 3</a></li>
-                        <li><a href="pricing-tables.html">Responsive pricing tables</a></li>
-                        <li><a href="coming_soon/index.html">Coming soon</a></li>
-                        <li><a href="invoice.html">Invoice</a></li>
-                        <li><a href="icon-pack-1.html">Icon pack 1</a></li>
-                        <li><a href="icon-pack-2.html">Icon pack 2</a></li>
-                        <li><a href="icon-pack-3.html">Icon pack 3</a></li>
-                        <li><a href="icon-pack-4.html">Icon pack 4</a></li>
-                        <li><a href="hamburgers.html">Animated Hamburgers</a></li>
-                    </ul> -->
-                </li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.AboutFoodnas') }}</a></span></li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.HowItWorks') }}</a></span></li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.JoinAsHost') }}</a></span></li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.TermsConditions') }}</a></span></li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.PrivacySafetyPolicy') }}</a></span></li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.ContactUs') }}</a></span></li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.Trust') }}</a></span></li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.Jobs') }}</a></span></li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.FAQ') }}</a></span></li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.RegisterHost') }}</a></span></li>
+               
+                <li class="registerHost activeCls"><span ><a href="#0" >{{ __('messages.RegisterHost') }}</a></span></li>
+               
+                <li class="registerHost"><span><a href="#0">{{ __('messages.Signup') }}</a></span></li>
+
+                <li class="registerHost"><span ><a href="#0" >{{ __('messages.HostBecome') }}</a></span></li>
+
+
+               
+                
             </ul>
         </nav>
     </header>

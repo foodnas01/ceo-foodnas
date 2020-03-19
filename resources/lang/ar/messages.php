@@ -11,18 +11,20 @@ return [
     'Forge' => 'تشكيل',
     'GitHub' => 'جيثب',
     'Laravel' => 'Laravel Arabic',
-    'BOOK_UNIQUE_EXPERIENCES'=>'إكتشف تجارب طعام ',
-    'BOOK_UNIQUE_EXPERIENCES1'=> 'جديدة يـستضيفها طهاة محليين في مدينتك',
-    'BOOK_UNIQUE_EXPERIENCES2' => 'محليين في مدينتك!',
+    'BOOK_UNIQUE_EXPERIENCES'=>'إكتشف تجارب طعام جديدة يـستضيفها
+طهاة',
+    'BOOK_UNIQUE_EXPERIENCES1'=> 'محليين في مدينتك محليين
+في مدينتك!',
+ 
 
-
-    'Expolore_top_rated_tours_hotels_and_restaurants_around_the_world1'=>'انضم إلى حفلات عشاء و دروس طهي و جولات تذوق مع',
-    'Expolore_top_rated_tours_hotels_and_restaurants_around_the_world2'=>' مضيفين محليين. احجز الآن و استمتع بتجربتك الجديدة',
+    'Expolore_top_rated_tours_hotels_and_restaurants_around_the_world1'=>'انضم إلى حفلات عشاء و دروس طهي و جولات تذوق مع
+مضيفين محليين.',
+    'Expolore_top_rated_tours_hotels_and_restaurants_around_the_world2'=>' احجز الآن و استمتع بتجربتك الجديدة',
     'When'=>'الـتـاريـخ',
     'Guests'=>'الضيوف',
     'Hotel_City' => 'ابحث عن مدينة ، شيف ، مناسبة للطعام ...',
     'RegisterHost'=>'سجل كمضيف',
-    'Entry' => 'دخول',
+    'Signup' => 'دخول',
     'Adults'=>'الكبار',
     'Childrens'=>'أطفال',
     'LoremIpsam' => 'لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت',
@@ -44,6 +46,20 @@ return [
     'ContactUs' => 'اتصل بنا',
     'Trust'=>'ثقافة الثقة',
     'Jobs'=>'وظائف',
-    'FAQ'=> 'أسئلة شائعة'
+    'FAQ'=> 'أسئلة شائعة',
+    'HostBecome' => 'المضيف تصبح',
+    'Dashboardgrid1'=>'دروس في الطهي',
+    'Dashboardgridtext1'=>'انضم إلى مئات ورش العمل و دروس الطبخ التي يقدمها أهم خبراء الطهي في الوطن العربي.',
+    'Dashboardgrid2'=>'تجارب طعام إجتماعية',
+    'Dashboardgridtext2'=>'احجز مناسات غداء و عشاء و حفلات طعام و غيرها من المناسبات التي يستضيفها مضيفينا المحليين.',
+    'Dashboardgrid3'=>'مناسبات طعام خاصة',
+    'Dashboardgridtext3'=>'انضم إلى مناسبات الطعام الخاصة والتي يتسضيفها نخبة من المشاهير والمؤثرين في الوطن العربي.
+
+
+
+
+
+
+'
 
 ];

@@ -18,8 +18,7 @@
                 <div class="col-lg-8" id="headerText">
                     <h3> {!! __('messages.BOOK_UNIQUE_EXPERIENCES') !!} <br />
                          {!! __('messages.BOOK_UNIQUE_EXPERIENCES1') !!} <br />
-                         {!! __('messages.BOOK_UNIQUE_EXPERIENCES2') !!}
-                     </h3>
+                      </h3>
 
                     <p>{{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world1') }}<br />
                     {{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world2') }}</p>
@@ -56,7 +55,7 @@
                             </div>
                             <div class="col-lg-2">
                               <!--   <img src = "{{ asset('frontend/img/Group132.png')}}" /> -->
-                                <input type="submit" class="btn_search" value="Go">
+                                <input type="submit" style="background: url(../frontend/img/Group132.png) center center no-repeat;background-color: red;margin-bottom: -6px;" class="btn_search" value="">
                             </div>
                         </div>
                         <!-- /row -->
@@ -66,132 +65,77 @@
         </section>
         <!-- /hero_single -->
 
-        <div class="container container-custom margin_80_0">
-            <div class="main_title_2">
-                <span><em></em></span>
-                <h2>Our Popular Tours</h2>
-                <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        <div class="container margin_60_35">
+            
+        <div class="wrapper-grid">
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="box_grid">
+
+                        <div class="wrapper" style="background-color:#A366FF;color:white;text-align: center;">
+                            <img src="{{asset('frontend/img/Group65.png')}}" style="float: right;" />
+                            <div style="height: 10px;"></div>
+                            <h3 style="margin-top:60px;text-align: center;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid3') !!}</a></h3>
+                            <p>{!! __('messages.Dashboardgridtext3') !!}</p>
+                           
+                        </div>
+                        <figure>
+
+                            <a href="tour-detail.html">
+                                <img src="{{asset('frontend/img/groupgrid1.png')}}" class="img-fluid" alt="" width="800" height="533">
+                            </a>
+                            
+                        </figure>
+                        
+                       
+                    </div>
+                </div>
+                <!-- /box_grid -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="box_grid">
+
+                         <div class="wrapper" style="background-color:#FF9900;color:white;text-align: center;">
+                            <img src="{{asset('frontend/img/Group87.png')}}" style="float: right;" />
+                            <div style="height: 10px;"></div>
+                              <h3 style="margin-top:60px;text-align: center;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid2') !!}</a></h3>
+                            <p>{!! __('messages.Dashboardgridtext2') !!}</p>
+                          
+                        </div>
+
+
+                        <figure>
+                            <a href="tour-detail.html"><img src="{{asset('frontend/img/groupgrid2.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            
+                        </figure>
+                    </div>
+                </div>
+                <!-- /box_grid -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="box_grid">
+                        <div class="wrapper" style="background-color:#FF0000;color:white;text-align: center;">
+                            <img src="{{asset('frontend/img/Group51.png')}}" style="float: right;" />
+                            <div style="height: 10px;"></div>
+                              <h3 style="margin-top:60px;text-align: center;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid1') !!}</a></h3>
+                            <p>{!! __('messages.Dashboardgridtext1') !!}</p>
+                        </div>
+                        <figure>
+                            <a href="tour-detail.html"><img src="{{asset('frontend/img/groupgrid3.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            
+                        </figure>
+                        
+                      
+                    </div>
+                </div>
+
             </div>
-            <div id="reccomended" class="owl-carousel owl-theme">
-                <div class="item">
-                    <div class="box_grid">
-                        <figure>
-                            <a href="#0" class="wish_bt"></a>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/tour_1.jpg')}}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-                            <small>Historic</small>
-                        </figure>
-                        <div class="wrapper">
-                            <h3><a href="tour-detail.html">Arc Triomphe</a></h3>
-                            <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
-                            <span class="price">From <strong>$54</strong> /per person</span>
-                        </div>
-                        <ul>
-                            <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                            <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /item -->
-                <div class="item">
-                    <div class="box_grid">
-                        <figure>
-                            <a href="#0" class="wish_bt"></a>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/tour_2.jpg')}}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-                            <small>Churches</small>
-                        </figure>
-                        <div class="wrapper">
-                            <h3><a href="tour-detail.html">Notredam</a></h3>
-                            <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
-                            <span class="price">From <strong>$124</strong> /per person</span>
-                        </div>
-                        <ul>
-                            <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                            <li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /item -->
-                <div class="item">
-                    <div class="box_grid">
-                        <figure>
-                            <a href="#0" class="wish_bt"></a>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/tour_3.jpg')}}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-                            <small>Historic</small>
-                        </figure>
-                        <div class="wrapper">
-                            <h3><a href="tour-detail.html">Versailles</a></h3>
-                            <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
-                            <span class="price">From <strong>$25</strong> /per person</span>
-                        </div>
-                        <ul>
-                            <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                            <li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /item -->
-                <div class="item">
-                    <div class="box_grid">
-                        <figure>
-                            <a href="#0" class="wish_bt"></a>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/tour_3.jpg')}}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-                            <small>Historic</small>
-                        </figure>
-                        <div class="wrapper">
-                            <h3><a href="tour-detail.html">Versailles</a></h3>
-                            <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
-                            <span class="price">From <strong>$25</strong> /per person</span>
-                        </div>
-                        <ul>
-                            <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                            <li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /item -->
-                <div class="item">
-                    <div class="box_grid">
-                        <figure>
-                            <a href="#0" class="wish_bt"></a>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/tour_4.jpg')}}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-                            <small>Museum</small>
-                        </figure>
-                        <div class="wrapper">
-                            <h3><a href="tour-detail.html">Pompidue Museum</a></h3>
-                            <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
-                            <span class="price">From <strong>$45</strong> /per person</span>
-                        </div>
-                        <ul>
-                            <li><i class="icon_clock_alt"></i> 2h 30min</li>
-                            <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>9.0</strong></div></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /item -->
-                <div class="item">
-                    <div class="box_grid">
-                        <figure>
-                            <a href="#0" class="wish_bt"></a>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/tour_5.jpg')}}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-                            <small>Walking</small>
-                        </figure>
-                        <div class="wrapper">
-                            <h3><a href="tour-detail.html">Tour Eiffel</a></h3>
-                            <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
-                            <span class="price">From <strong>$65</strong> /per person</span>
-                        </div>
-                        <ul>
-                            <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                            <li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.5</strong></div></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /item -->
+            <!-- /row -->
             </div>
-            <!-- /carousel -->
-            <p class="btn_home_align"><a href="tours-grid-isotope.html" class="btn_1 rounded">View all Tours</a></p>
-            <hr class="large">
+            <!-- /isotope-wrapper -->
+                        
         </div>
+
+
+        
         <!-- /container -->
 
         <div class="container container-custom margin_30_95">

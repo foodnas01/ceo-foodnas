@@ -4,6 +4,15 @@
     border-radius: 15px;
 
 }
+.anchorCls{
+    color: white;
+}
+
+.activeCls {
+    background-color: #FFC107;
+    color: #222;
+    border-radius: 15px;
+}
 
   .main-menu > ul > li.registerHost span > a {
     color: #fff;
