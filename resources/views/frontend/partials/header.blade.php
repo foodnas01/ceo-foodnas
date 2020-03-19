@@ -24,8 +24,8 @@
         <nav id="menu" class="main-menu">
             <ul>
                 <li class="registerHost"><span><a href="#0">{{ __('messages.Signup') }}</a></span></li>
-                <li class="registerHost"><span ><a href="#0" >{{ __('messages.HostBecome') }}</a></span></li>
-                <li class="registerHost activeCls"><span ><a href="#0" >{{ __('messages.RegisterHost') }}</a></span></li>
+                <li class="registerHost"><span><a href="#0" >{{ __('messages.RegisterHost') }}</a></span></li>
+                <li class="registerHost activeCls"><span ><a href="#0" >{{ __('messages.HostBecome') }}</a></span></li>
             </ul>
         </nav>
     </header>
