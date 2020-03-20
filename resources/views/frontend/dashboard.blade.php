@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-2">
-                              <!--   <img src = "{{ asset('frontend/img/Group132.png')}}" /> -->
+                         
                                 <input type="submit" style="background: url(../frontend/img/Group132.png) center center no-repeat;background-color: red;margin-bottom: -6px;" class="btn_search" value="">
                             </div>
                         </div>
@@ -72,10 +72,10 @@
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="box_grid">
 
-                        <div class="wrapper" style="background-color:#A366FF;color:white;text-align: center;">
+                        <div class="wrapper" style="background-color:#A366FF;color:white;text-align: right;">
                             <img src="{{asset('frontend/img/Group65.png')}}" style="float: right;" />
                             <div style="height: 10px;"></div>
-                            <h3 style="margin-top:60px;text-align: center;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid3') !!}</a></h3>
+                            <h3 style="margin-top:60px;text-align: right;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid3') !!}</a></h3>
                             <p>{!! __('messages.Dashboardgridtext3') !!}</p>
                            
                         </div>
@@ -94,10 +94,10 @@
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="box_grid">
 
-                         <div class="wrapper" style="background-color:#FF9900;color:white;text-align: center;">
+                         <div class="wrapper" style="background-color:#FF9900;color:white;text-align: right;">
                             <img src="{{asset('frontend/img/Group87.png')}}" style="float: right;" />
                             <div style="height: 10px;"></div>
-                              <h3 style="margin-top:60px;text-align: center;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid2') !!}</a></h3>
+                              <h3 style="margin-top:60px;text-align: right;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid2') !!}</a></h3>
                             <p>{!! __('messages.Dashboardgridtext2') !!}</p>
                           
                         </div>
@@ -112,10 +112,10 @@
                 <!-- /box_grid -->
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="box_grid">
-                        <div class="wrapper" style="background-color:#FF0000;color:white;text-align: center;">
+                        <div class="wrapper" style="background-color:#FF0000;color:white;text-align: right;">
                             <img src="{{asset('frontend/img/Group51.png')}}" style="float: right;" />
                             <div style="height: 10px;"></div>
-                              <h3 style="margin-top:60px;text-align: center;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid1') !!}</a></h3>
+                              <h3 style="margin-top:60px;text-align: right;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid1') !!}</a></h3>
                             <p>{!! __('messages.Dashboardgridtext1') !!}</p>
                         </div>
                         <figure>
@@ -140,21 +140,19 @@
 
         <div class="container container-custom margin_30_95">
             <section class="add_bottom_45">
-                <div class="main_title_3">
+                <div class="main_title_3" style="text-align: right;">
                     <span><em></em></span>
-                    <h2>Popular Hotels and Accommodations</h2>
-                    <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+                    <h2>{!! __('messages.AllCities') !!}</h2>
                 </div>
                 <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6">
+                   <div class="col-xl-3 col-lg-6 col-md-6">
                         <a href="hotel-detail.html" class="grid_item">
                             <figure>
-                                <div class="score"><strong>8.9</strong></div>
-                                <img src="{{asset('frontend/img/hotel_1.jpg')}}" class="img-fluid" alt="">
-                                <div class="info">
-                                    <div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-                                    <h3>Mariott Hotel</h3>
+                                <div class="info" style="text-align: center;height: 100px;">
+                                    <h3>@lang('messages.cities.Dubai')</h3>
                                 </div>
+                                <img src="{{asset('frontend/img/Cities_Pictures/Dubai/foodnas-Dubai_400x270.jpg')}}" class="img-fluid" alt="">
+                             
                             </figure>
                         </a>
                     </div>
@@ -162,12 +160,11 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <a href="hotel-detail.html" class="grid_item">
                             <figure>
-                                <div class="score"><strong>7.9</strong></div>
-                                <img src="{{asset('frontend/img/hotel_2.jpg')}}" class="img-fluid" alt="">
-                                <div class="info">
-                                    <div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-                                    <h3>Concorde Hotel </h3>
+                                <div class="info" style="text-align: center;height: 100px;">
+                                    <h3>@lang('messages.cities.Beirut')</h3>
                                 </div>
+                                <img src="{{asset('frontend/img/Cities_Pictures/Beirut/foodnas-Beirut_400x270.jpg')}}" class="img-fluid" alt="">
+                             
                             </figure>
                         </a>
                     </div>
@@ -175,12 +172,11 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <a href="hotel-detail.html" class="grid_item">
                             <figure>
-                                <div class="score"><strong>7.0</strong></div>
-                                <img src="{{asset('frontend/img/hotel_3.jpg')}}" class="img-fluid" alt="">
-                                <div class="info">
-                                    <div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-                                    <h3>Louvre Hotel</h3>
+                                <div class="info" style="text-align: center;height: 100px;">
+                                    <h3>@lang('messages.cities.Amman')</h3>
                                 </div>
+                                <img src="{{asset('frontend/img/Cities_Pictures/Amman/foodnas-Amman_400x270.jpg')}}" class="img-fluid" alt="">
+                             
                             </figure>
                         </a>
                     </div>
@@ -188,12 +184,11 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <a href="hotel-detail.html" class="grid_item">
                             <figure>
-                                <div class="score"><strong>8.9</strong></div>
-                                <img src="{{asset('frontend/img/hotel_4.jpg')}}" class="img-fluid" alt="">
-                                <div class="info">
-                                    <div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-                                    <h3>Park Yatt Hotel</h3>
+                                <div class="info" style="text-align: center;height: 100px;">
+                                    <h3>@lang('messages.cities.Abu_Dhabi')</h3>
                                 </div>
+                                <img src="{{asset('frontend/img/Cities_Pictures/Abu_Dhabi/foodnas-abudhabi_400x270.jpg')}}" class="img-fluid" alt="">
+                             
                             </figure>
                         </a>
                     </div>
@@ -203,6 +198,69 @@
                 <a href="hotels-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a>
             </section>
             <!-- /section -->
+
+
+            <div class="container margin_60_35">
+            
+        <div class="wrapper-grid">
+            <div class="row">
+                 <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="box_grid">
+                        <div class="wrapper" style="color:black;text-align: center;">
+                           
+                            <div style="height: 10px;"></div>
+                              <h3 style="margin-top:60px;text-align: center;color: black"><a class="" style="color: black;" href="#">Coconut Panna Cotta</a></h3>
+                            <p>{!! __('messages.fooditems.text3') !!}</p>
+                        </div>
+                        <figure>
+                            <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/CoconutPannaCotta.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            
+                        </figure>
+                        
+                      
+                    </div>
+                </div>
+                <!-- /box_grid -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="box_grid">
+                        <div class="wrapper" style="color:black;text-align: center;">
+                           
+                            <div style="height: 10px;"></div>
+                              <h3 style="margin-top:60px;text-align: center;color: black"><a class="" style="color: black;" href="#">Fish Fusion</a></h3>
+                            <p>{!! __('messages.fooditems.text2') !!}</p>
+                        </div>
+                        <figure>
+                            <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/FishFusion.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            
+                        </figure>
+                        
+                      
+                    </div>
+                </div>
+                <!-- /box_grid -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="box_grid">
+                        <div class="wrapper" style="color:black;text-align: center;">
+                           
+                            <div style="height: 10px;"></div>
+                              <h3 style="margin-top:60px;text-align: center;color: black"><a class="" style="color: black;" href="#">Barista Workshop</a></h3>
+                            <p>{!! __('messages.fooditems.text1') !!}</p>
+                        </div>
+                        <figure>
+                            <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/BaristaWorkshop.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            
+                        </figure>
+                        
+                      
+                    </div>
+                </div>
+
+            </div>
+            <!-- /row -->
+            </div>
+            <!-- /isotope-wrapper -->
+                        
+        </div>
 
             <section class="add_bottom_45">
                 <div class="main_title_3">

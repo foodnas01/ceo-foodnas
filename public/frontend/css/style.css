@@ -623,7 +623,7 @@ a {
   outline: none;
 }
 a:hover, a:focus {
-  color: #111;
+  color: #ffffff;
   text-decoration: none;
   outline: none;
 }
@@ -655,7 +655,7 @@ a.btn_1,
 }
 a.btn_1:hover,
 .btn_1:hover {
-  background: #0054a6;
+  background: #FF0000;
   color: #fff;
 }
 a.btn_1.full-width,
@@ -671,7 +671,7 @@ a.btn_1.full-width.purchase,
 }
 a.btn_1.full-width.purchase:hover,
 .btn_1.full-width.purchase:hover {
-  background-color: #0054a6;
+  background-color: #FF0000;
 }
 a.btn_1.full-width.wishlist,
 .btn_1.full-width.wishlist {
@@ -700,9 +700,9 @@ a.btn_1.outline,
 }
 a.btn_1.outline:hover,
 .btn_1.outline:hover {
-  background: #0054a6;
+  background: #FF0000;
   color: #fff;
-  border-color: #0054a6;
+  border-color: #FF0000;
 }
 a.btn_1.outline:focus,
 .btn_1.outline:focus {
@@ -800,7 +800,7 @@ a.btn_map_in,
 }
 a.btn_map_in:hover,
 .btn_map_in:hover {
-  background: #0054a6;
+  background: #FF0000;
   color: #fff;
 }
 
@@ -2989,13 +2989,13 @@ a.grid_item .info {
   width: 100%;
   z-index: 9;
   display: block;
-  padding: 25px 20px 5px 20px;
+/*  padding: 25px 20px 5px 20px;*/
   color: #fff;
   left: 0;
   bottom: 0;
   background: transparent;
-  background: -webkit-linear-gradient(top, transparent, #000);
-  background: linear-gradient(to bottom, transparent, #000);
+/*  background: -webkit-linear-gradient(top, transparent, #000);
+  background: linear-gradient(to bottom, transparent, #000);*/
   box-sizing: border-box;
 }
 a.grid_item .info .cat_star {
@@ -3147,8 +3147,8 @@ a.box_feat h3 {
   z-index: 9;
 }
 #carousel .item .title h4 {
-  background-color: #0054a6;
-  background-color: #0054a6;
+  background-color: #FF0000;
+  background-color: #FF0000;
   display: inline-block;
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
@@ -3233,7 +3233,7 @@ a.box_feat h3 {
 }
 
 .score strong {
-  background-color: #0054a6;
+  background-color: #FF0000;
   color: #fff;
   line-height: 1;
   -webkit-border-radius: 5px 5px 5px 0;
@@ -3933,7 +3933,7 @@ section#reviews {
 
 #review_summary {
   text-align: center;
-  background-color: #0054a6;
+  background-color: #FF0000;
   color: #fff;
   padding: 20px 10px;
   -webkit-border-radius: 5px 5px 5px 0;
@@ -3962,7 +3962,7 @@ section#reviews {
   margin-bottom: 12px;
 }
 .reviews-container .progress-bar {
-  background-color: #0054a6;
+  background-color: #FF0000;
 }
 .reviews-container .review-box {
   position: relative;
@@ -4803,7 +4803,7 @@ span.infobox_rate {
   display: inline-block;
   margin: -44px 0 0 -20px;
   float: left;
-  background-color: #0054a6;
+  background-color: #FF0000;
   padding: 5px 8px;
   font-weight: 500;
   text-align: left;
@@ -4917,7 +4917,7 @@ span.infobox_rate {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #0054a6 url(../img/pattern_1.svg) center bottom repeat-x;
+  background: #FF0000 url(../img/pattern_1.svg) center bottom repeat-x;
   color: #fff;
 }
 @media (max-width: 767px) {
@@ -5004,7 +5004,7 @@ span.infobox_rate {
 
 /*-------- 2.9 Cart section --------*/
 .cart_section {
-  background: #0054a6 url(../img/pattern_1.svg) center bottom repeat-x;
+  background: #FF0000 url(../img/pattern_1.svg) center bottom repeat-x;
 }
 @media (max-width: 767px) {
   .cart_section {
@@ -5043,7 +5043,7 @@ span.infobox_rate {
   width: 100%;
 }
 .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
-  background-color: #0054a6;
+  background-color: #FF0000;
 }
 .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
   opacity: 0;
@@ -5075,7 +5075,7 @@ span.infobox_rate {
   -ms-border-radius: 50%;
   border-radius: 50%;
   border: 2px solid #fff;
-  background-color: #0054a6;
+  background-color: #FF0000;
 }
 .bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
   content: '\e903';
@@ -5365,7 +5365,7 @@ ul.cart_details li span {
 }
 .box_cart a.btn_1.outline:hover, .box_cart .btn_1.outline:hover {
   color: #fff;
-  border: 2px solid #0054a6;
+  border: 2px solid #FF0000;
 }
 
 .cart-options {
@@ -5836,7 +5836,7 @@ a.grid_item.latest_adventure em {
 }
 
 .banner {
-  background: url(../img/banner_bg_desktop.jpg) center center no-repeat;
+  background: url(../img/shutterstock_1535059079_1400x700.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -6400,7 +6400,7 @@ a.btn_search_map_view {
   padding: 10px 0;
   margin: 0 -15px;
   color: #fff;
-  background: #0054a6;
+  background: #FF0000;
   position: relative;
   z-index: 99999999 !important;
 }
@@ -7309,7 +7309,7 @@ a.address:hover {
   display: inline-block;
   margin: -39px 0 0 -20px;
   float: left;
-  background-color: #0054a6;
+  background-color: #FF0000;
   padding: 5px 8px;
   font-weight: 500;
   text-align: left;
@@ -7374,7 +7374,7 @@ a.address:hover {
 }
   
 .box_1 {
-  background-color: #ff0000;
+  background-color: #121921;
   color: #fff;
   padding: 45px;
   opacity: 0;
@@ -7971,14 +7971,14 @@ ul.bullets li:before {
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
-  background: #0054a6;
+  background: #FF0000;
 }
 .animated .block-vertical {
   animation: reveal_top_to_bottom 1s ease-in-out;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
-  background: #0054a6;
+  background: #FF0000;
 }
 
 .block-reveal img {
@@ -8101,7 +8101,7 @@ ul.bullets li:before {
 }
 #cookie-bar .cb-enable:hover {
   background: #fff;
-  color: #0054a6;
+  color: #FF0000;
 }
 #cookie-bar .cb-disable {
   background: #990000;
@@ -8114,7 +8114,7 @@ ul.bullets li:before {
 }
 #cookie-bar .cb-policy:hover {
   background: #fff;
-  color: #0054a6;
+  color: #FF0000;
 }
 #cookie-bar.fixed {
   position: fixed;
@@ -8429,7 +8429,7 @@ a.social_bt.google:before {
 }
 
 .daterangepicker td.active, .daterangepicker td.active:hover {
-  background-color: #0054a6 !important;
+  background-color: #FF0000 !important;
 }
 
 .daterangepicker {
