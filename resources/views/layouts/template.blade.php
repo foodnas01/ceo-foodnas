@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Panagea - Premium site template for travel agencies, hotels and restaurant listing.">
     <meta name="author" content="Ansonika">
-    <title>Foodnas</title>
+    <title>فودناس</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="{{asset('frontend/img/favico.png')}}" type="image/x-icon">
@@ -19,7 +19,7 @@
 
     <!-- GOOGLE WEB FONT -->
     <link rel="stylesheet" href="{{ asset('frontend/css/fronticons.css')}}">
-   
+
     <!-- BASE CSS -->
     <link href="{{asset('frontend/css/bootstrap-rtl.min.css')}}" rel="stylesheet">
 
@@ -29,7 +29,7 @@
     <link href="{{asset('frontend/css/vendors.css')}}" rel="stylesheet">
 
 
- 
+
 
     <!-- YOUR CUSTOM CSS -->
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
@@ -39,18 +39,18 @@
 </head>
 
 @php
-$directionStyle = 'ltr'; 
+$directionStyle = 'ltr';
 if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
 
 @endphp
 <body style="font-weight:bold;direction: {{$directionStyle}}">
-        
+
     <div id="page">
-    
+
 
     @include('frontend.partials.header')
     <!-- /header -->
-    
+
     @yield('content')
     <!-- /main -->
 
@@ -58,7 +58,7 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
     <!--/footer-->
     </div>
     <!-- page -->
-    
+
     <!-- Sign In Popup -->
     <div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
         <div class="small-dialog-header">
@@ -106,14 +106,14 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
         <!--form -->
     </div>
     <!-- /Sign In Popup -->
-    
+
     <div id="toTop"></div><!-- Back to top button -->
-    
+
     <!-- COMMON SCRIPTS -->
     <script src="{{asset('frontend/js/common_scripts.js')}}"></script>
     <script src="{{asset('frontend/js/main_rtl.js')}}"></script>
     <script src="{{asset('frontend/js/validate.js')}}"></script>
-    
+
     <!-- DATEPICKER  -->
     <script>
     $(function() {
@@ -132,9 +132,9 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
       });
     });
     </script>
-    
+
     <!-- INPUT QUANTITY  -->
     <script src="{{asset('frontend/js/input_qty.js')}}"></script>
-    
+
 </body>
 </html>
