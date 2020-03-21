@@ -65,18 +65,18 @@
         </section>
         <!-- /hero_single -->
 
-        <div class="container margin_60_35">
+        <div class="container margin_40_0">
 
         <div class="wrapper-grid">
             <div class="row">
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="box_grid">
 
-                        <div class="wrapper" style="background-color:#A366FF;color:white;text-align: right;">
-                            <img src="{{asset('frontend/img/Group65.png')}}" style="float: right;" />
-                            <div style="height: 10px;"></div>
-                            <h3 style="margin-top:60px;text-align: right;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid3') !!}</a></h3>
-                            <p>{!! __('messages.Dashboardgridtext3') !!}</p>
+                        <div class="wrapper box-setting blue-col">
+                            <img src="{{asset('frontend/img/Group65.png')}}" class="align-r" />
+                            <div class="h10 clearb"></div>
+                            <h3 class="head"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid3') !!}</a></h3>
+                            <p class="mg-btm-none">{!! __('messages.Dashboardgridtext3') !!}</p>
 
                         </div>
                         <figure>
@@ -94,11 +94,11 @@
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="box_grid">
 
-                         <div class="wrapper" style="background-color:#FF9900;color:white;text-align: right;">
-                            <img src="{{asset('frontend/img/Group87.png')}}" style="float: right;" />
-                            <div style="height: 10px;"></div>
-                              <h3 style="margin-top:60px;text-align: right;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid2') !!}</a></h3>
-                            <p>{!! __('messages.Dashboardgridtext2') !!}</p>
+                         <div class="wrapper box-setting yellow-col" >
+                            <img src="{{asset('frontend/img/Group87.png')}}" class="align-r" />
+                            <div class="h10 clearb"></div>
+                              <h3 class="head"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid2') !!}</a></h3>
+                            <p class="mg-btm-none">{!! __('messages.Dashboardgridtext2') !!}</p>
 
                         </div>
 
@@ -112,11 +112,11 @@
                 <!-- /box_grid -->
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="box_grid">
-                        <div class="wrapper" style="background-color:#FF0000;color:white;text-align: right;">
-                            <img src="{{asset('frontend/img/Group51.png')}}" style="float: right;" />
-                            <div style="height: 10px;"></div>
-                              <h3 style="margin-top:60px;text-align: right;"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid1') !!}</a></h3>
-                            <p>{!! __('messages.Dashboardgridtext1') !!}</p>
+                        <div class="wrapper box-setting red-col">
+                            <img src="{{asset('frontend/img/Group51.png')}}" class="align-r" />
+                            <div class="h10 clearb"></div>
+                              <h3 class="head"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid1') !!}</a></h3>
+                            <p class="mg-btm-none">{!! __('messages.Dashboardgridtext1') !!}</p>
                         </div>
                         <figure>
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/groupgrid3.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
@@ -138,8 +138,8 @@
 
         <!-- /container -->
 
-        <div class="container container-custom margin_30_95">
-            <section class="add_bottom_45">
+        <div class="container container-custom">
+            <section class="">
                 <div class="main_title_3" style="text-align: right;">
                     <span><em></em></span>
                     <h2>{!! __('messages.AllCities') !!}</h2>
@@ -201,9 +201,9 @@
 
 
 
-            <div class="container margin_60_35">
-                    <section class="add_bottom_45">
-                <div class="main_title_3" style="text-align: right;">
+            <div class="container margin_40_0">
+            <section class="">
+                <div class="main_title_3">
                     <span><em></em></span>
                     <h2>{!! __('messages.AllCities') !!}</h2>
                 </div>
@@ -471,7 +471,7 @@
 {{--        </div>--}}
         <!-- /bg_color_1 -->
 
-        <div class="call_section">
+        <div class="call_section mtop30">
             <div class="container clearfix">
                 <div class="col-lg-5 col-md-6 float-right wow" data-wow-offset="250">
                     <div class="block-reveal">

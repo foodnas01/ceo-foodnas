@@ -570,6 +570,7 @@ ul, ol {
   font-size: 23px;
   font-size: 1.4375rem;
   margin: 25px 0 0 0;
+  text-align: right;
 }
 @media (max-width: 767px) {
   .main_title_3 h2, .main_title_3 h3 {
@@ -8544,4 +8545,40 @@ a.social_bt.google:before {
   #style-switcher {
     display: none;
   }
+}
+.blue-col{
+    background-color:#A366FF;
+}
+.box_grid .box-setting{
+    color:white;
+    text-align: right;
+}
+.align-r{
+    float: right;
+}
+.h10{
+    height: 10px;
+}
+h3.head{
+    margin-top:50px;
+    text-align: right;
+}
+.yellow-col{
+    background-color:#FF9900
+}
+.red-col{
+    background-color:#FF0000;
+}
+.clearb{
+    clear: both;
+}
+.mg-btm-none{
+    margin-bottom: 0px;
+}
+.margin_40_0 {
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+.mtop30{
+    margin-top: 30px;
 }
