@@ -195,61 +195,120 @@
                     <!-- /grid_item -->
                 </div>
                 <!-- /row -->
-                <a href="hotels-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a>
+                <!-- <a href="hotels-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a> -->
             </section>
             <!-- /section -->
 
 
+
             <div class="container margin_60_35">
+                    <section class="add_bottom_45">
+                <div class="main_title_3" style="text-align: right;">
+                    <span><em></em></span>
+                    <h2>{!! __('messages.AllCities') !!}</h2>
+                </div>
+
             
         <div class="wrapper-grid">
             <div class="row">
-                 <div class="col-xl-4 col-lg-6 col-md-6">
+
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div  style="height: 110px;background-color: #e6e6e6;">
+                        
+                        <div style="padding-top: 7px;text-align: center;">
+                            <img src="{{ asset('frontend/img/white-png-7.png')}}" style="height: 55px;width: 55px; border-radius: 50%;">
+                                <p>
+                                     {!! __('messages.fooditems.img_title2') !!}<br />
+                                    {!! __('messages.fooditems.img_title1') !!}
+                                </p>
+                                 
+                        </div>
+
+                    </div>
                     <div class="box_grid">
-                        <div class="wrapper" style="color:black;text-align: center;">
-                           
-                            <div style="height: 10px;"></div>
-                              <h3 style="margin-top:60px;text-align: center;color: black"><a class="" style="color: black;" href="#">Coconut Panna Cotta</a></h3>
-                            <p>{!! __('messages.fooditems.text3') !!}</p>
+                        <div class="wrapper" style="color:black;text-align: center;padding:0px;">
+                              <h3 style="text-align: center;color: black;padding-top: 10px;"><a class="" style="color: black;" href="#">Coconut Panna Cotta</a></h3>
+                            <p>
+                                {!! __('messages.fooditems.text1') !!}
+                                <br />
+                                {!! __('messages.fooditems.text4') !!}
+
+                            </p>
                         </div>
                         <figure>
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/CoconutPannaCotta.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
                             
                         </figure>
+                        <button style="width: 100%;height: 45px;background-color: #A366FF;color: white;text-transform:uppercase;">Request To Book</button>
                         
                       
                     </div>
                 </div>
-                <!-- /box_grid -->
+
+
+
                 <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div  style="height: 110px;background-color: #e6e6e6;">
+                        
+                        <div style="padding-top: 7px;text-align: center;">
+                            <img src="{{ asset('frontend/img/white-png-7.png')}}" style="height: 55px;width: 55px; border-radius: 50%;">
+                                <p>
+                                    Majeed Saleem<br />
+                                    {!! __('messages.fooditems.img_title1') !!}
+                                </p>
+                                 
+                        </div>
+
+                    </div>
                     <div class="box_grid">
-                        <div class="wrapper" style="color:black;text-align: center;">
-                           
-                            <div style="height: 10px;"></div>
-                              <h3 style="margin-top:60px;text-align: center;color: black"><a class="" style="color: black;" href="#">Fish Fusion</a></h3>
-                            <p>{!! __('messages.fooditems.text2') !!}</p>
+                        <div class="wrapper" style="color:black;text-align: center;padding:0px;">
+                              <h3 style="text-align: center;color: black;padding-top: 10px;"><a class="" style="color: black;" href="#">Fish Fusion</a></h3>
+                            <p>
+                                {!! __('messages.fooditems.text1') !!}
+                                <br />
+                                {!! __('messages.fooditems.text4') !!}
+
+                            </p>
                         </div>
                         <figure>
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/FishFusion.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
                             
                         </figure>
+                        <button style="width: 100%;height: 45px;background-color: #FF9900;color: white;text-transform:uppercase;">Request To Book</button>
                         
                       
                     </div>
                 </div>
+
+
                 <!-- /box_grid -->
                 <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div  style="height: 110px;background-color: #e6e6e6;">
+                        
+                        <div style="padding-top: 7px;text-align: center;">
+                            <img src="{{ asset('frontend/img/white-png-7.png')}}" style="height: 55px;width: 55px; border-radius: 50%;">
+                                <p>
+                                    Majeed Saleem<br />
+                                    {!! __('messages.fooditems.img_title1') !!}
+                                </p>
+                                 
+                        </div>
+
+                    </div>
                     <div class="box_grid">
-                        <div class="wrapper" style="color:black;text-align: center;">
-                           
-                            <div style="height: 10px;"></div>
-                              <h3 style="margin-top:60px;text-align: center;color: black"><a class="" style="color: black;" href="#">Barista Workshop</a></h3>
-                            <p>{!! __('messages.fooditems.text1') !!}</p>
+                        <div class="wrapper" style="color:black;text-align: center;padding:0px;">
+                              <h3 style="text-align: center;color: black;padding-top: 10px;"><a class="" style="color: black;" href="#">Barista Workshop</a></h3>
+                            <p>
+                                {!! __('messages.fooditems.text1') !!}
+                                <br />
+                                {!! __('messages.fooditems.text4') !!}
+                            </p>
                         </div>
                         <figure>
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/BaristaWorkshop.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
                             
                         </figure>
+                        <button style="width: 100%;height: 45px;background-color: #ff0000;color: white;text-transform:uppercase;">Request To Book</button>
                         
                       
                     </div>
@@ -259,6 +318,7 @@
             <!-- /row -->
             </div>
             <!-- /isotope-wrapper -->
+        </section>
                         
         </div>
 
@@ -319,7 +379,7 @@
                     <!-- /grid_item -->
                 </div>
                 <!-- /row -->
-                <a href="restaurants-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a>
+                <!-- <a href="restaurants-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a> -->
             </section>
             <!-- /section -->
 

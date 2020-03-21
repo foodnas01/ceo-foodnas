@@ -1472,7 +1472,7 @@ footer #copy {
   -moz-border-radius: 0 3px 3px 0;
   -ms-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-  background-color: #FF0000;
+  background-color: #FFC107;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1481,7 +1481,7 @@ footer #copy {
   outline: none;
 }
 #newsletter input[type='submit']:hover {
-  background-color: #FFC107;
+  background-color: #FF0000;
   color: #222;
 }
 

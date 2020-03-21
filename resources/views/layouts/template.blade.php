@@ -43,7 +43,7 @@ $directionStyle = 'ltr';
 if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
 
 @endphp
-<body style="direction: {{$directionStyle}}">
+<body style="font-weight:bold;direction: {{$directionStyle}}">
         
     <div id="page">
     
