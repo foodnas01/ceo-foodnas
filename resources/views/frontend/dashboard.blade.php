@@ -54,8 +54,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-2">
-
-                                <input type="submit" style="background: url(../frontend/img/Group132.png) center center no-repeat;background-color: red;margin-bottom: -6px;" class="btn_search" value="">
+                                <input type="submit" style="" class="btn_search search-btn-css" value="">
                             </div>
                         </div>
                         <!-- /row -->
@@ -140,7 +139,7 @@
 
         <div class="container container-custom">
             <section class="">
-                <div class="main_title_3" style="text-align: right;">
+                <div class="main_title_3">
                     <span><em></em></span>
                     <h2>{!! __('messages.AllCities') !!}</h2>
                 </div>
@@ -148,7 +147,7 @@
                    <div class="col-xl-3 col-lg-6 col-md-6">
                         <a href="hotel-detail.html" class="grid_item">
                             <figure>
-                                <div class="info" style="text-align: center;height: 100px;">
+                                <div class="info info-sec">
                                     <h3>@lang('messages.cities.Dubai')</h3>
                                 </div>
                                 <img src="{{asset('frontend/img/Cities_Pictures/Dubai/foodnas-Dubai_400x270.jpg')}}" class="img-fluid" alt="">
@@ -160,7 +159,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <a href="hotel-detail.html" class="grid_item">
                             <figure>
-                                <div class="info" style="text-align: center;height: 100px;">
+                                <div class="info info-sec">
                                     <h3>@lang('messages.cities.Beirut')</h3>
                                 </div>
                                 <img src="{{asset('frontend/img/Cities_Pictures/Beirut/foodnas-Beirut_400x270.jpg')}}" class="img-fluid" alt="">
@@ -172,7 +171,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <a href="hotel-detail.html" class="grid_item">
                             <figure>
-                                <div class="info" style="text-align: center;height: 100px;">
+                                <div class="info info-sec">
                                     <h3>@lang('messages.cities.Amman')</h3>
                                 </div>
                                 <img src="{{asset('frontend/img/Cities_Pictures/Amman/foodnas-Amman_400x270.jpg')}}" class="img-fluid" alt="">
@@ -184,7 +183,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <a href="hotel-detail.html" class="grid_item">
                             <figure>
-                                <div class="info" style="text-align: center;height: 100px;">
+                                <div class="info info-sec">
                                     <h3>@lang('messages.cities.Abu_Dhabi')</h3>
                                 </div>
                                 <img src="{{asset('frontend/img/Cities_Pictures/Abu_Dhabi/foodnas-abudhabi_400x270.jpg')}}" class="img-fluid" alt="">

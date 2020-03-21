@@ -8582,3 +8582,12 @@ h3.head{
 .mtop30{
     margin-top: 30px;
 }
+.info-sec{
+    text-align: center;
+    height: 100px;
+}
+.search-btn-css{
+    background: url(/frontend/img/Group132.png) center center no-repeat;
+    background-color: red;
+    margin-bottom: -6px;
+}
