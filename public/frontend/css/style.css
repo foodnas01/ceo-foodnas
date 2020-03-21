@@ -8591,3 +8591,7 @@ h3.head{
     background-color: red;
     margin-bottom: -6px;
 }
+.cont-padd{
+    padding-right: 0px;
+    padding-left: 0px;
+}

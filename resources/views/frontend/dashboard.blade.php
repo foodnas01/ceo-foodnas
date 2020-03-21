@@ -64,9 +64,9 @@
         </section>
         <!-- /hero_single -->
 
-        <div class="container margin_40_0">
+        <div class="container margin_40_0 cont-padd">
 
-        <div class="wrapper-grid">
+        <div class="">
             <div class="row">
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="box_grid">
@@ -137,7 +137,7 @@
 
         <!-- /container -->
 
-        <div class="container container-custom">
+        <div class="container container-custom cont-padd">
             <section class="">
                 <div class="main_title_3">
                     <span><em></em></span>
@@ -200,7 +200,7 @@
 
 
 
-            <div class="container margin_40_0">
+            <div class="container margin_40_0 cont-padd">
             <section class="">
                 <div class="main_title_3">
                     <span><em></em></span>
@@ -208,7 +208,7 @@
                 </div>
 
 
-        <div class="wrapper-grid">
+        <div class="">
             <div class="row">
 
                     <div class="col-xl-4 col-lg-6 col-md-6">
