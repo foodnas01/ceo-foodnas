@@ -238,7 +238,9 @@
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/CoconutPannaCotta.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
                         </figure>
-                        <button style="width: 100%;height: 45px;background-color: #A366FF;color: white;text-transform:uppercase;">Request To Book</button>
+                        <div style="width: 100%;height: 45px;background-color: #A366FF;color: white;text-transform:uppercase;text-align: center;">
+                            <span style="line-height: 45px;">Request To Book</span>
+                        </div>
 
 
                     </div>
@@ -273,7 +275,11 @@
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/FishFusion.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
                         </figure>
-                        <button style="width: 100%;height: 45px;background-color: #FF9900;color: white;text-transform:uppercase;">Request To Book</button>
+                       
+
+                        <div style="width: 100%;height: 45px;background-color: #FF9900;color: white;text-transform:uppercase;text-align: center;">
+                            <span style="line-height: 45px;">Request To Book</span>
+                        </div>
 
 
                     </div>
@@ -307,8 +313,10 @@
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/BaristaWorkshop.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
                         </figure>
-                        <button style="width: 100%;height: 45px;background-color: #ff0000;color: white;text-transform:uppercase;">Request To Book</button>
-
+                       
+                        <div style="width: 100%;height: 45px;background-color: #ff0000;color: white;text-transform:uppercase;text-align: center;">
+                            <span style="line-height: 45px;">Request To Book</span>
+                        </div>
 
                     </div>
                 </div>
