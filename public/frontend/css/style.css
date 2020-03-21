@@ -3008,7 +3008,7 @@ a.grid_item .info .cat_star i {
 a.grid_item .info h3 {
   color: #fff;
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 2.125rem;
 }
 a.grid_item .info p {
   color: #fff;
@@ -7372,7 +7372,7 @@ a.address:hover {
 .bg_color_1 {
   background-color: #fff;
 }
-  
+
 .box_1 {
   background-color: #121921;
   color: #fff;
