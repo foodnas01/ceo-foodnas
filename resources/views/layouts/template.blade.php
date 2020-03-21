@@ -36,6 +36,12 @@
 
     @yield('style')
 
+    <style type="text/css">
+        p{
+            font-weight:bold;
+        }
+    </style>
+
 </head>
 
 @php
@@ -43,7 +49,7 @@ $directionStyle = 'ltr';
 if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
 
 @endphp
-<body style="font-weight:bold;direction: {{$directionStyle}}">
+<body style="direction: {{$directionStyle}}">
 
     <div id="page">
 
