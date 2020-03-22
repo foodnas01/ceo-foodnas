@@ -200,7 +200,7 @@
 
 
 
-            <div class="container margin_40_0 cont-padd">
+            <div class="container margin_15_0 cont-padd">
             <section class="">
                 <div class="main_title_3">
                     <span><em></em></span>
@@ -275,7 +275,7 @@
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/FishFusion.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
                         </figure>
-                       
+
 
                         <div style="width: 100%;height: 45px;background-color: #FF9900;color: white;text-transform:uppercase;text-align: center;">
                             <span style="line-height: 45px;">Request To Book</span>
@@ -313,7 +313,7 @@
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/BaristaWorkshop.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
                         </figure>
-                       
+
                         <div style="width: 100%;height: 45px;background-color: #ff0000;color: white;text-transform:uppercase;text-align: center;">
                             <span style="line-height: 45px;">Request To Book</span>
                         </div>
