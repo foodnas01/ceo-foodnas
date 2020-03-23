@@ -6,6 +6,20 @@
             padding-top: 85px;
         }
 
+        .hybhTA {
+            font-size: 17px;
+            font-weight: bold;
+            line-height: 18px;
+            display: flex;
+            margin: 8px 0px 0px;
+        }
+
+        .gKJFzR {
+                color: red;
+                margin-right: 0.3em;
+            }
+
+
     </style>
 @stop
 @section('content')
@@ -200,6 +214,8 @@
 
 
 
+
+
             <div class="container margin_15_0 cont-padd">
             <section class="">
                 <div class="main_title_3">
@@ -212,35 +228,45 @@
             <div class="row">
 
                     <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div  style="height: 110px;background-color: #e6e6e6;">
-
-                        <div style="padding-top: 7px;text-align: center;">
-                            <img src="{{ asset('frontend/img/white-png-7.png')}}" style="height: 55px;width: 55px; border-radius: 50%;">
-                                <p>
-                                     {!! __('messages.fooditems.img_title2') !!}<br />
-                                    {!! __('messages.fooditems.img_title1') !!}
-                                </p>
-
-                        </div>
-
-                    </div>
+                
                     <div class="box_grid">
-                        <div class="wrapper" style="color:black;text-align: center;padding:0px;">
-                              <h3 style="text-align: center;color: black;padding-top: 10px;"><a class="" style="color: black;" href="#">Coconut Panna Cotta</a></h3>
-                            <p>
-                                {!! __('messages.fooditems.text1') !!}
-                                <br />
-                                {!! __('messages.fooditems.text4') !!}
-
-                            </p>
-                        </div>
+                   
                         <figure>
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/CoconutPannaCotta.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
+                            <div style="position:absolute;right:10px;bottom:20px;">
+                                    <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 70px;width: 70px; border-radius: 50%;">
+                            </div>
+
+
+
                         </figure>
-                        <div style="width: 100%;height: 45px;background-color: #A366FF;color: white;text-transform:uppercase;text-align: center;">
-                            <span style="line-height: 45px;">Request To Book</span>
+
+                        
+                         <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
+                              <h3 style="padding-top: 10px;"><a class="" style="color:red;" href="#">Coconut Panna Cotta</a></h3>
+                           <p style="margin-bottom:0px;">
+                                {!! __('messages.fooditems.text1') !!}
+                                <br />
+                                {!! __('messages.fooditems.text4') !!}
+                            </p>
+                          
+
+                            <span style="color: red;font-size: 14px;font-weight: bold;" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.Dinner') !!}</span> <span style="font-size: 14px;font-weight: bold;">{!! __('messages.inTel') !!}</span><br />
+
+                              <span class="EventCard__CardSubTitle-qmsapq-2 hybhTA"><span color="orange" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.AuthenticItalian') !!}</span>
+
+                            <!-- <span class="price" style="text-align: right;">From <strong>$54</strong> /per person</span> -->
                         </div>
+
+                        <ul style="padding-bottom: 40px;">
+                            <li style="float: right;"><i class="icon_clock_alt" ></i> 1h 30min</li>
+                            <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
+                        </ul>
+
+                       <!--  <div style="width: 100%;height: 45px;background-color: #A366FF;color: white;text-transform:uppercase;text-align: center;">
+                            <span style="line-height: 45px;">Request To Book</span>
+                        </div> -->
 
 
                     </div>
@@ -249,37 +275,47 @@
 
 
                 <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div  style="height: 110px;background-color: #e6e6e6;">
-
-                        <div style="padding-top: 7px;text-align: center;">
-                            <img src="{{ asset('frontend/img/white-png-7.png')}}" style="height: 55px;width: 55px; border-radius: 50%;">
-                                <p>
-                                    Majeed Saleem<br />
-                                    {!! __('messages.fooditems.img_title1') !!}
-                                </p>
-
-                        </div>
-
-                    </div>
+                 
                     <div class="box_grid">
-                        <div class="wrapper" style="color:black;text-align: center;padding:0px;">
-                              <h3 style="text-align: center;color: black;padding-top: 10px;"><a class="" style="color: black;" href="#">Fish Fusion</a></h3>
-                            <p>
-                                {!! __('messages.fooditems.text1') !!}
-                                <br />
-                                {!! __('messages.fooditems.text4') !!}
-
-                            </p>
-                        </div>
+                       
                         <figure>
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/FishFusion.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
+                            <div style="position:absolute;right:10px;bottom:20px;">
+                                    <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 70px;width: 70px; border-radius: 50%;">
+                            </div>
+
+
+
                         </figure>
 
+                         <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
+                              <h3 style="text-align: right;color: black;padding-top: 10px;"><a class=""  style="color:red;" href="#">Fish Fusion</a></h3>
 
-                        <div style="width: 100%;height: 45px;background-color: #FF9900;color: white;text-transform:uppercase;text-align: center;">
-                            <span style="line-height: 45px;">Request To Book</span>
+                                 
+
+                           <p style="margin-bottom:0px;">
+                                {!! __('messages.fooditems.text1') !!}
+                                <br />
+                                {!! __('messages.fooditems.text4') !!}
+                            </p>
+                          
+
+                            <span style="color: red;font-size: 14px;font-weight: bold;" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.Dinner') !!}</span> <span style="font-size: 14px;font-weight: bold;">{!! __('messages.inTel') !!}</span><br />
+
+                              <span class="EventCard__CardSubTitle-qmsapq-2 hybhTA"><span color="orange" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.AuthenticItalian') !!}</span>
+
+                                    <!--  <span class="price" style="text-align: right;">From <strong>$54</strong> /per person</span> -->
                         </div>
+
+                        <ul style="padding-bottom: 40px;">
+                            <li style="float: right;"><i class="icon_clock_alt" ></i> 1h 30min</li>
+                            <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
+                        </ul>
+
+                       <!--  <div style="width: 100%;height: 45px;background-color: #FF9900;color: white;text-transform:uppercase;text-align: center;">
+                            <span style="line-height: 45px;">Request To Book</span>
+                        </div> -->
 
 
                     </div>
@@ -288,35 +324,50 @@
 
                 <!-- /box_grid -->
                 <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div  style="height: 110px;background-color: #e6e6e6;">
-
-                        <div style="padding-top: 7px;text-align: center;">
-                            <img src="{{ asset('frontend/img/white-png-7.png')}}" style="height: 55px;width: 55px; border-radius: 50%;">
-                                <p>
-                                    Majeed Saleem<br />
-                                    {!! __('messages.fooditems.img_title1') !!}
-                                </p>
-
-                        </div>
-
-                    </div>
+                 
                     <div class="box_grid">
-                        <div class="wrapper" style="color:black;text-align: center;padding:0px;">
-                              <h3 style="text-align: center;color: black;padding-top: 10px;"><a class="" style="color: black;" href="#">Barista Workshop</a></h3>
-                            <p>
+                      
+                        <figure>
+                            <a href="tour-detail.html">
+                                <img src="{{asset('frontend/img/FoodItems/BaristaWorkshop.png')}}" class="img-fluid" alt="" width="800" height="533">
+
+                                
+                            </a>
+
+                            <div style="position:absolute;right:10px;bottom:20px;">
+                                    <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 70px;width: 70px; border-radius: 50%;">
+                            </div>
+
+
+                        </figure>
+
+                          <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
+                              <h3 style="text-align: right;color: black;padding-top: 10px;"><a class="" style="color:red;" href="#">Barista Workshop</a></h3>
+                            <p style="margin-bottom:0px;">
                                 {!! __('messages.fooditems.text1') !!}
                                 <br />
                                 {!! __('messages.fooditems.text4') !!}
                             </p>
+                          
+
+                            <span style="color: red;font-size: 14px;font-weight: bold;" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.Dinner') !!}</span> <span style="font-size: 14px;font-weight: bold;">{!! __('messages.inTel') !!}</span><br />
+
+                              <span class="EventCard__CardSubTitle-qmsapq-2 hybhTA"><span color="orange" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.AuthenticItalian') !!}</span>
+
+
+                                  <!-- <span class="price" style="text-align: right;">From <strong>$54</strong> /per person</span> -->
+
                         </div>
-                        <figure>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/BaristaWorkshop.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
-                        </figure>
 
-                        <div style="width: 100%;height: 45px;background-color: #ff0000;color: white;text-transform:uppercase;text-align: center;">
+             
+                        <ul style="padding-bottom: 40px;">
+                            <li style="float: right;"><i class="icon_clock_alt" ></i> 1h 30min</li>
+                            <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
+                        </ul>
+                    <!--     <div style="width: 100%;height: 45px;background-color: #ff0000;color: white;text-transform:uppercase;text-align: center;">
                             <span style="line-height: 45px;">Request To Book</span>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -392,11 +443,12 @@
 
             <div class="banner mb-0">
                 <div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.3)">
-                    <div>
-                        <small>Adventure</small>
-                        <h3>Your Perfect<br>Advenure Experience</h3>
-                        <p>Activities and accommodations</p>
-                        <a href="adventure.html" class="btn_1">Read more</a>
+                    <div style="flex: auto;">
+                        <!-- <p>{!! __('messages.Adventure') !!}</p> -->
+                        <h3>{!! __('messages.YourPerfect') !!}</h3>
+
+                            <h3>{!! __('messages.AdvenureExperience') !!}</h3>
+                         <a href="adventure.html" style="margin-left:124px;margin-top:20px;" class="btn_1">{!! __('messages.ReadMore') !!}</a>
                     </div>
                 </div>
                 <!-- /wrapper -->
