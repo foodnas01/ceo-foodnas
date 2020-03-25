@@ -18,6 +18,21 @@
                 color: red;
                 margin-right: 0.3em;
             }
+            .score{
+                text-align: right;
+            }
+
+            .headerTextClass:hover, .headerTextClass:focus {
+                color: black;
+                text-decoration: none;
+                outline: none;
+            }
+            .priceSpan{
+                font-weight:700 !important;
+            }
+            .bannerimg{
+                padding-top:45px !important;
+            }
 
 
     </style>
@@ -212,11 +227,80 @@
             </section>
             <!-- /section -->
 
-
-
-
-
             <div class="container margin_15_0 cont-padd">
+            <section class="">
+                <div class="main_title_3">
+                    <span><em></em></span>
+                    <h2>{!! __('messages.AllCities') !!}</h2>
+                </div>
+
+
+            <div class="banner mb-0" style="background-size: 1400px 420px;">
+                <div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.3)">
+                    <div class="col-md-12 pull-left">
+                        <!-- <p>{!! __('messages.Adventure') !!}</p> -->
+                        <h3>{!! __('messages.YourPerfect') !!} {!! __('messages.AdvenureExperience') !!}</h3>
+
+                        <span>{{ __('messages.dummytext1')}}</span><br />
+                        <span>{{ __('messages.dummytext1')}}</span><br />
+                     
+
+                            
+                         <a href="adventure.html" style="margin-top:20px;" class="btn_1">{!! __('messages.ReadMore') !!}</a>
+                    </div>
+                </div>
+                <!-- /wrapper -->
+            </div>
+            <!-- /banner -->
+        </section>
+    </div>
+
+
+   <div class="container margin_15_0 cont-padd bannerimg">
+            <section class="">
+                <div class="main_title_3">
+                    <span><em></em></span>
+                    <h2>{!! __('messages.AllCities') !!}</h2>
+                </div>
+ 
+
+
+ <div class="bg_color_1">
+            <div class="container margin_60_35">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#0" class="boxed_list">
+                            <i class="pe-7s-help2"></i>
+                            <h4>Need Help? Contact us</h4>
+                            <p>Cum appareat maiestatis interpretaris et, et sit.</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#0" class="boxed_list">
+                            <i class="pe-7s-wallet"></i>
+                            <h4>Payments</h4>
+                            <p>Qui ea nemore eruditi, magna prima possit eu mei.</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#0" class="boxed_list">
+                            <i class="pe-7s-note2"></i>
+                            <h4>Cancel Policy</h4>
+                            <p>Hinc vituperata sed ut, pro laudem nonumes ex.</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+    </section>
+</div>
+
+
+
+
+            <div class="container margin_15_0 cont-padd bannerimg">
             <section class="">
                 <div class="main_title_3">
                     <span><em></em></span>
@@ -227,23 +311,35 @@
         <div class="">
             <div class="row">
 
+
+
+
                     <div class="col-xl-4 col-lg-6 col-md-6">
                 
                     <div class="box_grid">
                    
                         <figure>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/CoconutPannaCotta.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/img1-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
                             <div style="position:absolute;right:10px;bottom:20px;">
-                                    <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 70px;width: 70px; border-radius: 50%;">
+                                    <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 50px;width: 50px; border-radius: 50%;">
                             </div>
 
 
 
                         </figure>
 
+                        <div class="wrapper" style="text-align: right;">
+                            <h3><a class="headerTextClass" href="tour-detail.html">Tour Eiffel</a></h3>
+                            <p>{!! __('messages.fooditems.text1') !!}
+                                <br />
+                                {!! __('messages.fooditems.text4') !!}
+                            </p>
+                            <span class="price priceSpan">From <strong>$65</strong> /per person</span>
+                        </div>
+
                         
-                         <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
+                         <!-- <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
                               <h3 style="padding-top: 10px;"><a class="" style="color:red;" href="#">Coconut Panna Cotta</a></h3>
                            <p style="margin-bottom:0px;">
                                 {!! __('messages.fooditems.text1') !!}
@@ -255,12 +351,15 @@
                             <span style="color: red;font-size: 14px;font-weight: bold;" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.Dinner') !!}</span> <span style="font-size: 14px;font-weight: bold;">{!! __('messages.inTel') !!}</span><br />
 
                               <span class="EventCard__CardSubTitle-qmsapq-2 hybhTA"><span color="orange" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.AuthenticItalian') !!}</span>
-
-                            <!-- <span class="price" style="text-align: right;">From <strong>$54</strong> /per person</span> -->
-                        </div>
+                        </div> -->
 
                         <ul style="padding-bottom: 40px;">
-                            <li style="float: right;"><i class="icon_clock_alt" ></i> 1h 30min</li>
+                            <li style="float: right;">
+                                <svg class="bi bi-clock" width="1em" style="margin-top: -3px;" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm8-7A8 8 0 110 8a8 8 0 0116 0z" clip-rule="evenodd"></path>
+                                  <path fill-rule="evenodd" d="M7.5 3a.5.5 0 01.5.5v5.21l3.248 1.856a.5.5 0 01-.496.868l-3.5-2A.5.5 0 017 9V3.5a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+                                </svg>
+                                 1h 30min</li>
                             <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
                         </ul>
 
@@ -274,21 +373,36 @@
 
 
 
+
+
+
                 <div class="col-xl-4 col-lg-6 col-md-6">
                  
                     <div class="box_grid">
                        
                         <figure>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/FishFusion.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/img3-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
                             <div style="position:absolute;right:10px;bottom:20px;">
-                                    <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 70px;width: 70px; border-radius: 50%;">
+                                    <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 50px;width: 50px; border-radius: 50%;">
                             </div>
 
 
 
                         </figure>
 
+                        <div class="wrapper" style="text-align: right;">
+                            <h3><a class="headerTextClass"  href="tour-detail.html">Arc Triomphe</a></h3>
+                    
+                            <p>{!! __('messages.fooditems.text1') !!}
+                                <br />
+                                {!! __('messages.fooditems.text4') !!}
+                            </p>
+                            <span class="price priceSpan">From <strong>$65</strong> /per person</span>
+                        </div>
+
+
+<!-- 
                          <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
                               <h3 style="text-align: right;color: black;padding-top: 10px;"><a class=""  style="color:red;" href="#">Fish Fusion</a></h3>
 
@@ -305,11 +419,17 @@
 
                               <span class="EventCard__CardSubTitle-qmsapq-2 hybhTA"><span color="orange" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.AuthenticItalian') !!}</span>
 
-                                    <!--  <span class="price" style="text-align: right;">From <strong>$54</strong> /per person</span> -->
-                        </div>
+                                   
+                        </div> -->
 
                         <ul style="padding-bottom: 40px;">
-                            <li style="float: right;"><i class="icon_clock_alt" ></i> 1h 30min</li>
+                            <li style="float: right;">
+                            <svg class="bi bi-clock" width="1em" style="margin-top: -3px;" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm8-7A8 8 0 110 8a8 8 0 0116 0z" clip-rule="evenodd"></path>
+                                  <path fill-rule="evenodd" d="M7.5 3a.5.5 0 01.5.5v5.21l3.248 1.856a.5.5 0 01-.496.868l-3.5-2A.5.5 0 017 9V3.5a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+                                </svg>
+
+                             1h 30min</li>
                             <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
                         </ul>
 
@@ -329,19 +449,31 @@
                       
                         <figure>
                             <a href="tour-detail.html">
-                                <img src="{{asset('frontend/img/FoodItems/BaristaWorkshop.png')}}" class="img-fluid" alt="" width="800" height="533">
+                                <img src="{{asset('frontend/img/FoodItems/img2-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533">
 
                                 
                             </a>
 
                             <div style="position:absolute;right:10px;bottom:20px;">
-                                    <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 70px;width: 70px; border-radius: 50%;">
+                                    <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 50px;width: 50px; border-radius: 50%;">
                             </div>
 
 
                         </figure>
 
-                          <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
+                        <div class="wrapper" style="text-align: right;">
+                              <h3><a class="headerTextClass"  href="tour-detail.html">Notredam</a></h3>
+
+                            <p>{!! __('messages.fooditems.text1') !!}
+                                <br />
+                                {!! __('messages.fooditems.text4') !!}
+                            </p>
+                            <span class="price priceSpan">From <strong>$65</strong> /per person</span>
+                        </div>
+
+
+
+                         <!--  <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
                               <h3 style="text-align: right;color: black;padding-top: 10px;"><a class="" style="color:red;" href="#">Barista Workshop</a></h3>
                             <p style="margin-bottom:0px;">
                                 {!! __('messages.fooditems.text1') !!}
@@ -355,14 +487,17 @@
                               <span class="EventCard__CardSubTitle-qmsapq-2 hybhTA"><span color="orange" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.AuthenticItalian') !!}</span>
 
 
-                                  <!-- <span class="price" style="text-align: right;">From <strong>$54</strong> /per person</span> -->
-
-                        </div>
+                        </div> -->
 
 
              
                         <ul style="padding-bottom: 40px;">
-                            <li style="float: right;"><i class="icon_clock_alt" ></i> 1h 30min</li>
+                            <li style="float: right;">
+                                <svg class="bi bi-clock" width="1em" style="margin-top: -3px;" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm8-7A8 8 0 110 8a8 8 0 0116 0z" clip-rule="evenodd"></path>
+                                  <path fill-rule="evenodd" d="M7.5 3a.5.5 0 01.5.5v5.21l3.248 1.856a.5.5 0 01-.496.868l-3.5-2A.5.5 0 017 9V3.5a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+                                </svg>
+                             1h 30min</li>
                             <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
                         </ul>
                     <!--     <div style="width: 100%;height: 45px;background-color: #ff0000;color: white;text-transform:uppercase;text-align: center;">
@@ -441,19 +576,7 @@
 {{--            </section>--}}
             <!-- /section -->
 
-            <div class="banner mb-0">
-                <div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.3)">
-                    <div style="flex: auto;">
-                        <!-- <p>{!! __('messages.Adventure') !!}</p> -->
-                        <h3>{!! __('messages.YourPerfect') !!}</h3>
-
-                            <h3>{!! __('messages.AdvenureExperience') !!}</h3>
-                         <a href="adventure.html" style="margin-left:124px;margin-top:20px;" class="btn_1">{!! __('messages.ReadMore') !!}</a>
-                    </div>
-                </div>
-                <!-- /wrapper -->
-            </div>
-            <!-- /banner -->
+            
 
         </div>
         <!-- /container -->

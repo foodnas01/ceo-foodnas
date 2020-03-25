@@ -3234,7 +3234,7 @@ a.box_feat h3 {
 }
 
 .score strong {
-  background-color: #FF0000;
+  background-color: #0054a6;
   color: #fff;
   line-height: 1;
   -webkit-border-radius: 5px 5px 5px 0;
@@ -5837,7 +5837,7 @@ a.grid_item.latest_adventure em {
 }
 
 .banner {
-  background: url(../img/banner1.jpg) center center no-repeat;
+  background: url(../img/web-banner-1400-700.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
