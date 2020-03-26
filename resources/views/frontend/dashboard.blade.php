@@ -73,7 +73,7 @@
 
 
     <main>
-       
+
             <section id="grid" class="hero_single version_2">
                 <div class="wrapper">
                     <div class="col-lg-8" id="headerText">
@@ -123,7 +123,7 @@
                     </div>
                 </div>
             </section>
-        
+
         <!-- /hero_single -->
 
         <div class="container margin_40_0 cont-padd">
@@ -280,7 +280,7 @@
                         <span class="bannerSpan">{{ __('messages.banner.para2')}}</span><br />
                         <span class="bannerSpan">{{ __('messages.banner.para3')}}</span><br />
 
-                     
+
                         <div class="col-xl-11">
                              <a href="adventure.html" style="margin-top: 20px;width: 220px;margin-left: 20px;" class="btn_1"><span>Job As Host</span></a>
                         </div>
@@ -303,7 +303,7 @@
 
 
  <div class="bg_color_1">
-            <div class="container margin_60_35">
+            <div class="container margin_40_0">
                 <div class="row">
                     <div class="col-md-4">
                         <a href="#0" class="boxed_list bxList">
