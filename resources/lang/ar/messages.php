@@ -72,14 +72,11 @@ return [
     'inTel'=>'في تل أبيب - يافا',
     'AuthenticItalian'=>'عشاء إيطالي أصيل مع طاهي ميلاني',
     'Adventure'=>'مغامرة',
-    /*'YourPerfect'=>'الكمال الخاص بك',
-    'AdvenureExperience' => 'تجربة مغامرة',
-    'ActivitiesAndAccommodations' => 'الأنشطة والإقامة',*/
-
+    'how_it_works' => 'كيف تعمل',
      'YourPerfect'=>'  الكمال الخاص بكتجربة',
     'AdvenureExperience' => 'مغامرة
 الأنشطة والإقامة',
     'dummytext1' => ' بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت'
-     
+
 
 ];

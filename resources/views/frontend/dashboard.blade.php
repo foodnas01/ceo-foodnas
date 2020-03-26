@@ -229,10 +229,10 @@
 
             <div class="container margin_15_0 cont-padd">
             <section class="">
-                <div class="main_title_3">
-                    <span><em></em></span>
-                    <h2>{!! __('messages.AllCities') !!}</h2>
-                </div>
+{{--                <div class="main_title_3">--}}
+{{--                    <span><em></em></span>--}}
+{{--                    <h2>{!! __('messages.how_it_works') !!}</h2>--}}
+{{--                </div>--}}
 
 
             <div class="banner mb-0" style="background-size: 1400px 420px;">
@@ -243,9 +243,9 @@
 
                         <span>{{ __('messages.dummytext1')}}</span><br />
                         <span>{{ __('messages.dummytext1')}}</span><br />
-                     
 
-                            
+
+
                          <a href="adventure.html" style="margin-top:20px;" class="btn_1">{!! __('messages.ReadMore') !!}</a>
                     </div>
                 </div>
@@ -260,9 +260,9 @@
             <section class="">
                 <div class="main_title_3">
                     <span><em></em></span>
-                    <h2>{!! __('messages.AllCities') !!}</h2>
+                    <h2>{!! __('messages.how_it_works') !!}</h2>
                 </div>
- 
+
 
 
  <div class="bg_color_1">
@@ -302,10 +302,10 @@
 
             <div class="container margin_15_0 cont-padd bannerimg">
             <section class="">
-                <div class="main_title_3">
-                    <span><em></em></span>
-                    <h2>{!! __('messages.AllCities') !!}</h2>
-                </div>
+{{--                <div class="main_title_3">--}}
+{{--                    <span><em></em></span>--}}
+{{--                    <h2>{!! __('messages.AllCities') !!}</h2>--}}
+{{--                </div>--}}
 
 
         <div class="">
@@ -315,9 +315,9 @@
 
 
                     <div class="col-xl-4 col-lg-6 col-md-6">
-                
+
                     <div class="box_grid">
-                   
+
                         <figure>
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/img1-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
@@ -338,7 +338,7 @@
                             <span class="price priceSpan">From <strong>$65</strong> /per person</span>
                         </div>
 
-                        
+
                          <!-- <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
                               <h3 style="padding-top: 10px;"><a class="" style="color:red;" href="#">Coconut Panna Cotta</a></h3>
                            <p style="margin-bottom:0px;">
@@ -346,7 +346,7 @@
                                 <br />
                                 {!! __('messages.fooditems.text4') !!}
                             </p>
-                          
+
 
                             <span style="color: red;font-size: 14px;font-weight: bold;" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.Dinner') !!}</span> <span style="font-size: 14px;font-weight: bold;">{!! __('messages.inTel') !!}</span><br />
 
@@ -377,9 +377,9 @@
 
 
                 <div class="col-xl-4 col-lg-6 col-md-6">
-                 
+
                     <div class="box_grid">
-                       
+
                         <figure>
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/img3-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
@@ -393,7 +393,7 @@
 
                         <div class="wrapper" style="text-align: right;">
                             <h3><a class="headerTextClass"  href="tour-detail.html">Arc Triomphe</a></h3>
-                    
+
                             <p>{!! __('messages.fooditems.text1') !!}
                                 <br />
                                 {!! __('messages.fooditems.text4') !!}
@@ -402,24 +402,24 @@
                         </div>
 
 
-<!-- 
+<!--
                          <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
                               <h3 style="text-align: right;color: black;padding-top: 10px;"><a class=""  style="color:red;" href="#">Fish Fusion</a></h3>
 
-                                 
+
 
                            <p style="margin-bottom:0px;">
                                 {!! __('messages.fooditems.text1') !!}
                                 <br />
                                 {!! __('messages.fooditems.text4') !!}
                             </p>
-                          
+
 
                             <span style="color: red;font-size: 14px;font-weight: bold;" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.Dinner') !!}</span> <span style="font-size: 14px;font-weight: bold;">{!! __('messages.inTel') !!}</span><br />
 
                               <span class="EventCard__CardSubTitle-qmsapq-2 hybhTA"><span color="orange" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.AuthenticItalian') !!}</span>
 
-                                   
+
                         </div> -->
 
                         <ul style="padding-bottom: 40px;">
@@ -444,14 +444,14 @@
 
                 <!-- /box_grid -->
                 <div class="col-xl-4 col-lg-6 col-md-6">
-                 
+
                     <div class="box_grid">
-                      
+
                         <figure>
                             <a href="tour-detail.html">
                                 <img src="{{asset('frontend/img/FoodItems/img2-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533">
 
-                                
+
                             </a>
 
                             <div style="position:absolute;right:10px;bottom:20px;">
@@ -480,7 +480,7 @@
                                 <br />
                                 {!! __('messages.fooditems.text4') !!}
                             </p>
-                          
+
 
                             <span style="color: red;font-size: 14px;font-weight: bold;" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.Dinner') !!}</span> <span style="font-size: 14px;font-weight: bold;">{!! __('messages.inTel') !!}</span><br />
 
@@ -490,7 +490,7 @@
                         </div> -->
 
 
-             
+
                         <ul style="padding-bottom: 40px;">
                             <li style="float: right;">
                                 <svg class="bi bi-clock" width="1em" style="margin-top: -3px;" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -576,7 +576,7 @@
 {{--            </section>--}}
             <!-- /section -->
 
-            
+
 
         </div>
         <!-- /container -->
