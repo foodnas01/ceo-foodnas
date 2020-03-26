@@ -5836,6 +5836,18 @@ a.grid_item.latest_adventure em {
   font-style: normal;
 }
 
+.circleDiv1{
+    background: url(../img/Group29_40x40.png) center center no-repeat;
+}
+
+.circleDiv2{
+    background: url(../img/Group44_40x40.png) center center no-repeat;
+}
+
+.circleDiv3{
+    background: url(../img/Group30_40x40.png) center center no-repeat;
+}
+
 .banner {
   background: url(../img/banner1_3_1100x400.jpg) center center no-repeat;
   -webkit-background-size: cover;

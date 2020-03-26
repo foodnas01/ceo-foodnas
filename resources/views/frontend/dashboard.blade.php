@@ -46,6 +46,24 @@
                 font-size:16px;
                 color: black;
             }
+            .circleDiv1,.circleDiv2,.circleDiv3{
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+                border: 2px solid #FEA621;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+            .circleSpan{
+                color: black;
+            }
+
+            .circleSpan:hover, .circleSpan:focus {
+                color: black;
+            }
+            .bxList{
+                border:0px solid #ededed !important;
+            }
 
 
     </style>
@@ -251,7 +269,7 @@
 
 
             <div class="banner mb-0">
-                <div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.1)">
+                <div class="wrapper d-flex align-items-center opacity-mask">
                     <div class="col-md-12 pull-left" style="padding-left: 60px;">
                         <!-- <p>{!! __('messages.Adventure') !!}</p> -->
                         <h1 class="h1Cls">{!! __('messages.banner.text1') !!}<br /> {!! __('messages.banner.text2') !!} <br />
@@ -288,24 +306,27 @@
             <div class="container margin_60_35">
                 <div class="row">
                     <div class="col-md-4">
-                        <a href="#0" class="boxed_list">
-                            <i class="pe-7s-help2"></i>
-                            <h4>Need Help? Contact us</h4>
-                            <p>Cum appareat maiestatis interpretaris et, et sit.</p>
+                        <a href="#0" class="boxed_list bxList">
+                            <div class="circleDiv1"></div>
+                            <h3>{!! __('messages.circleImages.imgLebel1') !!}</h3>
+                            <span class="circleSpan">{!! __('messages.circleImages.imgText11') !!}</span><br />
+                            <span class="circleSpan">{!! __('messages.circleImages.imgText12') !!}</span><br />
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="#0" class="boxed_list">
-                            <i class="pe-7s-wallet"></i>
-                            <h4>Payments</h4>
-                            <p>Qui ea nemore eruditi, magna prima possit eu mei.</p>
+                        <a href="#0" class="boxed_list bxList">
+                            <div class="circleDiv2"></div>
+                            <h4>{!! __('messages.circleImages.imgLebel2') !!}</h4>
+                            <span class="circleSpan">{!! __('messages.circleImages.imgText21') !!}</span><br />
+                            <span class="circleSpan">{!! __('messages.circleImages.imgText22') !!}</span><br />
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="#0" class="boxed_list">
-                            <i class="pe-7s-note2"></i>
-                            <h4>Cancel Policy</h4>
-                            <p>Hinc vituperata sed ut, pro laudem nonumes ex.</p>
+                        <a href="#0" class="boxed_list bxList">
+                            <div class="circleDiv3"></div>
+                            <h4>{!! __('messages.circleImages.imgLebel3') !!}</h4>
+                             <span class="circleSpan">{!! __('messages.circleImages.imgText31') !!}</span><br />
+                            <span class="circleSpan">{!! __('messages.circleImages.imgText32') !!}</span><br />
                         </a>
                     </div>
                 </div>
