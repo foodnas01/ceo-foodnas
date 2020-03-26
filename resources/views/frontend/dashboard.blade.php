@@ -37,6 +37,15 @@
             #grid{
                   background-image: linear-gradient(to bottom,#4D4C48,transparent);
             }
+            .h1Cls{
+                font-size: 44px;
+                margin-bottom: 15px;
+                line-height: 1;
+            }
+            .bannerSpan{
+                font-size:16px;
+                color: black;
+            }
 
 
     </style>
@@ -241,18 +250,22 @@
 {{--                </div>--}}
 
 
-            <div class="banner mb-0" style="background-size: 1400px 420px;">
-                <div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.3)">
-                    <div class="col-md-12 pull-left">
+            <div class="banner mb-0">
+                <div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.1)">
+                    <div class="col-md-12 pull-left" style="padding-left: 60px;">
                         <!-- <p>{!! __('messages.Adventure') !!}</p> -->
-                        <h3>{!! __('messages.YourPerfect') !!} {!! __('messages.AdvenureExperience') !!}</h3>
+                        <h1 class="h1Cls">{!! __('messages.banner.text1') !!}<br /> {!! __('messages.banner.text2') !!} <br />
+                        {!! __('messages.banner.text3') !!}
+                        </h1>
 
-                        <span>{{ __('messages.dummytext1')}}</span><br />
-                        <span>{{ __('messages.dummytext1')}}</span><br />
+                        <span class="bannerSpan">{{ __('messages.banner.para1')}}</span><br />
+                        <span class="bannerSpan">{{ __('messages.banner.para2')}}</span><br />
+                        <span class="bannerSpan">{{ __('messages.banner.para3')}}</span><br />
 
-
-
-                         <a href="adventure.html" style="margin-top:20px;" class="btn_1">{!! __('messages.ReadMore') !!}</a>
+                     
+                        <div class="col-xl-11">
+                             <a href="adventure.html" style="margin-top: 20px;width: 220px;margin-left: 20px;" class="btn_1"><span>Job As Host</span></a>
+                        </div>
                     </div>
                 </div>
                 <!-- /wrapper -->
