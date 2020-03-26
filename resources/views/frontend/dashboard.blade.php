@@ -34,6 +34,10 @@
                 padding-top:45px !important;
             }
 
+            #grid{
+                  background-image: linear-gradient(to bottom,#4D4C48,transparent);
+            }
+
 
     </style>
 @stop
@@ -42,55 +46,57 @@
 
 
     <main>
-        <section class="hero_single version_2">
-            <div class="wrapper">
-                <div class="col-lg-8" id="headerText">
-                    <h3> {!! __('messages.BOOK_UNIQUE_EXPERIENCES') !!} <br />
-                         {!! __('messages.BOOK_UNIQUE_EXPERIENCES1') !!} <br />
-                      </h3>
+       
+            <section id="grid" class="hero_single version_2">
+                <div class="wrapper">
+                    <div class="col-lg-8" id="headerText">
+                        <h3> {!! __('messages.BOOK_UNIQUE_EXPERIENCES') !!} <br />
+                             {!! __('messages.BOOK_UNIQUE_EXPERIENCES1') !!} <br />
+                          </h3>
 
-                    <p>{{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world1') }}<br />
-                    {{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world2') }}</p>
+                        <p>{{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world1') }}<br />
+                        {{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world2') }}</p>
 
-                    <form>
-                        <div class="row no-gutters custom-search-input-2">
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="{{ __('messages.Hotel_City') }}">
-                                    <i class="icon_pin_alt"></i>
+                        <form>
+                            <div class="row no-gutters custom-search-input-2">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="{{ __('messages.Hotel_City') }}">
+                                        <i class="icon_pin_alt"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" name="dates" placeholder="{{ __('messages.When') }}">
-                                    <i class="icon_calendar"></i>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="dates" placeholder="{{ __('messages.When') }}">
+                                        <i class="icon_calendar"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="panel-dropdown">
-                                    <a href="#">{{ __('messages.Guests') }} <span class="qtyTotal">1</span></a>
-                                    <div class="panel-dropdown-content">
-                                        <!-- Quantity Buttons -->
-                                        <div class="qtyButtons">
-                                            <label>{{ __('messages.Adults') }}</label>
-                                            <input type="text" name="qtyInput" value="1">
-                                        </div>
-                                        <div class="qtyButtons">
-                                            <label>{{ __('messages.Childrens') }}</label>
-                                            <input type="text" name="qtyInput" value="0">
+                                <div class="col-lg-3">
+                                    <div class="panel-dropdown">
+                                        <a href="#">{{ __('messages.Guests') }} <span class="qtyTotal">1</span></a>
+                                        <div class="panel-dropdown-content">
+                                            <!-- Quantity Buttons -->
+                                            <div class="qtyButtons">
+                                                <label>{{ __('messages.Adults') }}</label>
+                                                <input type="text" name="qtyInput" value="1">
+                                            </div>
+                                            <div class="qtyButtons">
+                                                <label>{{ __('messages.Childrens') }}</label>
+                                                <input type="text" name="qtyInput" value="0">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-lg-2">
+                                    <input type="submit" style="" class="btn_search search-btn-css" value="">
+                                </div>
                             </div>
-                            <div class="col-lg-2">
-                                <input type="submit" style="" class="btn_search search-btn-css" value="">
-                            </div>
-                        </div>
-                        <!-- /row -->
-                    </form>
+                            <!-- /row -->
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        
         <!-- /hero_single -->
 
         <div class="container margin_40_0 cont-padd">
