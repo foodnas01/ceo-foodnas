@@ -3,7 +3,7 @@
     <style type="text/css">
 
         #headerText{
-            padding-top: 85px;
+            /*padding-top: 85px;*/
         }
 
         .hybhTA {
@@ -73,56 +73,56 @@
 
 
     <main>
-
-            <section id="grid" class="hero_single version_2">
-                <div class="wrapper">
-                    <div class="col-lg-8" id="headerText">
-                        <h3> {!! __('messages.BOOK_UNIQUE_EXPERIENCES') !!} <br />
-                             {!! __('messages.BOOK_UNIQUE_EXPERIENCES1') !!} <br />
-                          </h3>
-
-                        <p>{{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world1') }}<br />
-                        {{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world2') }}</p>
-
-                        <form>
-                            <div class="row no-gutters custom-search-input-2">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="{{ __('messages.Hotel_City') }}">
-                                        <i class="icon_pin_alt"></i>
-                                    </div>
+        <section id="grid" class="hero_single version_2">
+            <div class="wrapper">
+                <div class="container" id="headerText">
+                    <h3>
+                        {!! __('messages.BOOK_UNIQUE_EXPERIENCES') !!} <br />
+                        {!! __('messages.BOOK_UNIQUE_EXPERIENCES1') !!} <br />
+                    </h3>
+                    <p>
+                        {{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world1') }}<br />
+                        {{ __('messages.Expolore_top_rated_tours_hotels_and_restaurants_around_the_world2') }}
+                    </p>
+                    <form>
+                        <div class="row no-gutters custom-search-input-2">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="{{ __('messages.Hotel_City') }}">
+                                    <i class="icon_pin_alt"></i>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" name="dates" placeholder="{{ __('messages.When') }}">
-                                        <i class="icon_calendar"></i>
-                                    </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="dates" placeholder="{{ __('messages.When') }}">
+                                    <i class="icon_calendar"></i>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="panel-dropdown">
-                                        <a href="#">{{ __('messages.Guests') }} <span class="qtyTotal">1</span></a>
-                                        <div class="panel-dropdown-content">
-                                            <!-- Quantity Buttons -->
-                                            <div class="qtyButtons">
-                                                <label>{{ __('messages.Adults') }}</label>
-                                                <input type="text" name="qtyInput" value="1">
-                                            </div>
-                                            <div class="qtyButtons">
-                                                <label>{{ __('messages.Childrens') }}</label>
-                                                <input type="text" name="qtyInput" value="0">
-                                            </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="panel-dropdown">
+                                    <a href="#">{{ __('messages.Guests') }} <span class="qtyTotal">1</span></a>
+                                    <div class="panel-dropdown-content">
+                                    <!-- Quantity Buttons -->
+                                        <div class="qtyButtons">
+                                            <label>{{ __('messages.Adults') }}</label>
+                                            <input type="text" name="qtyInput" value="1">
+                                        </div>
+                                        <div class="qtyButtons">
+                                            <label>{{ __('messages.Childrens') }}</label>
+                                            <input type="text" name="qtyInput" value="0">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-2">
-                                    <input type="submit" style="" class="btn_search search-btn-css" value="">
-                                </div>
                             </div>
+                            <div class="col-lg-2">
+                                <input type="submit" style="" class="btn_search search-btn-css" value="">
+                            </div>
+                        </div>
                             <!-- /row -->
-                        </form>
-                    </div>
+                    </form>
                 </div>
-            </section>
+            </div>
+        </section>
 
         <!-- /hero_single -->
 
@@ -132,41 +132,34 @@
             <div class="row">
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="box_grid">
-
                         <div class="wrapper box-setting blue-col">
                             <img src="{{asset('frontend/img/Group65.png')}}" class="align-r" />
                             <div class="h10 clearb"></div>
                             <h3 class="head"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid3') !!}</a></h3>
                             <p class="mg-btm-none">{!! __('messages.Dashboardgridtext3') !!}</p>
-
                         </div>
                         <figure>
-
                             <a href="tour-detail.html">
                                 <img src="{{asset('frontend/img/groupgrid1.png')}}" class="img-fluid" alt="" width="800" height="533">
                             </a>
-
                         </figure>
-
-
                     </div>
                 </div>
                 <!-- /box_grid -->
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="box_grid">
-
                          <div class="wrapper box-setting yellow-col" >
                             <img src="{{asset('frontend/img/Group87.png')}}" class="align-r" />
+
                             <div class="h10 clearb"></div>
-                              <h3 class="head"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid2') !!}</a></h3>
+
+                            <h3 class="head"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid2') !!}</a></h3>
+
                             <p class="mg-btm-none">{!! __('messages.Dashboardgridtext2') !!}</p>
-
                         </div>
-
 
                         <figure>
                             <a href="tour-detail.html"><img src="{{asset('frontend/img/groupgrid2.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
-
                         </figure>
                     </div>
                 </div>
@@ -308,7 +301,7 @@
                     <div class="col-md-4">
                         <a href="#0" class="boxed_list bxList">
                             <div class="circleDiv1"></div>
-                            <h3>{!! __('messages.circleImages.imgLebel1') !!}</h3>
+                            <h4>{!! __('messages.circleImages.imgLebel1') !!}</h4>
                             <span class="circleSpan">{!! __('messages.circleImages.imgText11') !!}</span><br />
                             <span class="circleSpan">{!! __('messages.circleImages.imgText12') !!}</span><br />
                         </a>
