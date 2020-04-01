@@ -1,7 +1,7 @@
  <footer>
         <div class="container margin_60_35">
             <div class="row">
-                <div class="col-lg-5 col-md-12 p-r-5"> 
+                <div class="col-lg-5 col-md-12 p-r-5" style="text-align: right;"> 
                     <p><img src="{{asset('frontend/img/Group130.png')}}" width="150" height="36" alt=""></p>
                     <p>{{ __('messages.LoremIpsam') }}</p>
                     <div class="follow_us">
@@ -13,7 +13,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 ml-lg-auto">
+                <div class="col-lg-3 col-md-6 ml-lg-auto" style="text-align: right;">
                     <h5>{{ __('messages.UsefulLinks') }}</h5>
                     <ul class="links">
                         <li><a href="{{URL('about')}}">{{ __('messages.AboutFoodnas') }}</a></li>
@@ -28,7 +28,7 @@
                         
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" style="text-align: right;">
                     <h5>{{ __('messages.ContactUs') }}</h5>
                     <ul class="contacts">
                         <li><a href="tel://61280932400"><i class="ti-mobile"></i>  +966547475047</a></li>
