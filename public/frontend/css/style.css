@@ -5850,7 +5850,7 @@ a.grid_item.latest_adventure em {
 }
 
 .banner {
-  background: url(../img/banner1_3_1100x400.jpg) center center no-repeat;
+  background: url(../img/banner1_2_950x380.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7359,8 +7359,8 @@ a.address:hover {
   }
 }
 .opacity-mask {
-  width: 100%;
-  height: 100%;
+/*  width: 100%;
+  height: 100%;*/
   position: absolute;
   left: 0;
   top: 0;

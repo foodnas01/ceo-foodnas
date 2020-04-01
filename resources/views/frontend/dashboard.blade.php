@@ -34,9 +34,16 @@
                 padding-top:45px !important;
             }
 
-            #grid{
-                  background-image: linear-gradient(to bottom,#4D4C48,transparent);
+            h1,h3,h2,h4{
+                  
+                  font-size: 0.875rem;
+                  line-height: 1.6;
+                  font-family: "NeoSansArabicBold", NeoSansArabic-Regular;
             }
+
+           /* #grid{
+                  background-image: linear-gradient(to bottom,#4D4C48,transparent);
+            }*/
             .h1Cls{
                 font-size: 44px;
                 margin-bottom: 15px;
@@ -63,6 +70,10 @@
             }
             .bxList{
                 border:0px solid #ededed !important;
+            }
+
+            .box_1{
+                    text-align: right;
             }
 
 
@@ -264,19 +275,31 @@
             <div class="banner mb-0">
                 <div class="wrapper d-flex align-items-center opacity-mask">
                     <div class="col-md-12 pull-left" style="padding-left: 60px;">
-                        <!-- <p>{!! __('messages.Adventure') !!}</p> -->
-                        <h1 class="h1Cls">{!! __('messages.banner.text1') !!}<br /> {!! __('messages.banner.text2') !!} <br />
-                        {!! __('messages.banner.text3') !!}
-                        </h1>
+                          <div class="col-md-12" style="text-align: right;">
+                           
+                                
+                                <!-- <p>{!! __('messages.Adventure') !!}</p> -->
+                                <h1 class="h1Cls">{!! __('messages.banner.text1') !!}<br /> {!! __('messages.banner.text2') !!} <br />
+                                {!! __('messages.banner.text3') !!}
+                                </h1>
 
-                        <span class="bannerSpan">{{ __('messages.banner.para1')}}</span><br />
-                        <span class="bannerSpan">{{ __('messages.banner.para2')}}</span><br />
-                        <span class="bannerSpan">{{ __('messages.banner.para3')}}</span><br />
+                                <span class="bannerSpan">{{ __('messages.banner.para1')}}</span><br />
+                                <span class="bannerSpan">{{ __('messages.banner.para2')}}</span><br />
+                                <span class="bannerSpan">{{ __('messages.banner.para3')}}</span><br />
 
 
-                        <div class="col-xl-11">
-                             <a href="adventure.html" style="margin-top: 20px;width: 220px;margin-left: 20px;" class="btn_1"><span>Job As Host</span></a>
-                        </div>
+                                <div>
+                                     <a href="adventure.html" style="margin-top: 20px;width: 220px;margin-left: 20px;" class="btn_1"><span style="    font-size: 20px;">العمل كمضيف
+</span></a>
+                                </div>
+
+
+
+                            
+                        
+
+
+    </div>
                     </div>
                 </div>
                 <!-- /wrapper -->
@@ -302,8 +325,10 @@
                         <a href="#0" class="boxed_list bxList">
                             <div class="circleDiv1"></div>
                             <h4>{!! __('messages.circleImages.imgLebel1') !!}</h4>
+                            <p>
                             <span class="circleSpan">{!! __('messages.circleImages.imgText11') !!}</span><br />
                             <span class="circleSpan">{!! __('messages.circleImages.imgText12') !!}</span><br />
+                            </p>
                         </a>
                     </div>
                     <div class="col-md-4">
