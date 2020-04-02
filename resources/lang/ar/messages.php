@@ -96,6 +96,18 @@ return [
         'imgText31' => 'حان وقت الإحتفال بتجربتك الجديدة',
         'imgText32' => 'والتعرّف على أصدقاء جدد!'
 
+    ],
+
+    'signup_page' => [
+        'FirstName'         => 'الاسم الأول',
+        'LastName'          =>  'اسمك الاخير',
+        'YourEmail'         => 'بريدك الالكتروني',
+        'YourPassword'      => 'كلمتك السرية',
+        'CnfmPassword'      => 'تأكيد كلمة المرور',
+        'RegisterNow'       => 'سجل الان',
+        'AlreadyAccount'    => 'هل لديك حساب بالفعل؟',
+        'SignIn'            => 'تسجيل الدخول',
+        'Foodnas'           => 'فودناس'
     ]
 
 

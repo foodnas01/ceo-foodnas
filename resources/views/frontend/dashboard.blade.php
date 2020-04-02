@@ -395,22 +395,6 @@
                             </p>
                             <span class="price priceSpan">From <strong>$65</strong> /per person</span>
                         </div>
-
-
-                         <!-- <div class="wrapper" style="color:black;text-align: right;padding-right: :15px;">
-                              <h3 style="padding-top: 10px;"><a class="" style="color:red;" href="#">Coconut Panna Cotta</a></h3>
-                           <p style="margin-bottom:0px;">
-                                {!! __('messages.fooditems.text1') !!}
-                                <br />
-                                {!! __('messages.fooditems.text4') !!}
-                            </p>
-
-
-                            <span style="color: red;font-size: 14px;font-weight: bold;" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.Dinner') !!}</span> <span style="font-size: 14px;font-weight: bold;">{!! __('messages.inTel') !!}</span><br />
-
-                              <span class="EventCard__CardSubTitle-qmsapq-2 hybhTA"><span color="orange" class="EventCard__CardColoredText-qmsapq-3 gKJFzR">{!! __('messages.AuthenticItalian') !!}</span>
-                        </div> -->
-
                         <ul style="padding-bottom: 40px;">
                             <li style="float: right;">
                                 <svg class="bi bi-clock" width="1em" style="margin-top: -3px;" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -420,10 +404,6 @@
                                  1h 30min</li>
                             <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
                         </ul>
-
-                       <!--  <div style="width: 100%;height: 45px;background-color: #A366FF;color: white;text-transform:uppercase;text-align: center;">
-                            <span style="line-height: 45px;">Request To Book</span>
-                        </div> -->
 
 
                     </div>

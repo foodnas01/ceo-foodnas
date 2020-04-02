@@ -1,3 +1,28 @@
 /*============================================================================================*/
 /* Your custom styles below */
 /*============================================================================================*/
+
+
+/* Register Page */
+	.signupLabel, .signUpReg{
+                  
+	  font-size: 1.1rem;
+	  line-height: 1.6;
+	  font-family: "NeoSansArabicBold", NeoSansArabic-Regular;
+	}
+
+	.signUpIcon{
+		    top: 40px !important;
+	}
+	.registerNow{
+    	font-size: 23px;
+	}
+
+	.help-block{
+		font-weight: bold;
+    	font-size: 15px;
+	}
+	.inputField{
+		font-size: 17px;
+	}
+/*End Register Page */

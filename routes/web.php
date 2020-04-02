@@ -25,3 +25,5 @@ Route::get('/', function () {
 
 
 Route::get('/about', 'AboutController@index');
+Route::get('/signup', 'LoginController@sign_up');
+Route::post('/login/register', 'LoginController@register')->name('register');

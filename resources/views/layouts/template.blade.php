@@ -96,7 +96,7 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
                 </div>
                 <div class="text-center"><input type="submit" value="Log In" class="btn_1 full-width"></div>
                 <div class="text-center">
-                    Don’t have an account? <a href="register.html">Sign up</a>
+                    Don’t have an account? <a href="{{URL('signup')}}">Sign up</a>
                 </div>
                 <div id="forgot_pw">
                     <div class="form-group">
