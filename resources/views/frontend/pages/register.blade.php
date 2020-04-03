@@ -51,13 +51,17 @@
 			@endif
 
 
-			<form action="{{ route('register') }}" method="POST">
+				{!! Form::open(array('route' => 'register', 'method' => 'post')) !!}
 				@csrf
 
-
 				<div class="form-group">
-					<label class="signupLabel">@lang('messages.signup_page.FirstName') </label>
-					<input class="form-control inputField {{ $errors->has('first_name') ? 'has-error' : ''}}" value="{{ old('first_name') }}" name="first_name" type="text">
+					
+					{{ Form::label(trans('messages.signup_page.FirstName'), null, ['class' => 'signupLabel']) }}
+
+					
+					{!! Form::text('first_name', old('first_name', null), ['class' => "form-control inputField $errors->has('first_name') ? 'has-error' : ''"]) !!}
+
+
 					<i class="ti-user signUpIcon"></i>
 
 					<span class="text-danger">{!! $errors->first('first_name', '<p class="help-block">:message</p>') !!}</span>
@@ -67,39 +71,57 @@
 				</div>
 				<div class="form-group">
 					
-					<label class="signupLabel">@lang('messages.signup_page.LastName') </label>
-					<input class="form-control inputField" name="last_name" value="{{ old('last_name') }}" type="text">
+					
+					{{ Form::label(trans('messages.signup_page.LastName'), null, ['class' => 'signupLabel']) }}
+
+					
+
+					{!! Form::text('last_name', old('last_name', null), ['class' => "form-control inputField $errors->has('last_name') ? 'has-error' : ''"]) !!}
+
+
 					<i class="ti-user signUpIcon"></i>
 
 					<span class="text-danger">{!! $errors->first('last_name', '<p class="help-block">:message</p>') !!}</span>
 
 				</div>
 				<div class="form-group">
-					<label class="signupLabel">@lang('messages.signup_page.YourEmail')</label>
-					<input class="form-control inputField" value="{{ old('email') }}" name="email" type="email">
+				
+					{{ Form::label(trans('messages.signup_page.YourEmail'), null, ['class' => 'signupLabel']) }}
+
+					{!! Form::email('email', old('email', null), ['class' => "form-control inputField $errors->has('email') ? 'has-error' : ''"]) !!}
+
 					<i class="icon_mail_alt signUpIcon"></i>
 
 					<span class="text-danger">{!! $errors->first('email', '<p class="help-block">:message</p>') !!}</span>
 
 				</div>
+
+
 				<div class="form-group">
-					<label class="signupLabel">@lang('messages.signup_page.YourPassword')</label>
-					<input class="form-control inputField"  name="password" type="password" id="password1">
+					
+
+					{{ Form::label(trans('messages.signup_page.YourPassword'), null, ['class' => 'signupLabel']) }}
+					{!! Form::password('password', ['class' => "form-control inputField $errors->has('password') ? 'has-error' : ''"]) !!}
 					<i class="icon_lock_alt signUpIcon"></i>
 					<span class="text-danger">{!! $errors->first('password', '<p class="help-block">:message</p>') !!}</span>
 				</div>
 				<div class="form-group">
-					<label class="signupLabel">@lang('messages.signup_page.CnfmPassword')</label>
-					<input class="form-control inputField"  name="password_confirmation" type="password" id="password_confirmation">
+				
+					{{ Form::label(trans('messages.signup_page.CnfmPassword'), null, ['class' => 'signupLabel']) }}
+
+
+					{!! Form::password('password_confirmation', ['class' => "form-control inputField $errors->has('password_confirmation') ? 'has-error' : ''"]) !!}
+
+
 					<i class="icon_lock_alt signUpIcon"></i>
 					<span class="text-danger">{!! $errors->first('password_confirmation', '<p class="help-block">:message</p>') !!}</span>
 				</div>
-				<!-- <div id="pass-info" class="clearfix"></div> -->
-			
+		
 
-				<button type="submit"  class="btn_1 rounded full-width add_top_30 registerNow">@lang('messages.signup_page.RegisterNow') </button>
+			{!!  Form::submit(trans('messages.signup_page.FirstName'),['class'=>'btn_1 rounded full-width add_top_30 registerNow']) !!}
+
 				<div class="text-center add_top_10 signUpReg">@lang('messages.signup_page.AlreadyAccount') <strong><a href="login.html">@lang('messages.signup_page.SignIn')</a></strong></div>
-			</form>
+			{{ Form::close() }}
 			<div class="copy signupLabel">© {{date('Y')}} @lang('messages.signup_page.Foodnas')</div>
 		</aside>
 	</div>
