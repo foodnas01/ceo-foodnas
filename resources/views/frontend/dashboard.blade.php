@@ -35,7 +35,7 @@
             }
 
             h1,h3,h2,h4{
-                  
+
                   font-size: 0.875rem;
                   line-height: 1.6;
                   font-family: "NeoSansArabicBold", NeoSansArabic-Regular;
@@ -184,7 +184,7 @@
                             <p class="mg-btm-none">{!! __('messages.Dashboardgridtext1') !!}</p>
                         </div>
                         <figure>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/groupgrid3.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            <a href="tour-detbanner mb-0ail.html"><img src="{{asset('frontend/img/groupgrid3.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
                         </figure>
 
@@ -276,12 +276,12 @@
                 <div class="wrapper d-flex align-items-center opacity-mask">
                     <div class="col-md-12 pull-left" style="padding-left: 60px;">
                           <div class="col-md-12" style="text-align: right;">
-                           
-                                
+
+
                                 <!-- <p>{!! __('messages.Adventure') !!}</p> -->
-                                <h1 class="h1Cls">{!! __('messages.banner.text1') !!}<br /> {!! __('messages.banner.text2') !!} <br />
+                                <h2 class="h1Cls">{!! __('messages.banner.text1') !!}<br /> {!! __('messages.banner.text2') !!} <br />
                                 {!! __('messages.banner.text3') !!}
-                                </h1>
+                                </h2>
 
                                 <span class="bannerSpan">{{ __('messages.banner.para1')}}</span><br />
                                 <span class="bannerSpan">{{ __('messages.banner.para2')}}</span><br />
@@ -295,8 +295,8 @@
 
 
 
-                            
-                        
+
+
 
 
     </div>
