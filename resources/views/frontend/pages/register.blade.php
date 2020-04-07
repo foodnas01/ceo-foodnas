@@ -51,7 +51,7 @@
 			@endif
 
 
-				{!! Form::open(array('route' => 'register', 'method' => 'post')) !!}
+				{!! Form::open(array('route' => 'front_register', 'method' => 'post')) !!}
 				@csrf
 
 				<div class="form-group">

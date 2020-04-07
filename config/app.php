@@ -180,6 +180,13 @@ return [
         
         Collective\Html\HtmlServiceProvider::class,
 
+        //A Laravel package which allow you to track the creator and updater of eloquent models
+        DigitalCloud\Blameable\BlameableServiceProvider::class,
+
+        Spatie\Permission\PermissionServiceProvider::class,
+
+        Collective\Html\HtmlServiceProvider::class,
+
 
     ],
 

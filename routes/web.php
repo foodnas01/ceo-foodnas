@@ -25,5 +25,22 @@ Route::get('/', function () {
 
 
 Route::get('/about', 'AboutController@index');
-Route::get('/signup', 'LoginController@sign_up');
-Route::post('/login/register', 'LoginController@register')->name('register');
+Route::get('/signup', 'FrontloginController@sign_up');
+Route::post('/login/register', 'FrontloginController@register')->name('front_register');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles','RoleController');
+    Route::resource('users','UserController');
+    Route::resource('products','ProductController');
+});
+
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+

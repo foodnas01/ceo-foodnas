@@ -36,6 +36,10 @@ class User extends Authenticatable
     ];
 
 
+   
+
+
+
     /**
      * The attributes that should be cast to native types.
      *
@@ -45,11 +49,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-
-    /*public function setPasswordAttribute($password)
-    {
-        $this->attributes['password'] = \Hash::make($password);
-    }*/
+    public function setPasswordAttribute($value){
+        $this->attributes['password'] = bcrypt($value);
+    }
 
 
    
