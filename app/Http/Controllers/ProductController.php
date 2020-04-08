@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use App\Grids\UsersGrid;
 
 
 class ProductController extends Controller
@@ -27,11 +28,16 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::latest()->paginate(5);
+        /*$products = Product::latest()->paginate(5);
         return view('products.index',compact('products'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 5);*/
+
+        $query = Product::orderBy('id','ASC');
+        return (new UsersGrid())
+                    ->create(['query' => $query, 'request' => $request])
+                    ->renderOn('products.index');
     }
 
 
