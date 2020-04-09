@@ -54,7 +54,7 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
     <div id="page">
 
 
-    @include('frontend.partials.header')
+    @include('frontend.partials.header1')
     <!-- /header -->
 
     @yield('content')

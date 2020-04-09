@@ -29,18 +29,29 @@ Route::get('/signup', 'FrontloginController@sign_up');
 Route::post('/login/register', 'FrontloginController@register')->name('front_register');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::group(['middleware' => ['auth']], function() {
-    Route::resource('roles','RoleController');
-    Route::resource('users','UserController');
-    Route::resource('products','ProductController');
+
+
+
+Route::group(['prefix' => 'admin'], function () {
+
+	Auth::routes();
+
+
+
+	Route::group(['middleware' => ['auth']], function() {
+		Route::get('/home', 'HomeController@index')->name('home');
+	    Route::resource('roles','RoleController');
+	    Route::resource('users','UserController');
+	    Route::resource('products','ProductController');
+	});
+
+
+
 });
 
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
+Route::get('/user/verify/{token}', 'FrontloginController@verifyUser');
 
 

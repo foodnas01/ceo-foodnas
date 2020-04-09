@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use DigitalCloud\Blameable\Traits\Blameable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Permission\Traits\HasRoles;
+use App\VerifyUser;
 
 
 class User extends Authenticatable
@@ -23,7 +24,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name','last_name', 'email', 'password','created_by','updated_by','deleted_by'
+        'first_name','last_name','phone_no','email', 'password','created_by','updated_by','deleted_by'
     ];
 
     /**
@@ -36,10 +37,6 @@ class User extends Authenticatable
     ];
 
 
-   
-
-
-
     /**
      * The attributes that should be cast to native types.
      *
@@ -49,9 +46,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function setPasswordAttribute($value){
-        $this->attributes['password'] = bcrypt($value);
+  
+     public function verifyUser()
+    {
+        return $this->hasOne('App\VerifyUser');
     }
+
+
+    /*public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = \Hash::make($password);
+    }*/
 
 
    

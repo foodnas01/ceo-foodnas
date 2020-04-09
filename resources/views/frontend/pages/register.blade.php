@@ -84,6 +84,20 @@
 					<span class="text-danger">{!! $errors->first('last_name', '<p class="help-block">:message</p>') !!}</span>
 
 				</div>
+				
+				<div class="form-group">
+				
+					{{ Form::label(trans('messages.signup_page.YourPhone'), null, ['class' => 'signupLabel']) }}
+
+					{!! Form::text('phone_no', old('phone_no', null), ['class' => "form-control inputField $errors->has('phone_no') ? 'has-error' : ''"]) !!}
+
+					<i class="icon_mail_alt signUpIcon"></i>
+
+					<span class="text-danger">{!! $errors->first('phone_no', '<p class="help-block">:message</p>') !!}</span>
+
+				</div>
+
+
 				<div class="form-group">
 				
 					{{ Form::label(trans('messages.signup_page.YourEmail'), null, ['class' => 'signupLabel']) }}

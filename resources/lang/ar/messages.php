@@ -101,6 +101,7 @@ return [
     'signup_page' => [
         'FirstName'         => 'الاسم الأول',
         'LastName'          =>  'اسمك الاخير',
+        'YourPhone'         => 'رقم الهاتف',
         'YourEmail'         => 'بريدك الالكتروني',
         'YourPassword'      => 'كلمتك السرية',
         'CnfmPassword'      => 'تأكيد كلمة المرور',

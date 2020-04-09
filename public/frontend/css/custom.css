@@ -7,9 +7,9 @@
 	.signupLabel, .signUpReg{
                   
 	  font-size: 1.1rem;
-	  line-height: 1.6;
-	  font-family: "NeoSansArabicBold", NeoSansArabic-Regular;
-	}
+	  line-height: 0.6;
+	  /*font-family: "NeoSansArabicBold", NeoSansArabic-Regular;
+	}*/
 
 	.signUpIcon{
 		    top: 40px !important;

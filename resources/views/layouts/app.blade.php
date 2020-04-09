@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
     <!-- grid's css (required) -->
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/leantony/grid/css/grid.css') }}" />
-
+    
 
 
 </head>
@@ -106,6 +106,7 @@
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 		<!-- required to supply js functionality for the grid -->
 		<script src="{{ asset('vendor/leantony/grid/js/grid.js') }}"></script>
+
 		<script>
 		    // send csrf token (see https://laravel.com/docs/5.6/csrf#csrf-x-csrf-token) - this is required
 		    $.ajaxSetup({

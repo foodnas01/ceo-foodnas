@@ -81,8 +81,6 @@
 @stop
 @section('content')
     <!-- Conent Section -->
-
-
     <main>
         <section id="grid" class="hero_single version_2">
             <div class="wrapper">
@@ -198,6 +196,8 @@
             <!-- /isotope-wrapper -->
 
         </div>
+
+
 
 
 
@@ -707,6 +707,40 @@
         </div>
         <!--/call_section-->
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/jquery.toast.css') }}" />
+     <script src="{{ asset('frontend/js/jquery.toast.js') }}"></script>
+    <script type="text/javascript">
+        <?php
+            if(Session::has('status')){ ?>
+                $.toast({
+                    heading: 'Success',
+                    text: '<?php echo Session::get('status'); ?>',
+                    showHideTransition: 'slide',
+                    position: 'top-center',
+                    icon: 'success'
+                })
+            <?php Session::forget('status');}?>
+
+         <?php
+            if(Session::has('warning')){ ?>
+
+                $.toast({
+                    heading: 'Warning',
+                    text: '<?php echo Session::get('warning'); ?>',
+                    showHideTransition: 'slide',
+                    position: 'top-center',
+                    icon: 'warning'
+                })
+
+
+            <?php Session::forget('status');
+
+             }
+         ?>
+        
+    
+    </script>
 
     <!-- Conent Section end -->
 @endsection
