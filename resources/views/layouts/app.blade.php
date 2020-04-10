@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- jquery (required) -->
+      <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ -->
+
     <title>{{ config('app.name', 'Laravel 5.8 User Roles and Permissions Tutorial') }}</title>
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" ></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
@@ -34,7 +39,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                     <img src="{{asset('frontend/img/Group130.png')}}" width="185" height="50" alt="" class="logo_normal">
+                     <img src="{{asset('frontend/img/Group101.png')}}" width="185" height="50" alt="" class="logo_normal">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -56,9 +61,9 @@
                             <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
                             <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
                             <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
-                            <li class="nav-item dropdown">
+                            <li class="mycls nav-item dropdown" id="mycls">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->email }} <span class="caret"></span>
                                 </a>
 
 
@@ -94,13 +99,14 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
 		<!-- moment js (required by datepicker library) -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
-		<!-- jquery (required) -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
 		<!-- popper js (required by bootstrap) -->
 		<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+
 		<!-- bootstrap js (required) -->
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-		<!-- pjax js (required) -->
+		
+        <!-- pjax js (required) -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 		<!-- datepicker js (required for datepickers) -->
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -108,6 +114,8 @@
 		<script src="{{ asset('vendor/leantony/grid/js/grid.js') }}"></script>
 
 		<script>
+
+
 		    // send csrf token (see https://laravel.com/docs/5.6/csrf#csrf-x-csrf-token) - this is required
 		    $.ajaxSetup({
 		        headers: {
@@ -122,6 +130,23 @@
 		    $(document).on('pjax:end', function () {
 		        NProgress.done();
 		    });
+
+            $(document).ready(function() {
+            
+         $("#mycls").click(function(e){
+            console.log('sdfsfsfs')
+            $(".dropdown-menu").addClass("show");
+                let RandomN = Math.random();
+                console.log('HERERE'+RandomN)
+              // $(".dropdown-toggle").dropdown();
+
+            })
+
+            
+});
+
+
+
 		</script>
 		<!-- entry point for all scripts injected by the generated grids (required) -->
 		@stack('grid_js')

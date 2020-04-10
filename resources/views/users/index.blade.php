@@ -21,4 +21,12 @@
 @endif
 
 {!! $grid !!}
+
+<script type="text/javascript">
+
+
+
+
+
+</script>
 @endsection

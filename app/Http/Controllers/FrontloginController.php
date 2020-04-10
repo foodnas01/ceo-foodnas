@@ -10,8 +10,10 @@ use Hash;
 use App\VerifyUser;
 use App\Mail\VerifyMail;
 use Session;
+use Validator;
 use DB;
-
+use Auth;
+use Redirect;
 
 class FrontloginController extends Controller
 {
@@ -40,10 +42,51 @@ class FrontloginController extends Controller
       return redirect('/')->with('status', $status);
     }
 
+    function front_login(Request $request){
+
+        // validate the info, create rules for the inputs
+        $rules = array(
+            'email'    => 'required|email',
+            'password' => 'required' 
+        );
+
+        // run the validation rules on the inputs from the form
+        $validator = Validator::make($request->all(), $rules);
+
+
+        // if the validator fails, redirect back to the form
+        if ($validator->fails()) {
+            
+
+            return Redirect::to('/')
+                ->withErrors($validator) // send back all errors to the login form
+                ->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
+        } else {
+
+            // create our user data for the authentication
+            $userdata = array(
+                'email'     => $request->email,
+                'password'  => $request->password
+            );
+
+            // attempt to do the login
+            if (Auth::attempt($userdata)) {
+                return Redirect::to('/admin/home');
+
+            } else {  
+                \Session::put('invalidDetails', "Sorry! Email or password is not valid."); 
+                // validation not successful, send back to form 
+               // return Redirect::to('/');
+                return Redirect::back()->withErrors($validator)->withInput($request->all());
+            }
+
+        }
+    }
+
   
      public function register(RegisterRequest $request)
-    {
-        DB::enableQueryLog();
+        {
+        //DB::enableQueryLog();
 
     	//pending  task  :remember role & email form repalce
         $data = $request->all();
@@ -67,30 +110,6 @@ class FrontloginController extends Controller
 
         $view = view("emails.verifyUser",compact('verifyUser','user'))->render();
         echo $view;die;
-
-       /*  $to = "zohaibyousuf456@gmail.com";
-         $subject = "Verification Email Foodnas";
-         
-         $header = "From:foodnas@foodnas.com \r\n";
-         $header .= "MIME-Version: 1.0\r\n";
-         $header .= "Content-type: text/html\r\n";
-
-
-         
-         $retval = mail ($to,$subject,$view,$header);
-         
-         if( $retval == true ) {
-            echo "Message sent successfully...";
-         }else {
-            echo "Message could not be sent...";
-         }
-*/
-       //echo  view('frontend.pages.register',compact('myArray'),true); die;
-
-   
-       // \Mail::to($user->email)->send(new VerifyMail($verifyUser01));
-
-
         return redirect()->back()
                         ->with('success','User has been created successfully.');
     }

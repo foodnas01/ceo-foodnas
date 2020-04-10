@@ -103,12 +103,17 @@ return [
         'LastName'          =>  'اسمك الاخير',
         'YourPhone'         => 'رقم الهاتف',
         'YourEmail'         => 'بريدك الالكتروني',
-        'YourPassword'      => 'كلمتك السرية',
+        'YourPassword'      => 'كلمه السر',
         'CnfmPassword'      => 'تأكيد كلمة المرور',
         'RegisterNow'       => 'سجل الان',
         'AlreadyAccount'    => 'هل لديك حساب بالفعل؟',
         'SignIn'            => 'تسجيل الدخول',
         'Foodnas'           => 'فودناس'
+    ],
+    'dashboard' => [
+        'email'             =>  'البريد الإلكتروني',
+        'password'          =>  'كلمه السر',
+        'show'              =>  'تبين'
     ]
 
 

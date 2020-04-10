@@ -26,6 +26,13 @@
 
     <!-- YOUR CUSTOM CSS -->
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
+    <style type="text/css">
+    	
+    	.registerNow{
+	    	font-size: 18px !important;
+		}
+
+    </style>
 	
 </head>
 
@@ -64,7 +71,7 @@
 
 					<i class="ti-user signUpIcon"></i>
 
-					<span class="text-danger">{!! $errors->first('first_name', '<p class="help-block">:message</p>') !!}</span>
+					<span class="text-danger">{!! $errors->first('first_name', '<span class="help-block">:message</span>') !!}</span>
 
 
 
@@ -81,7 +88,7 @@
 
 					<i class="ti-user signUpIcon"></i>
 
-					<span class="text-danger">{!! $errors->first('last_name', '<p class="help-block">:message</p>') !!}</span>
+					<span class="text-danger">{!! $errors->first('last_name', '<span class="help-block">:message</span>') !!}</span>
 
 				</div>
 				
@@ -93,7 +100,7 @@
 
 					<i class="icon_mail_alt signUpIcon"></i>
 
-					<span class="text-danger">{!! $errors->first('phone_no', '<p class="help-block">:message</p>') !!}</span>
+					<span class="text-danger">{!! $errors->first('phone_no', '<span class="help-block">:message</span>') !!}</span>
 
 				</div>
 
@@ -106,7 +113,7 @@
 
 					<i class="icon_mail_alt signUpIcon"></i>
 
-					<span class="text-danger">{!! $errors->first('email', '<p class="help-block">:message</p>') !!}</span>
+					<span class="text-danger">{!! $errors->first('email', '<span class="help-block">:message</span>') !!}</span>
 
 				</div>
 
@@ -117,7 +124,7 @@
 					{{ Form::label(trans('messages.signup_page.YourPassword'), null, ['class' => 'signupLabel']) }}
 					{!! Form::password('password', ['class' => "form-control inputField $errors->has('password') ? 'has-error' : ''"]) !!}
 					<i class="icon_lock_alt signUpIcon"></i>
-					<span class="text-danger">{!! $errors->first('password', '<p class="help-block">:message</p>') !!}</span>
+					<span class="text-danger">{!! $errors->first('password', '<span class="help-block">:message</span>') !!}</span>
 				</div>
 				<div class="form-group">
 				
@@ -128,13 +135,13 @@
 
 
 					<i class="icon_lock_alt signUpIcon"></i>
-					<span class="text-danger">{!! $errors->first('password_confirmation', '<p class="help-block">:message</p>') !!}</span>
+					<span class="text-danger">{!! $errors->first('password_confirmation', '<span class="help-block">:message</span>') !!}</span>
 				</div>
 		
 
-			{!!  Form::submit(trans('messages.signup_page.FirstName'),['class'=>'btn_1 rounded full-width add_top_30 registerNow']) !!}
+			{!!  Form::submit(trans('messages.signup_page.RegisterNow'),['class'=>'btn_1 rounded full-width add_top_30 registerNow']) !!}
 
-				<div class="text-center add_top_10 signUpReg">@lang('messages.signup_page.AlreadyAccount') <strong><a href="login.html">@lang('messages.signup_page.SignIn')</a></strong></div>
+				<div class="text-center add_top_10 signUpReg">@lang('messages.signup_page.AlreadyAccount') <strong><a href="javascript:void(0)">@lang('messages.signup_page.SignIn')</a></strong></div>
 			{{ Form::close() }}
 			<div class="copy signupLabel">© {{date('Y')}} @lang('messages.signup_page.Foodnas')</div>
 		</aside>
@@ -146,10 +153,7 @@
     <script src="{{asset('frontend/js/common_scripts.js')}}"></script>
     <script src="{{asset('frontend/js/main_rtl.js')}}"></script>
     <script src="{{asset('frontend/js/validate.js')}}"></script>
-
-	
-	
-
+    
 	<!-- SPECIFIC SCRIPTS -->
     <script src="{{asset('frontend/js/pw_strenght.js')}}"></script>
 	
