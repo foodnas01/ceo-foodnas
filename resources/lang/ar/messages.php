@@ -113,7 +113,12 @@ return [
     'dashboard' => [
         'email'             =>  'البريد الإلكتروني',
         'password'          =>  'كلمه السر',
-        'show'              =>  'تبين'
+        'show'              =>  'تبين',
+        'ForgotPassword'    =>  'هل نسيت كلمة المرور',
+        'RememberMe'        =>  'تذكرنى',
+        'Login'             =>  'تسجيل الدخول',
+        'dontAccount'       =>  'ليس لديك حساب'
+        
     ]
 
 

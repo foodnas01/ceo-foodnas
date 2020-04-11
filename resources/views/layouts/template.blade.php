@@ -65,7 +65,7 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
     <!-- Sign In Popup -->
     <div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
         <div class="small-dialog-header">
-            <h3>Sign In</h3>
+            <h3>{{ @trans('messages.signup_page.SignIn') }}</h3>
         </div>
 
         <form method="POST" action="{{ route('front_login') }}">
@@ -108,19 +108,19 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
 
                 <div class="clearfix add_bottom_15">
                     <div class="checkboxes float-left">
-                        <label class="container_check">{{ __('Remember Me') }}
+                        <label class="container_check">{{ @trans('messages.dashboard.RememberMe') }} 
                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                           <span class="checkmark"></span>
                         </label>
                     </div>
                     <div class="float-right mt-1">
-                        <a id="forgot" href="javascript:void(0);">Forgot Password?</a>
+                        <a id="forgot" href="javascript:void(0);">{{ @trans('messages.dashboard.ForgotPassword') }}?</a>
                     </div>
                 </div>
-                <div class="text-center"><input type="submit" value="Log In" class="btn_1 full-width"></div>
+                <div class="text-center"><input type="submit" value="{{ @trans('messages.dashboard.Login') }}" class="btn_1 full-width"></div>
                 <div class="text-center">
-                    Don’t have an account? <a href="{{URL('signup')}}">Sign up</a>
+                    {{ @trans('messages.dashboard.dontAccount') }}? <a href="{{URL('signup')}}">{{ @trans('messages.Signup') }}</a>
                 </div>
                 <div id="forgot_pw">
                     <div class="form-group">

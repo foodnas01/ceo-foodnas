@@ -2,7 +2,7 @@
 
 
 @section('content')
-<div class="row">
+<!-- <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2>Role Management</h2>
@@ -13,7 +13,7 @@
             @endcan
         </div>
     </div>
-</div>
+</div> -->
 
 
 @if ($message = Session::get('success'))
@@ -26,5 +26,10 @@
 
 
 {!! $grid !!}
+
+
+<script type="text/javascript">
+    $(".card-body").find(".col-md-6:first").html('');
+</script>
 
 @endsection

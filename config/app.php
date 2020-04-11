@@ -185,7 +185,9 @@ return [
 
         Spatie\Permission\PermissionServiceProvider::class,
 
-        Collective\Html\HtmlServiceProvider::class,
+      /*  Collective\Html\HtmlServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class*/
+
 
 
     ],
@@ -242,6 +244,9 @@ return [
         //form package
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
+       /* 'Excel' => 'Maatwebsite\Excel\Facades\Excel',*/
+
+
 
     ],
 

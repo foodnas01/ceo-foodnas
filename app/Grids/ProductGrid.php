@@ -5,14 +5,14 @@ namespace App\Grids;
 use Closure;
 use Leantony\Grid\Grid;
 
-class UsersGrid extends Grid implements UsersGridInterface
+class ProductGrid extends Grid implements UsersGridInterface
 {
     /**
      * The name of the grid
      *
      * @var string
      */
-    protected $name = 'Users Managment';
+    protected $name = 'Product Managment';
 
     /**
      * List of buttons to be generated on the grid
@@ -55,20 +55,6 @@ class UsersGrid extends Grid implements UsersGridInterface
 		    ],
 		   
 
-            "first_name" => [
-                "search" => [
-                    "enabled" => true,
-                    "useFilterQuery" => true
-                ],
-            "filter" => [
-                    "enabled" => true,
-                    "query" => function($query, $columnName, $userInput) {
-                        return $query->where("first_name", "like", "%" . $userInput . "%");
-                            /*->orWhere("first_name", "like", "%" . $userInput . "%");*/
-                    }
-                ],
-            ],
-
 
             "name" => [
                 "search" => [
@@ -83,9 +69,7 @@ class UsersGrid extends Grid implements UsersGridInterface
                     }
                 ],
             ],
-		   
-
-            "last_name" => [
+             "detail" => [
                 "search" => [
                     "enabled" => true,
                     "useFilterQuery" => true
@@ -93,21 +77,7 @@ class UsersGrid extends Grid implements UsersGridInterface
             "filter" => [
                     "enabled" => true,
                     "query" => function($query, $columnName, $userInput) {
-                        return $query->where("last_name", "like", "%" . $userInput . "%");
-                            /*->orWhere("first_name", "like", "%" . $userInput . "%");*/
-                    }
-                ],
-            ],
-
-            "email" => [
-                "search" => [
-                    "enabled" => true,
-                    "useFilterQuery" => true
-                ],
-            "filter" => [
-                    "enabled" => true,
-                    "query" => function($query, $columnName, $userInput) {
-                        return $query->where("email", "like", "%" . $userInput . "%");
+                        return $query->where("detail", "like", "%" . $userInput . "%");
                             /*->orWhere("first_name", "like", "%" . $userInput . "%");*/
                     }
                 ],
@@ -123,12 +93,12 @@ class UsersGrid extends Grid implements UsersGridInterface
     public function setRoutes()
     {
         // searching, sorting and filtering
-        $this->setIndexRouteName('users.index');
+        $this->setIndexRouteName('products.index');
 
         // crud support
-        $this->setCreateRouteName('users.create');
-        $this->setViewRouteName('users.show');
-        $this->setDeleteRouteName('users.destroy');
+        $this->setCreateRouteName('products.create');
+        $this->setViewRouteName('products.show');
+        $this->setDeleteRouteName('products.destroy');
 
         // default route parameter
         $this->setDefaultRouteParameter('id');

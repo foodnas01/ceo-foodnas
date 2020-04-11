@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use DB;
-use App\Grids\UsersGrid;
+use App\Grids\RolesGrid;
 
 
 class RoleController extends Controller
@@ -40,9 +40,9 @@ class RoleController extends Controller
             ->with('i', ($request->input('page', 1) - 1) * 5);*/
 
              $query = Role::orderBy('id','ASC');
-        return (new UsersGrid())
+        return (new RolesGrid())
                     ->create(['query' => $query, 'request' => $request])
-                    ->renderOn('products.index');
+                    ->renderOn('roles.index');
 
 
     }
