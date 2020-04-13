@@ -32,7 +32,7 @@ class ProductGrid extends Grid implements UsersGridInterface
      *
      * @var bool
      */
-    protected $linkableRows = true;
+    protected $linkableRows = false;
 
     /**
     * Set the columns to be displayed.

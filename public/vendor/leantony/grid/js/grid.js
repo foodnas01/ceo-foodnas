@@ -43,6 +43,7 @@ var _grids = _grids || {};
         var confirmation = obj.data('trigger-confirm');
         var confirmationMessage = obj.data('confirmation-msg') || 'Are you sure?';
         var pjaxContainer = obj.data('pjax-target');
+        console.log(pjaxContainer);
         var refresh = obj.data('refresh-page');
         var isForm = obj.is('form');
 
@@ -53,6 +54,17 @@ var _grids = _grids || {};
               return;
             }
           }
+
+          $.ajaxSetup({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+          });
+          /*
+            console.log(obj.attr('href'));
+              return false;*/
+
+        
           $.ajax({
             method: isForm ? obj.attr('method') : obj.data('method') || 'POST',
             url: isForm ? obj.attr('action') : obj.attr('href'),
@@ -68,7 +80,9 @@ var _grids = _grids || {};
               }
             },
             success: function success(data) {
+             
               if (pjaxContainer) {
+                //console.log('sldjfsldkfjsdkjfsdkl');
                 $.pjax.reload({ container: pjaxContainer });
               }
             },
@@ -76,7 +90,9 @@ var _grids = _grids || {};
               if (typeof toastr !== 'undefined') {
                 toastr.error('An error occurred', 'Whoops!');
               } else {
-                alert('An error occurred');
+                console.log(data);
+                //location.reload();
+               // alert('An error occurred');
               }
             }
           });
@@ -98,6 +114,7 @@ var _grids = _grids || {};
           el.css({ 'cursor': 'pointer' });
           el.click(function (e) {
             setTimeout(function () {
+              console.log('OA<<');
               window.location = link;
             }, options.navigationDelay || 100);
           });

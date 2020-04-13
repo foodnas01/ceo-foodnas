@@ -10,7 +10,7 @@
       <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  -->
 
-    <title>{{ config('app.name', 'Laravel 5.8 User Roles and Permissions Tutorial') }}</title>
+    <title>{{ config('app.name', 'User Roles and Permissions') }}</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" ></script>
     <!-- Fonts -->
@@ -138,7 +138,7 @@
             $(".dropdown-menu").addClass("show");
                 let RandomN = Math.random();
                 console.log('HERERE'+RandomN)
-              // $(".dropdown-toggle").dropdown();
+             
 
             })
 
@@ -150,6 +150,9 @@
 		</script>
 		<!-- entry point for all scripts injected by the generated grids (required) -->
 		@stack('grid_js')
+
+         <?php // Session::forget('success01');?>
+
 
 
     </div>

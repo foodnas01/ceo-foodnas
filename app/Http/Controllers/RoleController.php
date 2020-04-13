@@ -55,6 +55,7 @@ class RoleController extends Controller
      */
     public function create()
     {
+       
         $permission = Permission::get();
         return view('roles.create',compact('permission'));
     }
@@ -153,7 +154,7 @@ class RoleController extends Controller
     public function destroy($id)
     {
         DB::table("roles")->where('id',$id)->delete();
-        return redirect()->route('roles.index')
-                        ->with('success','Role deleted successfully');
+        session()->put('successRole','Role deleted successfully');
+ 
     }
 }

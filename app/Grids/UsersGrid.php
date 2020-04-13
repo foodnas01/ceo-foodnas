@@ -32,7 +32,7 @@ class UsersGrid extends Grid implements UsersGridInterface
      *
      * @var bool
      */
-    protected $linkableRows = true;
+    protected $linkableRows = false;
 
     /**
     * Set the columns to be displayed.
@@ -156,6 +156,15 @@ class UsersGrid extends Grid implements UsersGridInterface
         // call `addRowButton` to add a row button
         // call `addToolbarButton` to add a toolbar button
         // call `makeCustomButton` to do either of the above, but passing in the button properties as an array
+
+       /* $this->editToolbarButton('create', [
+           'showModal' => true,
+           'dataAttributes' => [
+                // to optionally change the size of the modal. see https://getbootstrap.com/docs/4.0/components/modal/#optional-sizes
+               'modal-size' => 'modal-sm'
+           ]
+        ]);*/
+
 
         // call `editToolbarButton` to edit a toolbar button
         // call `editRowButton` to edit a row button
