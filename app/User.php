@@ -24,7 +24,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name','last_name','phone_no','email', 'password','created_by','updated_by','deleted_by'
+        'name','phone_no','email', 'password','created_by','updated_by','deleted_by'
     ];
 
     /**
@@ -51,5 +51,7 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\VerifyUser');
     }
+
+   
 
 }

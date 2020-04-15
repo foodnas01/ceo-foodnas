@@ -14,9 +14,13 @@ use Validator;
 use DB;
 use Auth;
 use Redirect;
+use Spatie\Permission\Models\Role;
+use App\Traits\GuestRole;
 
 class FrontloginController extends Controller
 {
+    use GuestRole;
+
     public function sign_up(){
     	return view('frontend.pages.register');
     }
@@ -86,28 +90,19 @@ class FrontloginController extends Controller
   
      public function register(RegisterRequest $request)
         {
-        //DB::enableQueryLog();
 
-    	//pending  task  :remember role & email form repalce
+          
         $data = $request->all();
-        //print_r($request->all());die;
         $data['password'] = Hash::make($request->password);
-       // print_r($data);die;
     	$user = User::create($data);
-        $laQuery = DB::getQueryLog();
-        #print_r($laQuery);die;
-        #echo $laQuery;die;
-        #print_r($user);die;
+        
+        $role = $this->getRole($roleName='Guest');
+        $user->assignRole([$role->id]);
         User::addBlameableColumns();
-
         $verifyUser = VerifyUser::create([
             'user_id' => $user->id,
             'token' => sha1(time())
         ]);
-
-
-
-
         $view = view("emails.verifyUser",compact('verifyUser','user'))->render();
         echo $view;die;
         return redirect()->back()

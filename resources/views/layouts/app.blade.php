@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
     <!-- date picker (required if you need date picker & date range filters) -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
-    <!-- grid's css (required) -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/leantony/grid/css/grid.css') }}" />
     
 
 
@@ -93,7 +91,6 @@
             </div>
         </main>
 
-        @include('leantony::modal.container')
 
         <!-- progress bar js (not required, but cool) -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
@@ -110,8 +107,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 		<!-- datepicker js (required for datepickers) -->
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-		<!-- required to supply js functionality for the grid -->
-		<script src="{{ asset('vendor/leantony/grid/js/grid.js') }}"></script>
 
 		<script>
 
@@ -148,12 +143,7 @@
 
 
 		</script>
-		<!-- entry point for all scripts injected by the generated grids (required) -->
-		@stack('grid_js')
-
-         <?php // Session::forget('success01');?>
-
-
+	
 
     </div>
 </body>

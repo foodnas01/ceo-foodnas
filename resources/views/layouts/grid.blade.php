@@ -44,7 +44,6 @@
             </div>
         </main>
 
-        @include('leantony::modal.container')
 
         <!-- progress bar js (not required, but cool) -->
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script> -->
@@ -100,7 +99,6 @@
 
 		</script>
 		<!-- entry point for all scripts injected by the generated grids (required) -->
-		@stack('grid_js')
 
      
 

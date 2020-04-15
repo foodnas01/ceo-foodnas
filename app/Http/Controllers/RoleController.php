@@ -9,7 +9,6 @@ use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use DB;
-use App\Grids\RolesGrid;
 
 
 class RoleController extends Controller
@@ -35,16 +34,9 @@ class RoleController extends Controller
      */
     public function index(Request $request)
     {
-       /* $roles = Role::orderBy('id','DESC')->paginate(5);
+        $roles = Role::orderBy('id','DESC')->paginate(5);
         return view('roles.index',compact('roles'))
-            ->with('i', ($request->input('page', 1) - 1) * 5);*/
-
-             $query = Role::orderBy('id','ASC');
-        return (new RolesGrid())
-                    ->create(['query' => $query, 'request' => $request])
-                    ->renderOn('roles.index');
-
-
+            ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
 

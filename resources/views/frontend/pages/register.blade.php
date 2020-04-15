@@ -63,34 +63,20 @@
 
 				<div class="form-group">
 					
-					{{ Form::label(trans('messages.signup_page.FirstName'), null, ['class' => 'signupLabel']) }}
+					{{ Form::label(trans('messages.signup_page.Name'), null, ['class' => 'signupLabel']) }}
 
 					
-					{!! Form::text('first_name', old('first_name', null), ['class' => "form-control inputField $errors->has('first_name') ? 'has-error' : ''"]) !!}
+					{!! Form::text('name', old('name', null), ['class' => "form-control inputField $errors->has('name') ? 'has-error' : ''"]) !!}
 
 
 					<i class="ti-user signUpIcon"></i>
 
-					<span class="text-danger">{!! $errors->first('first_name', '<span class="help-block">:message</span>') !!}</span>
+					<span class="text-danger">{!! $errors->first('name', '<span class="help-block">:message</span>') !!}</span>
 
 
 
 				</div>
-				<div class="form-group">
-					
-					
-					{{ Form::label(trans('messages.signup_page.LastName'), null, ['class' => 'signupLabel']) }}
-
-					
-
-					{!! Form::text('last_name', old('last_name', null), ['class' => "form-control inputField $errors->has('last_name') ? 'has-error' : ''"]) !!}
-
-
-					<i class="ti-user signUpIcon"></i>
-
-					<span class="text-danger">{!! $errors->first('last_name', '<span class="help-block">:message</span>') !!}</span>
-
-				</div>
+				
 				
 				<div class="form-group">
 				

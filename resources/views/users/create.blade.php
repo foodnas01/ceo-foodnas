@@ -1,4 +1,4 @@
-@extends('layouts.grid')
+@extends('layouts.app')
 
 
 @section('content')

@@ -99,8 +99,7 @@ return [
     ],
 
     'signup_page' => [
-        'FirstName'         => 'الاسم الأول',
-        'LastName'          =>  'اسمك الاخير',
+        'Name'              => 'الاسم',
         'YourPhone'         => 'رقم الهاتف',
         'YourEmail'         => 'بريدك الالكتروني',
         'YourPassword'      => 'كلمه السر',

@@ -10,11 +10,14 @@ use App\User;
 use Spatie\Permission\Models\Role;
 use DB;
 use Hash;
-use App\Grids\UsersGrid;
+use App\Traits\GuestRole;
+
+use Spatie\Permission\Models\Permission;
 
 
 class UserController extends Controller
 {
+    use GuestRole;
     /**
      * Display a listing of the resource.
      *
@@ -22,14 +25,14 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-       /* $data = User::orderBy('id','DESC')->paginate(5);
-        return view('users.index',compact('data'))
-            ->with('i', ($request->input('page', 1) - 1) * 5);*/
 
-        $query = User::orderBy('id','ASC');
-        return (new UsersGrid())
-                    ->create(['query' => $query, 'request' => $request])
-                    ->renderOn('users.index');
+       /* $returnResponse = $this->getRole();
+        print_r($returnResponse->id);die;*/
+        $data = User::orderBy('id','DESC')->paginate(5);
+        return view('users.index',compact('data'))
+            ->with('i', ($request->input('page', 1) - 1) * 5);
+
+    
 
 
     }
