@@ -31,10 +31,6 @@ class UserController extends Controller
         $data = User::orderBy('id','DESC')->paginate(5);
         return view('users.index',compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
-
-    
-
-
     }
 
 
@@ -156,6 +152,7 @@ class UserController extends Controller
     public function destroy($id)
     {
         User::find($id)->delete();
-        session()->put('success01','User deleted successfully');
+        return redirect()->route('users.index')
+                        ->with('success','User deleted successfully');
     }
 }

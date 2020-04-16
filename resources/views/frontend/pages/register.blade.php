@@ -9,8 +9,12 @@
     <meta name="author" content="Ansonika">
      <title>فودناس</title>
 
+  
+
     <!-- Favicons-->
-    <link rel="shortcut icon" href="{{ asset('img/favico.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('frontend/img/favico.png')}}" type="image/x-icon">
+
+
     <link rel="apple-touch-icon" type="image/x-icon" href="{{ asset('img/apple-touch-icon-57x57-precomposed.png')}}">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ asset('img/apple-touch-icon-72x72-precomposed.png')}}">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ asset('img/apple-touch-icon-114x114-precomposed.png')}}">
@@ -30,6 +34,13 @@
     	
     	.registerNow{
 	    	font-size: 18px !important;
+		}
+
+		.required {
+ 
+		    color: red;
+		    padding-right: 5px;
+		   
 		}
 
     </style>
@@ -64,6 +75,7 @@
 				<div class="form-group">
 					
 					{{ Form::label(trans('messages.signup_page.Name'), null, ['class' => 'signupLabel']) }}
+					<span class="required">*</span>
 
 					
 					{!! Form::text('name', old('name', null), ['class' => "form-control inputField $errors->has('name') ? 'has-error' : ''"]) !!}
@@ -81,6 +93,7 @@
 				<div class="form-group">
 				
 					{{ Form::label(trans('messages.signup_page.YourPhone'), null, ['class' => 'signupLabel']) }}
+					<span class="required">*</span>
 
 					{!! Form::text('phone_no', old('phone_no', null), ['class' => "form-control inputField $errors->has('phone_no') ? 'has-error' : ''"]) !!}
 
@@ -94,6 +107,7 @@
 				<div class="form-group">
 				
 					{{ Form::label(trans('messages.signup_page.YourEmail'), null, ['class' => 'signupLabel']) }}
+					<span class="required">*</span>
 
 					{!! Form::email('email', old('email', null), ['class' => "form-control inputField $errors->has('email') ? 'has-error' : ''"]) !!}
 
@@ -108,6 +122,7 @@
 					
 
 					{{ Form::label(trans('messages.signup_page.YourPassword'), null, ['class' => 'signupLabel']) }}
+					<span class="required">*</span>
 					{!! Form::password('password', ['class' => "form-control inputField $errors->has('password') ? 'has-error' : ''"]) !!}
 					<i class="icon_lock_alt signUpIcon"></i>
 					<span class="text-danger">{!! $errors->first('password', '<span class="help-block">:message</span>') !!}</span>
@@ -115,6 +130,7 @@
 				<div class="form-group">
 				
 					{{ Form::label(trans('messages.signup_page.CnfmPassword'), null, ['class' => 'signupLabel']) }}
+					<span class="required">*</span>
 
 
 					{!! Form::password('password_confirmation', ['class' => "form-control inputField $errors->has('password_confirmation') ? 'has-error' : ''"]) !!}

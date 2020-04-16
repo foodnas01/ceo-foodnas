@@ -1,0 +1,31 @@
+<style type="text/css">
+  
+  div.dt-buttons {
+    position: relative;
+    float: right;
+}
+
+.dataTables_wrapper .dataTables_filter {
+     float: left; 
+     text-align: left; 
+}
+button.dt-button.buttons-collection.btn.btn-outline-success.dropdown-toggle {
+    color: #fff;
+    background-color: #545b62;
+    border-color: #4e555b;
+    background: #545b62;
+    width: 104px;
+    font-size: 14px;
+}
+
+div.dt-buttons {
+  float: left;
+  margin-bottom: 15px;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+}
+
+</style>

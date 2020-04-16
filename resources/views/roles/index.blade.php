@@ -24,11 +24,12 @@
 
 
 <table class="table table-bordered">
-  <tr>
+  <thead>
      <th>No</th>
      <th>Name</th>
      <th width="280px">Action</th>
-  </tr>
+  </thead>
+  <tbody>
     @foreach ($roles as $key => $role)
     <tr>
         <td>{{ ++$i }}</td>
@@ -46,6 +47,7 @@
         </td>
     </tr>
     @endforeach
+    </tbody>
 </table>
 
 

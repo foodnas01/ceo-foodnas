@@ -10,7 +10,13 @@
       <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  -->
 
-    <title>{{ config('app.name', 'User Roles and Permissions') }}</title>
+
+     <title>فودناس</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="{{asset('frontend/img/favico.png')}}" type="image/x-icon">
+
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" ></script>
     <!-- Fonts -->
@@ -23,11 +29,19 @@
     <!-- font awesome (required) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <!-- progress bar (not required, but cool) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/nprogress.css') }}" />
     <!-- bootstrap (required) -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
     <!-- date picker (required if you need date picker & date range filters) -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/daterangepicker.css') }}"/>
+
+   <!--  <link rel="stylesheet" href="{{ asset('frontend/css/jquery.dataTables.min.css') }}"> -->
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css">
+
+    @yield('datatable_custom')
+
     
 
 
@@ -93,20 +107,34 @@
 
 
         <!-- progress bar js (not required, but cool) -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+		<script src="{{ asset('frontend/js/nprogress.min.js') }}"></script>
 		<!-- moment js (required by datepicker library) -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+		<script src="{{ asset('frontend/js/moment.min.js') }}"></script>
 		
 		<!-- popper js (required by bootstrap) -->
-		<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+		<script src="{{ asset('frontend/js/popper.min.js') }}"></script>
 
 		<!-- bootstrap js (required) -->
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="{{ asset('frontend/js/popper.min.js') }}"></script>
 		
         <!-- pjax js (required) -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+		<script src="{{ asset('frontend/js/jquery.pjax.min.js') }}"></script>
 		<!-- datepicker js (required for datepickers) -->
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+		<script type="text/javascript" src="{{ asset('frontend/js/daterangepicker.min.js') }}"></script>
+
+        
+        <!-- datatable js (required for datatable) -->
+        <script src = "{{ asset('frontend/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('frontend/js/dataTables.buttons.min.js') }}"></script>
+        <script src="{{ asset('frontend/js/buttons.flash.min.js') }}"></script>
+        <script src="{{ asset('frontend/js/jszip.min.js') }}"></script>
+        <script src="{{ asset('frontend/js/pdfmake.min.js') }}"></script>
+        <script src="{{ asset('frontend/js/vfs_fonts.js') }}"></script>
+        <script src="{{ asset('frontend/js/pdfmake.min.js') }}"></script>
+        <script src="{{ asset('frontend/js/vfs_fonts.js') }}"></script>
+        <script src="{{ asset('frontend/js/buttons.html5.min.js') }}"></script>
+        <script src="{{ asset('frontend/js/buttons.print.min.js') }}"></script>
+
 
 		<script>
 
@@ -125,23 +153,6 @@
 		    $(document).on('pjax:end', function () {
 		        NProgress.done();
 		    });
-
-            $(document).ready(function() {
-            
-         $("#mycls").click(function(e){
-            console.log('sdfsfsfs')
-            $(".dropdown-menu").addClass("show");
-                let RandomN = Math.random();
-                console.log('HERERE'+RandomN)
-             
-
-            })
-
-            
-});
-
-
-
 		</script>
 	
 
