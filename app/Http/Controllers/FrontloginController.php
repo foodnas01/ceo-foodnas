@@ -75,7 +75,7 @@ class FrontloginController extends Controller
 
             // attempt to do the login
             if (Auth::attempt($userdata)) {
-                return Redirect::to('/admin/home');
+                return Redirect::to('home');
 
             } else {  
                 \Session::put('invalidDetails', "Sorry! Email or password is not valid."); 
@@ -85,6 +85,10 @@ class FrontloginController extends Controller
             }
 
         }
+    }
+
+    public function home(){
+        return view('fronthome');
     }
 
   

@@ -20,36 +20,45 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Name:</strong>
-            {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
+            <strong>{{ __('Name') }}:</strong>
+            {!! Form::text('name', null, array('required'=> 'required','class' => 'form-control')) !!}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Email:</strong>
-            {!! Form::text('email', null, array('placeholder' => 'Email','class' => 'form-control')) !!}
+            <strong>{{ __('Email') }}:</strong>
+            {!! Form::text('email', null, array('required'=> 'required','class' => 'form-control')) !!}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>{{ __('Phone') }}:</strong>
+            {!! Form::text('phone_no', null, array('required'=> 'required','class' => 'form-control ')) !!}
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>{{ __('Password') }}:</strong>
+            {!! Form::password('password', array('required'=> 'required','class' => 'form-control ')) !!}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Password:</strong>
-            {!! Form::password('password', array('placeholder' => 'Password','class' => 'form-control')) !!}
+            <strong>{{ __('Confirm Password') }}:</strong>
+            {!! Form::password('confirm-password', array('required'=> 'required','class' => 'form-control ')) !!}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Confirm Password:</strong>
-            {!! Form::password('confirm-password', array('placeholder' => 'Confirm Password','class' => 'form-control')) !!}
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Role:</strong>
-            {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
+            <strong>{{ __('Role') }}:</strong>
+            {!! Form::select('roles[]', $roles,[], array('required'=> 'required','class' => 'form-control','multiple')) !!}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 text-right">
-        <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i>&nbsp;Save</button>
+        <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i>&nbsp;{{ __('Save') }}</button>
     </div>
 </div>
 {!! Form::close() !!}

@@ -66,13 +66,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                        @else
-                            <li><a class="nav-link" href="{{ route('users.index') }}">{{ __('Manage Users') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('roles.index') }}">{{ __('Manage Role') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('products.index') }}">{{ __('Manage Product') }}</a></li>
+                        
                             <li class="mycls nav-item dropdown" id="mycls">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->email }} <span class="caret"></span>
@@ -92,7 +86,6 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
                     </ul>
                 </div>
             </div>

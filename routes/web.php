@@ -25,6 +25,7 @@ Route::get('/', function () {
 
 
 Route::get('/about', 'AboutController@index');
+Route::get('/home',  'FrontloginController@home');
 Route::get('/signup', 'FrontloginController@sign_up');
 Route::post('/login/register', 'FrontloginController@register')->name('front_register');
 Route::post('/login/front_login', 'FrontloginController@front_login')->name('front_login');

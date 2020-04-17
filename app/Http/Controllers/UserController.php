@@ -28,11 +28,10 @@ class UserController extends Controller
 
        /* $returnResponse = $this->getRole();
         print_r($returnResponse->id);die;*/
-        $data = User::orderBy('id','DESC')->paginate(5);
+        $data = User::orderBy('id','DESC')->paginate(100);
         return view('users.index',compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
-
 
     /**
      * Show the form for creating a new resource.

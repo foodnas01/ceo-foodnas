@@ -81,7 +81,7 @@
 					{!! Form::text('name', old('name', null), ['class' => "form-control inputField $errors->has('name') ? 'has-error' : ''"]) !!}
 
 
-					<i class="ti-user signUpIcon"></i>
+					<!-- <i class="ti-user signUpIcon"></i> -->
 
 					<span class="text-danger">{!! $errors->first('name', '<span class="help-block">:message</span>') !!}</span>
 
@@ -97,7 +97,7 @@
 
 					{!! Form::text('phone_no', old('phone_no', null), ['class' => "form-control inputField $errors->has('phone_no') ? 'has-error' : ''"]) !!}
 
-					<i class="icon_mail_alt signUpIcon"></i>
+					<!-- <i class="icon_mail_alt signUpIcon"></i> -->
 
 					<span class="text-danger">{!! $errors->first('phone_no', '<span class="help-block">:message</span>') !!}</span>
 
@@ -111,7 +111,7 @@
 
 					{!! Form::email('email', old('email', null), ['class' => "form-control inputField $errors->has('email') ? 'has-error' : ''"]) !!}
 
-					<i class="icon_mail_alt signUpIcon"></i>
+					<!-- <i class="icon_mail_alt signUpIcon"></i> -->
 
 					<span class="text-danger">{!! $errors->first('email', '<span class="help-block">:message</span>') !!}</span>
 
@@ -124,7 +124,7 @@
 					{{ Form::label(trans('messages.signup_page.YourPassword'), null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 					{!! Form::password('password', ['class' => "form-control inputField $errors->has('password') ? 'has-error' : ''"]) !!}
-					<i class="icon_lock_alt signUpIcon"></i>
+					<!-- <i class="icon_lock_alt signUpIcon"></i> -->
 					<span class="text-danger">{!! $errors->first('password', '<span class="help-block">:message</span>') !!}</span>
 				</div>
 				<div class="form-group">
@@ -136,7 +136,7 @@
 					{!! Form::password('password_confirmation', ['class' => "form-control inputField $errors->has('password_confirmation') ? 'has-error' : ''"]) !!}
 
 
-					<i class="icon_lock_alt signUpIcon"></i>
+					<!-- <i class="icon_lock_alt signUpIcon"></i> -->
 					<span class="text-danger">{!! $errors->first('password_confirmation', '<span class="help-block">:message</span>') !!}</span>
 				</div>
 		
