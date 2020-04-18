@@ -27,5 +27,17 @@ div.dt-buttons {
     float: right;
     text-align: right;
 }
+.form-group{
+  text-align: right;
+}
+.modal-header .close {
+  margin-left: 0px !important;
+}
 
+#btnDelete{
+  margin-left: 10px;
+}
+#popupBody{
+  text-align: right;
+}
 </style>

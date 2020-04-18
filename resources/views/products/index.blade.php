@@ -7,7 +7,7 @@
 @section('content')
     @if ($message = Session::get('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-          <strong>Success!</strong> {{ $message }}
+          <strong>{{ __('Success') }}!</strong> {{ $message }}
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -21,11 +21,11 @@
         <div class="card">
             <div class="card-header">
                 <div class="pull-left">
-                    <h4 class="grid-title">Product Management</h4>
+                    <h4 class="grid-title">{{ __('Product Management') }}</h4>
                 </div>
                 <div class="pull-right">
                     <a href="javascript:void(0)" title="add new role" class="btn btn-success show_modal_form">
-                        <i class="fa fa-plus-circle"></i> Create
+                        <i class="fa fa-plus-circle"></i> {{ __('Create') }}
                     </a>
                 </div>
 
@@ -36,10 +36,10 @@
                     <table id="datatable1" class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Name</th>
-                                <th>Details</th>
-                                <th width="280px">Action</th>
+                                <th>{{ __('No') }}</th>
+                                <th>{{ __('Name') }}</th>
+                                <th>{{ __('Details') }}</th>
+                                <th width="280px">{{ __('Action') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,12 +52,12 @@
                                     <div class="pull-left">
                                         @can('product-edit')
                                         <a href="javascript:void(0)" data-url="{{ route('products.edit',$product->id) }}" onclick="editPopup(this,'{{$product->id}}')" title="update record" class="btn btn-outline-primary btn-sm grid-row-button">
-                                            <i class="fa fa-eye"></i> Edit
+                                            <i class="fa fa-eye"></i> {{ __('Edit') }}
                                         </a>
                                         @endcan 
                                         @can('product-delete') {!! Form::open(['method' => 'DELETE','route' => ['products.destroy', $product->id],'id'=>$product->id,'style'=>'display:inline']) !!}
                                         <button type="button" onclick="deletePopup(this,'{{$product->id}}')" class="data-remote grid-row-button btn btn-outline-danger btn-sm">
-                                            <i class="fa fa-trash"></i> Delete
+                                            <i class="fa fa-trash"></i> {{ __('Delete') }}
                                         </button>
                                         @endcan {!! Form::close() !!}
 
@@ -83,12 +83,15 @@
 <script type="text/javascript">
     $(document).ready(function() {
         var table = $('#datatable1').DataTable({
+            "language": {
+                "url": "{{asset('lang/Arabic.json')}}"
+            },
             dom: 'Bfrtip',
             extend: 'collection',
             buttons: [{
                         extend: 'collection',
                         autoClose: 'true',
-                        text: '     Export',
+                        text: '{{ __('Export') }}',
                         tag: 'span',
 
                         className: 'fa fa-download btn btn-primary dropdown-toggle',
@@ -124,11 +127,9 @@
             url: "{{ route('products.create') }}",
             success: function(data) {
                 console.log(data);
-
-                $("#popupTitle").html("Create Product");
+                $("#popupTitle").html("{{ __('Create Product') }}");
                 $("#modalPoppup").modal("show");
                 $("#popupBody").html(data);
-
             }
         });
     });
@@ -139,7 +140,7 @@
             type: 'GET',
             url: $(obj).attr("data-url"),
             success: function(data) {
-                $("#popupTitle").html("Update Product");
+                $("#popupTitle").html("{{ __('Update Product') }}");
                 $("#modalPoppup").modal("show");
                 $("#popupBody").html(data);
             }
@@ -147,12 +148,12 @@
     }
 
     deletePopup = (obj, id) => {
-        $("#popupTitle").html("Delete Product");
+        $("#popupTitle").html("{{ __('Delete Product') }}");
         $("#modalPoppup").modal("show");
 
-        let myHtml = '<div> Are You sure you want to delete the product ?<br />';
-        myHtml += '<div class="modal-footer" style="0px solid;margin-top:15px;"><button type="button" onclick="confirmDelete(' + id + ')" class="btn btn-primary">Yes</button>';
-        myHtml += '<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>';
+        let myHtml = '<div> {{ __("Are You sure you want to delete the product ?") }}<br />';
+        myHtml += '<div class="modal-footer" style="0px solid;margin-top:15px;"><button type="button" id="btnDelete" onclick="confirmDelete(' + id + ')" class="btn btn-primary">{{ __("Yes") }}</button>';
+        myHtml += '<button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __("No") }}</button>';
         myHtml += '</div></div>';
         $("#popupBody").html(myHtml);
     }

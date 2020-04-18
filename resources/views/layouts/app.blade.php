@@ -46,7 +46,7 @@
 
 
 </head>
-<body>
+<body style="direction: rtl">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">

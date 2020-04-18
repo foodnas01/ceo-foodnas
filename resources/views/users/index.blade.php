@@ -8,10 +8,9 @@
 @section('content')
 
 
-
 @if ($message = Session::get('success'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Success!</strong> {{ $message }}
+  <strong>{{ __('Success') }}!</strong> {{ $message }}
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -194,7 +193,7 @@
     $("#modalPoppup").modal("show");
 
      let myHtml = '<div> {{ __("Are You sure you want to delete the user ?") }}<br />';
-        myHtml += '<div class="modal-footer" style="0px solid;margin-top:15px;"><button type="button" onclick="confirmDelete('+id+')" class="btn btn-primary">{{ __("Yes") }}</button>';
+        myHtml += '<div class="modal-footer" style="0px solid;margin-top:15px;"><button type="button" id="btnDelete" onclick="confirmDelete('+id+')" class="btn btn-primary">{{ __("Yes") }}</button>';
         myHtml += '<button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __("No") }}</button>';
         myHtml   += '</div></div>';
     $("#popupBody").html(myHtml);

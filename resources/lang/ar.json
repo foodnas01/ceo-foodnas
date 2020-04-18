@@ -36,6 +36,29 @@
   "Permission"    : "الإذن",
   "Are You sure you want to delete the role ?": "هل أنت متأكد أنك تريد حذف الدور؟",
   "Create Role":  "إنشاء دور",
-  "Update Role":  "تحديث الدور"
+  "Update Role":  "تحديث الدور",
+  "Permission": "الإذن",
+  "Delete Role" : "حذف الدور",
+  "User created successfully": "تم إنشاء المستخدم بنجاح",
+  "User updated successfully":  "تم تحديث المستخدم بنجاح",
+  "User deleted successfully":  "تم حذف المستخدم بنجاح",
+  "Success"                  :  "نجاح",
+  "Role created successfully":  "تم إنشاء الدور بنجاح",
+  "Role updated successfully":  "تم تحديث الدور بنجاح",
+  "Role deleted successfully":  "تم حذف الدور بنجاح",
+  "Product Management"       :  "ادارة المنتج",
+  "Details"                  :  "تفاصيل",
+  "Create Product"           :  "إنشاء منتج",
+  "Are You sure you want to delete the product ?": "هل أنت متأكد أنك تريد حذف المنتج؟",
+  "Detail"                   :  "التفاصيل",
+  "Product updated successfully": "تم تحديث المنتج بنجاح",
+  "Product created successfully": "تم إنشاء المنتج بنجاح.",
+  "Product deleted successfully":"تم حذف المنتج بنجاح.",
+  "Delete Product"              : "حذف المنتج",
+  "Update Product"           :    "تحديث المنتج",
+  "Create Product"           :    "إنشاء منتج",
+  "Reset Password"           :  "إعادة تعيين كلمة المرور",
+  "Send Password Reset Link"  : "إرسال رابط إعادة تعيين كلمة السر"
+
 
 }

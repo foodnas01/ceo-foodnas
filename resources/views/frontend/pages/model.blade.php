@@ -1,4 +1,4 @@
-<div class="modal" id="modalPoppup" tabindex="-1" role="dialog">
+<div style="direction: rtl;" class="modal" id="modalPoppup" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
