@@ -90,7 +90,12 @@ class FrontloginController extends Controller
     }
 
     public function home(){
-        return view('fronthome');
+        if (Auth::user()) {   // Check is user logged in
+           return view('fronthome');
+        } else {
+            return redirect('/')->with('warning', __("You can't access here!"));
+        
+        }  
     }
 
   

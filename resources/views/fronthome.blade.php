@@ -9,6 +9,8 @@
     </style>
 @stop
 @section('content')
+
+<body class="rtl">
     <main>
         
         <section class="hero_in general">
@@ -350,6 +352,7 @@
             <!-- /container -->
         </div>
     </main>
+</body>
 
         <!-- Conent Section end -->
 @endsection
