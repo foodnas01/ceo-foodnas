@@ -1,5 +1,25 @@
 @extends('layouts.app')
 
+<style type="text/css">
+    
+    ul.navbar-nav.ml-auto{
+        margin-right: 40em !important;
+    }
+
+    .checkboxRem{
+        padding-left: 0.59rem !important;
+    }
+    
+    .btnCls{
+            margin-right: 20px !important;
+    }
+    .card-header{
+            text-align: right;
+    }
+
+
+
+</style>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -41,9 +61,9 @@
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
+                                <div class="form-check checkboxRem">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
@@ -52,7 +72,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-9 offset-md-4">
+                            <div class="col-md-9 offset-md-4 btnCls">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>

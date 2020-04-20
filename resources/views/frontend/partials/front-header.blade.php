@@ -17,11 +17,17 @@
         </a>
         <nav id="menu" class="main-menu">
             <ul>
-                
-                <li class="registerHost"><span><a href="#0" >{{ __('messages.RegisterHost') }}</a></span></li>
-                <li class="registerHost"><span><a href="#sign-in-dialog" id="sign-in" class="login" >{{ __('messages.Entry') }}</a></span></li>
+                <li class="registerHost activeCls"><span >
+                 <a class="dropdown-item" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a></a></span></li>
 
-                <li class="registerHost activeCls"><span ><a href="{{ url('/signup') }}" >{{ __('messages.Signup') }}</a></span></li>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </ul>
         </nav>
     </header>

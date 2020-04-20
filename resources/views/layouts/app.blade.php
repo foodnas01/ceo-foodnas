@@ -35,6 +35,8 @@
     <!-- date picker (required if you need date picker & date range filters) -->
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/daterangepicker.css') }}"/>
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/headercss.css') }}"/>
+
    <!--  <link rel="stylesheet" href="{{ asset('frontend/css/jquery.dataTables.min.css') }}"> -->
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">

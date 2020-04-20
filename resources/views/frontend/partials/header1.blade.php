@@ -21,7 +21,7 @@
                 <li class="registerHost"><span><a href="#0" >{{ __('messages.RegisterHost') }}</a></span></li>
                 <li class="registerHost"><span><a href="#sign-in-dialog" id="sign-in" class="login" >{{ __('messages.Entry') }}</a></span></li>
 
-                <li class="registerHost activeCls"><span ><a href="#0" >{{ __('messages.Signup') }}</a></span></li>
+                <li class="registerHost activeCls"><span ><a href="{{ url('/signup') }}" >{{ __('messages.Signup') }}</a></span></li>
             </ul>
         </nav>
     </header>

@@ -711,10 +711,12 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/jquery.toast.css') }}" />
      <script src="{{ asset('frontend/js/jquery.toast.js') }}"></script>
     <script type="text/javascript">
+
+        
         <?php
             if(Session::has('status')){ ?>
                 $.toast({
-                    heading: 'Success',
+                    heading: "{{ __('Success') }}",
                     text: '<?php echo Session::get('status'); ?>',
                     showHideTransition: 'slide',
                     position: 'top-center',
@@ -726,7 +728,7 @@
             if(Session::has('warning')){ ?>
 
                 $.toast({
-                    heading: 'Warning',
+                    heading: "{{ __('Warning') }}",
                     text: '<?php echo Session::get('warning'); ?>',
                     showHideTransition: 'slide',
                     position: 'top-center',

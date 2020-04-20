@@ -40,4 +40,8 @@ div.dt-buttons {
 #popupBody{
   text-align: right;
 }
+
+.fa-download:before {
+    margin-left: 10px !important;
+}
 </style>

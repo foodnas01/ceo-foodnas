@@ -33,14 +33,14 @@ class FrontloginController extends Controller
         if(!$user->verified) {
           $verifyUser->user->verified = 1;
           $verifyUser->user->save();
-          $status = "Your e-mail is verified. You can now login.";
+          $status = __('Your e-mail is verified. You can now login.');
         } else {
-          $status = "Your e-mail is already verified. You can now login.";
+          $status = __('Your e-mail is already verified. You can now login.');
         }
       } else {
-        \Session::put('warning', "Sorry your email cannot be identified.");
+        \Session::put('warning', __('Sorry your email cannot be identified.'));
 
-        return redirect('/')->with('warning', "Sorry your email cannot be identified.");
+        return redirect('/')->with('warning', __('Sorry your email cannot be identified.'));
       }
       \Session::put('status', $status);
       return redirect('/')->with('status', $status);
@@ -70,7 +70,9 @@ class FrontloginController extends Controller
             // create our user data for the authentication
             $userdata = array(
                 'email'     => $request->email,
-                'password'  => $request->password
+                'password'  => $request->password,
+                'verified'  => 1
+
             );
 
             // attempt to do the login
@@ -78,7 +80,7 @@ class FrontloginController extends Controller
                 return Redirect::to('home');
 
             } else {  
-                \Session::put('invalidDetails', "Sorry! Email or password is not valid."); 
+                \Session::put('invalidDetails', __('Sorry! Email or password is not valid.')); 
                 // validation not successful, send back to form 
                // return Redirect::to('/');
                 return Redirect::back()->withErrors($validator)->withInput($request->all());
@@ -107,9 +109,21 @@ class FrontloginController extends Controller
             'user_id' => $user->id,
             'token' => sha1(time())
         ]);
-        $view = view("emails.verifyUser",compact('verifyUser','user'))->render();
-        echo $view;die;
+        //$view = view("emails.verifyUser",compact('verifyUser','user'))->render();
+        //echo $view;die;
+
+            $to_name  = $request->name;
+            //$to_email = 'motivatepakistan@gmail.com';
+            $to_email = $request->email;
+            $token    = $user->verifyUser->token;
+
+            $data = array('name'=>$request->name, "body" => __('Verify Signup Email'),"token"=>$token);
+            \Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)
+            ->subject(__('Verify Signup Email'));
+            $message->from('foodnas@gmail.com',__('Verify Signup Email'));
+            });
         return redirect()->back()
-                        ->with('success','User has been created successfully.');
+                        ->with('success',__('Verification email has been sent to you please verify!'));
     }
 }

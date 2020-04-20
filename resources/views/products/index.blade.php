@@ -20,10 +20,10 @@
     <div class="col-md-12 col-xs-12 col-sm-12">
         <div class="card">
             <div class="card-header">
-                <div class="pull-left">
+                <div class="pull-right">
                     <h4 class="grid-title">{{ __('Product Management') }}</h4>
                 </div>
-                <div class="pull-right">
+                <div class="pull-left">
                     <a href="javascript:void(0)" title="add new role" class="btn btn-success show_modal_form">
                         <i class="fa fa-plus-circle"></i> {{ __('Create') }}
                     </a>

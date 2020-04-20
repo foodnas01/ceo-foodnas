@@ -1,5 +1,10 @@
 @extends('layouts.app')
-
+<style type="text/css">
+    
+    .card{
+        text-align: right;
+    }
+</style>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
