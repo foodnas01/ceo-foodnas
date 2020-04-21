@@ -31,14 +31,11 @@ Route::post('/login/register', 'FrontloginController@register')->name('front_reg
 Route::post('/login/front_login', 'FrontloginController@front_login')->name('front_login');
 
 
-
+Route::get('/pages/{mypage?}','FrontloginController@pages');
 
 Route::group(['prefix' => 'admin'], function () {
 
 	Auth::routes();
-
-
-
 	Route::group(['middleware' => ['auth']], function() {
 		Route::get('/home', 'HomeController@index')->name('home');
 	    Route::resource('roles','RoleController');

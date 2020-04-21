@@ -46,6 +46,10 @@ class FrontloginController extends Controller
       return redirect('/')->with('status', $status);
     }
 
+    function pages($mypage){
+        echo view("frontend.pages.allPages",compact('mypage'))->render();
+    }
+
     function front_login(Request $request){
 
         // validate the info, create rules for the inputs
@@ -56,8 +60,6 @@ class FrontloginController extends Controller
 
         // run the validation rules on the inputs from the form
         $validator = Validator::make($request->all(), $rules);
-
-
         // if the validator fails, redirect back to the form
         if ($validator->fails()) {
             
@@ -66,36 +68,37 @@ class FrontloginController extends Controller
                 ->withErrors($validator) // send back all errors to the login form
                 ->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
         } else {
-
             // create our user data for the authentication
             $userdata = array(
                 'email'     => $request->email,
                 'password'  => $request->password,
                 'verified'  => 1
-
             );
+            $user = User::where('email', '=', $request->email)
+             ->where('verified', '=', 1)->first();
+             if (!$user) {
 
-            // attempt to do the login
-            if (Auth::attempt($userdata)) {
-                return Redirect::to('home');
-
-            } else {  
-                \Session::put('invalidDetails', __('Sorry! Email or password is not valid.')); 
-                // validation not successful, send back to form 
-               // return Redirect::to('/');
+               \Session::put('invalidDetails', __('Sorry! Email or password is not valid.')); 
                 return Redirect::back()->withErrors($validator)->withInput($request->all());
-            }
-
+             }else{
+                 if (Hash::check($request->password, $user->password)) {
+                    \Session::put('isLoggedIn', 1); 
+                    return Redirect::to('home');   
+                 }else{
+                     \Session::put('invalidDetails', __('Sorry! Email or password is not valid.')); 
+                    return Redirect::back()->withErrors($validator)->withInput($request->all());               
+                 }
+             }
         }
     }
 
     public function home(){
-        if (Auth::user()) {   // Check is user logged in
-           return view('fronthome');
-        } else {
+        if(\Session::get('isLoggedIn')){
+            return view('fronthome');
+        }else{
             return redirect('/')->with('warning', __("You can't access here!"));
-        
-        }  
+        }
+         
     }
 
   

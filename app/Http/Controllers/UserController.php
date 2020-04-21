@@ -23,11 +23,16 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     function __construct()
+    {
+        $this->middleware('guestMiddle');
+    }
     public function index(Request $request)
     {
 
-       /* $returnResponse = $this->getRole();
-        print_r($returnResponse->id);die;*/
+        /*$returnResponse = $this->getRole();
+        print_r($returnResponse);die;*/
         $data = User::orderBy('id','DESC')->paginate(100);
         return view('users.index',compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);

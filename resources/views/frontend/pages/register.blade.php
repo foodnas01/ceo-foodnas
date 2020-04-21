@@ -109,7 +109,7 @@
 					{{ Form::label(trans('messages.signup_page.YourEmail'), null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 
-					{!! Form::email('email', old('email', null), ['class' => "form-control inputField $errors->has('email') ? 'has-error' : ''"]) !!}
+					{!! Form::text('email', old('email', null), ['class' => "form-control inputField $errors->has('email') ? 'has-error' : ''"]) !!}
 
 					<!-- <i class="icon_mail_alt signUpIcon"></i> -->
 
