@@ -108,7 +108,7 @@ class FrontloginController extends Controller
           
         $data = $request->all();
         $data['password'] = Hash::make($request->password);
-    	$user = User::create($data);
+    	  $user = User::create($data);
         
         $role = $this->getRole($roleName='Guest');
         $user->assignRole([$role->id]);
@@ -129,7 +129,7 @@ class FrontloginController extends Controller
             \Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
             ->subject(__('Verify Signup Email'));
-            $message->from('foodnas@gmail.com',__('Verify Signup Email'));
+            $message->from('no-reply@foodnas.com',__('Verify Signup Email'));
             });
         return redirect()->back()
                         ->with('success',__('Verification email has been sent to you please verify!'));
