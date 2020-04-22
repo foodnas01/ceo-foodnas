@@ -14,9 +14,9 @@ use App\VerifyUser;
 class User extends Authenticatable
 {
     use Notifiable;
-    use Blameable;
     use SoftDeletes;
     use HasRoles;
+    use Blameable;
 
     /**
      * The attributes that are mass assignable.
@@ -24,8 +24,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name','phone_no','email', 'password','created_by','updated_by','deleted_by'
+        'name','phone_no','email', 'password'
     ];
+
+    //,'created_by','updated_by','deleted_by'
 
     /**
      * The attributes that should be hidden for arrays.
@@ -51,6 +53,7 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\VerifyUser');
     }
+
 
    
 

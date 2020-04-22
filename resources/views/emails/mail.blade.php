@@ -12,7 +12,7 @@
                 <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border: 1px solid #cccccc; border-collapse: collapse;">
                     <tr>
                         <td align="center" bgcolor="#FFC107" style="padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;">
-                            <img src="http://dev.foodnas.com/frontend/img/Group130.png" alt="Signup Email" width="300" height="120" style="display: block;" />
+                            <img src="http://dev.foodnas.com/frontend/img/Group130.png" alt="Signup Email" width="140" height="40" style="display: block;" />
                         </td>
                     </tr>
                     <tr>
@@ -46,13 +46,13 @@
                                             <tr>
                                                 <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
                                                     <a href="https://twitter.com/foodnasarabia" style="color: #ffffff;">
-                                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/tw.gif" alt="Twitter" width="38" height="38" style="display: block;" border="0" />
+                                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/tw.gif" alt="Twitter" width="25" height="25" style="display: block;" border="0" />
                                                     </a>
                                                 </td>
                                                 <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
                                                 <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
                                                     <a href="http://www.twitter.com/" style="color: #ffffff;">
-                                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/fb.gif" alt="Facebook" width="38" height="38" style="display: block;" border="0" />
+                                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/fb.gif" alt="Facebook" width="25" height="25" style="display: block;" border="0" />
                                                     </a>
                                                 </td>
                                             </tr>

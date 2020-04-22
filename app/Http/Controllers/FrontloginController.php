@@ -50,6 +50,14 @@ class FrontloginController extends Controller
         echo view("frontend.pages.allPages",compact('mypage'))->render();
     }
 
+    function my_profile($mypage){
+
+      $uesrInfo = \Session::get('userinfo');
+      $id = $uesrInfo->id;
+      $user = User::find($id);
+      echo  view('frontend.pages.my_profile',compact('user'))->render();
+    }
+
     function front_login(Request $request){
 
         // validate the info, create rules for the inputs
@@ -83,6 +91,8 @@ class FrontloginController extends Controller
              }else{
                  if (Hash::check($request->password, $user->password)) {
                     \Session::put('isLoggedIn', 1); 
+                    \Session::put('userinfo', $user); 
+
                     return Redirect::to('home');   
                  }else{
                      \Session::put('invalidDetails', __('Sorry! Email or password is not valid.')); 
@@ -94,7 +104,10 @@ class FrontloginController extends Controller
 
     public function home(){
         if(\Session::get('isLoggedIn')){
-            return view('fronthome');
+          $uesrInfo = \Session::get('userinfo');
+          $id = $uesrInfo->id;
+          $user = User::find($id);
+          return view('fronthome',compact('user'));
         }else{
             return redirect('/')->with('warning', __("You can't access here!"));
         }
@@ -105,14 +118,14 @@ class FrontloginController extends Controller
      public function register(RegisterRequest $request)
         {
 
-          
-        $data = $request->all();
-        $data['password'] = Hash::make($request->password);
-    	  $user = User::create($data);
+        $input = $request->all();
+        $input['password'] = Hash::make($input['password']);
+    	  $user = User::create($input);
+        // Store or dump the log data...
         
         $role = $this->getRole($roleName='Guest');
         $user->assignRole([$role->id]);
-        User::addBlameableColumns();
+
         $verifyUser = VerifyUser::create([
             'user_id' => $user->id,
             'token' => sha1(time())
@@ -134,4 +147,29 @@ class FrontloginController extends Controller
         return redirect()->back()
                         ->with('success',__('Verification email has been sent to you please verify!'));
     }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email,'.$id,
+            'password' => 'same:confirm-password'
+        ]);
+
+
+        $input = $request->all();
+        if(!empty($input['password'])){ 
+            $input['password'] = Hash::make($input['password']);
+        }else{
+            $input = array_except($input,array('password'));    
+        }
+
+
+        $user = User::find($id);
+        $user->update($input);
+        return redirect()->route('front_home')
+                        ->with('success',__('User updated successfully'));
+    }
+
+
 }

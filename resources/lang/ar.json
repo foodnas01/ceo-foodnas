@@ -70,7 +70,15 @@
   "Your e-mail is already verified. You can now login.": "تم التحقق من بريدك الإلكتروني بالفعل. يمكنك الآن تسجيل الدخول.",
   "Sorry your email cannot be identified.": "عذرًا ، لا يمكن تحديد بريدك الإلكتروني.",
   "Sorry! Email or password is not valid."  : "آسف! البريد الإلكتروني أو كلمة المرور غير صالحة.",
-  "You can't access here!" : "لا يمكنك الوصول هنا!"
+  "You can't access here!" : "لا يمكنك الوصول هنا!",
+  "Image"                   : "صورة",
+  "Gender"                  : "جنس",
+  "Date of Birth"           : "تاريخ الولادة",
+  "Male"                    : "الذكر",
+  "Female"                  : "أنثى",
+  "Other"                   : "آخر",
+  "My Profile"              : "ملفي"
+
 
 
 

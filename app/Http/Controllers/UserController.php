@@ -69,8 +69,15 @@ class UserController extends Controller
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
 
-
+  /* \DB::enableQueryLog();*/
         $user = User::create($input);
+
+
+        /*dd(
+            DB::getQueryLog()
+        );*/
+
+
         $user->assignRole($request->input('roles'));
 
 

@@ -25,12 +25,14 @@ Route::get('/', function () {
 
 
 Route::get('/about', 'AboutController@index');
-Route::get('/home',  'FrontloginController@home');
+Route::get('/home',  'FrontloginController@home')->name('front_home');
 Route::get('/signup', 'FrontloginController@sign_up');
 Route::post('/login/register', 'FrontloginController@register')->name('front_register');
 Route::post('/login/front_login', 'FrontloginController@front_login')->name('front_login');
 
+Route::patch('/update/{user}','FrontloginController@update')->name('update_profile');
 
+Route::get('/my_profile/{mypage?}','FrontloginController@my_profile');
 Route::get('/pages/{mypage?}','FrontloginController@pages');
 
 Route::group(['prefix' => 'admin'], function () {
