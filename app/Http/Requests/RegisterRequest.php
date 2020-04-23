@@ -31,6 +31,9 @@ class RegisterRequest extends FormRequest
             'email'                   => 'required|unique:users',
             'password'                => 'required|confirmed|min:6',
             'password_confirmation'   => 'required',
+            'user_image'              => 'required',
+            'dob'                     =>  'required',
+            'gender'                  => 'required'
 
         ];
     }

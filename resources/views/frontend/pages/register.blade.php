@@ -69,7 +69,7 @@
 			@endif
 
 
-				{!! Form::open(array('route' => 'front_register', 'method' => 'post')) !!}
+				{!! Form::open(array('route' => 'front_register', 'method' => 'post','enctype'=>'multipart/form-data')) !!}
 				@csrf
 
 				<div class="form-group">
@@ -138,6 +138,52 @@
 
 					<!-- <i class="icon_lock_alt signUpIcon"></i> -->
 					<span class="text-danger">{!! $errors->first('password_confirmation', '<span class="help-block">:message</span>') !!}</span>
+				</div>
+
+
+				<div class="form-group">
+				
+					{{ Form::label(__('Date of Birth') , null, ['class' => 'signupLabel']) }}
+					<span class="required">*</span>
+
+
+					 <input class="form-control" value="{{ old('dob') }}" style="padding-right:10px;padding-left:10px;" name="dob" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
+
+					<span class="text-danger">{!! $errors->first('dob', '<span class="help-block">:message</span>') !!}</span>
+				</div>
+
+
+				<div class="form-group">
+				
+					{{ Form::label(__('Image')  , null, ['class' => 'signupLabel']) }}
+					<span class="required">*</span>
+					 <input type="file" name="user_image" style="padding-right:0px;padding-left:0px;"  class="form-control-file" id="exampleFormControlFile1">
+
+					<span class="text-danger">{!! $errors->first('user_image', '<span class="help-block">:message</span>') !!}</span>
+				</div>
+
+					<div class="form-group">
+					
+					{{ Form::label(  __('Gender')  , null, ['class' => 'signupLabel']) }}
+					<span class="required">*</span>
+
+					<div style="display: flex;">
+						<input type="radio" @if (old('gender') == 'male') checked="checked" @endif  id="male" name="gender" value="male" style="margin-top: 5px;">
+	                    <label for="male" style="padding-right: 20px;padding-left: 20px;">{{ __('Male') }}</label>
+	                    <br>
+	                    <input type="radio" id="female"  @if (old('gender') == 'female') checked="checked" @endif  name="gender" value="female" style="margin-top: 5px;">
+	                    <label for="female" style="padding-right: 20px;padding-left: 20px;">{{ __('Female') }}</label>
+	                    <br>
+	                    <input type="radio"  id="other"  @if (old('gender') == 'other') checked="checked" @endif name="gender" value="other" style="margin-top: 5px;">
+	                    <label for="other" style="padding-right: 20px;">{{ __('Other') }}</label>
+	                </div>
+
+					<!-- <i class="ti-user signUpIcon"></i> -->
+
+					<span class="text-danger">{!! $errors->first('gender', '<span class="help-block">:message</span>') !!}</span>
+
+
+
 				</div>
 		
 

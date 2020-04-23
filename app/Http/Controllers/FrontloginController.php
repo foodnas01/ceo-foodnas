@@ -16,10 +16,12 @@ use Auth;
 use Redirect;
 use Spatie\Permission\Models\Role;
 use App\Traits\GuestRole;
+use App\Traits\CommonTrait;
 
 class FrontloginController extends Controller
 {
     use GuestRole;
+    use CommonTrait;
 
     public function sign_up(){
     	return view('frontend.pages.register');
@@ -119,8 +121,16 @@ class FrontloginController extends Controller
         {
 
         $input = $request->all();
+        $folder      = 'uploads/profile_images';
+        $file = null;
+        if ($request->has('user_image')) {
+            $image = $request->file('user_image');
+            $file = $this->uploadImage($image,$folder, '');
+        }
+        $input['user_image']   = $file;
         $input['password'] = Hash::make($input['password']);
     	  $user = User::create($input);
+     
         // Store or dump the log data...
         
         $role = $this->getRole($roleName='Guest');
@@ -153,11 +163,22 @@ class FrontloginController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email|unique:users,email,'.$id,
-            'password' => 'same:confirm-password'
+            'password' => 'same:confirm-password',
+            'user_image' => 'image|mimes:jpeg,png,jpg,bmp,gif,svg|max:2048',
         ]);
 
 
         $input = $request->all();
+        $folder      = 'uploads/profile_images';
+      
+        if ($request->has('user_image')) {
+            $user = User::find($id);
+            $image = $request->file('user_image');
+            $file = $this->uploadImage($image,$folder, $user->user_image);
+            $input['user_image']   = $file;
+        }
+        
+        
         if(!empty($input['password'])){ 
             $input['password'] = Hash::make($input['password']);
         }else{

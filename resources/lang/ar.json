@@ -77,7 +77,10 @@
   "Male"                    : "الذكر",
   "Female"                  : "أنثى",
   "Other"                   : "آخر",
-  "My Profile"              : "ملفي"
+  "My Profile"              : "ملفي",
+  "dob"                     : "تاريخ الولادة",
+  "gender"                  : "جنس",
+  "image"                   : "صورة"
 
 
 

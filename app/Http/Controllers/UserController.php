@@ -13,11 +13,13 @@ use Hash;
 use App\Traits\GuestRole;
 
 use Spatie\Permission\Models\Permission;
+use App\Traits\CommonTrait;
 
 
 class UserController extends Controller
 {
     use GuestRole;
+    use CommonTrait;
     /**
      * Display a listing of the resource.
      *
@@ -67,6 +69,16 @@ class UserController extends Controller
 
 
         $input = $request->all();
+
+        $file = null;
+        if ($request->has('user_image')) {
+            $folder      = 'uploads/profile_images';
+            $image = $request->file('user_image');
+            $file = $this->uploadImage($image,$folder, '');
+        }
+        $input['user_image']   = $file;
+
+
         $input['password'] = Hash::make($input['password']);
 
   /* \DB::enableQueryLog();*/
@@ -134,6 +146,16 @@ class UserController extends Controller
 
 
         $input = $request->all();
+
+        $folder      = 'uploads/profile_images';
+        if ($request->has('user_image')) {
+            $user = User::find($id);
+            $image = $request->file('user_image');
+            $file = $this->uploadImage($image,$folder, $user->user_image);
+            $input['user_image']   = $file;
+        }
+
+
         if(!empty($input['password'])){ 
             $input['password'] = Hash::make($input['password']);
         }else{

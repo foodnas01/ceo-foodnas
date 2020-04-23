@@ -52,6 +52,9 @@
                               <th>{{ __('Email') }}</th>
                               <th>{{ __('Phone') }}</th>
                               <th>{{ __('Roles') }}</th>
+                              <th>{{ __('dob') }}</th>
+                              <th>{{ __('gender') }}</th>
+                              <th>{{ __('image') }}</th>
                               <th width="280px">{{ __('Action') }}</th>
                           </tr>
                       </thead>
@@ -67,6 +70,9 @@
                                   <label class="badge badge-success">{{ $v }}</label>
                                   @endforeach @endif
                               </td>
+                              <td>{{ $user->dob }}</td>
+                              <td>{{ $user->gender }}</td>
+                              <td><img src={{url('/uploads/profile_images/'.$user->user_image)}} alt="No Image" width="60" height="60" alt=""/></td>
                               <td>
                                 <div class="pull-left">
                                     <a href="javascript:void(0)" data-url = "{{ route('users.edit',$user->id) }}" onclick="editPopup(this,'{{$user->id}}')" title="update record" class="btn btn-outline-primary btn-sm grid-row-button">

@@ -14,7 +14,7 @@
 @endif
 
 
-{!! Form::model($user, ['method' => 'PATCH','route' => ['users.update', $user->id]]) !!}
+{!! Form::model($user, ['method' => 'PATCH','enctype'=>'multipart/form-data','route' => ['users.update', $user->id]]) !!}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
@@ -48,6 +48,38 @@
             {!! Form::password('confirm-password', array('class' => 'form-control')) !!}
         </div>
     </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>{{ __('Date of Birth')}}:</strong>
+             <input class="form-control" value="{{ $user->dob }}" style="padding-right:10px;padding-left:10px;" name="dob" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>{{ __('Image') }}:</strong>
+            <input type="file" name="user_image" style="padding-right:0px;padding-left:0px;"  class="form-control-file" id="exampleFormControlFile1">
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>{{ __('Gender') }}:</strong>
+            <div style="display: flex;">
+                <input type="radio" @if ($user->gender == 'male') checked="checked" @endif  id="male" name="gender" value="male" style="margin-top: 5px;">
+                <label for="male" style="padding-right: 20px;padding-left: 20px;">{{ __('Male') }}</label>
+                <br>
+                <input type="radio" id="female"  @if ($user->gender == 'female') checked="checked" @endif  name="gender" value="female" style="margin-top: 5px;">
+                <label for="female" style="padding-right: 20px;padding-left: 20px;">{{ __('Female') }}</label>
+                <br>
+                <input type="radio"  id="other"  @if ($user->gender == 'other') checked="checked" @endif name="gender" value="other" style="margin-top: 5px;">
+                <label for="other" style="padding-right: 20px;">{{ __('Other') }}</label>
+            </div>
+        </div>
+    </div>
+
+
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>{{ __('Role') }}:</strong>

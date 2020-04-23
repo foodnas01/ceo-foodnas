@@ -33,7 +33,7 @@
             <div class="container margin_60_35">
                 <div class="row">
                     @include('layouts/leftmenus')
-                    <div class="col-lg-8" id="dynamicContent">
+                    <div class="col-lg-8" >
                         <section id="description">
                             <h2>{{ __('My Profile') }}</h2>
                             <div class="col-lg-12">
@@ -63,9 +63,10 @@
                                 <div id="message-contact"></div>
                              
 
-                                    {!! Form::model($user, ['method' => 'PATCH','route' => ['update_profile', $user->id]]) !!}
+                                    {!! Form::model($user, ['method' => 'PATCH','enctype'=>'multipart/form-data','route' => ['update_profile', $user->id]]) !!}
                                         @csrf
 
+                                <div id="dynamicContent">
 
                                     <div class="row">
                                         <div class="col-md-6">
@@ -123,7 +124,7 @@
 
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">{{ __('Image') }}</label>
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                <input type="file" name="user_image" class="form-control-file" id="exampleFormControlFile1">
                                             </div>
 
                                         </div>
@@ -135,14 +136,14 @@
                                                 </div>
                                                 <div class="col-md-6" style="display: inline-flex;padding-right: 20px;padding-top: 20px;">
 
-                                                    <input type="radio" id="male" name="gender" value="male" style="margin-top: 5px;
+                                                    <input type="radio"  {{ ($user->gender  == 'male') ? 'checked' : '' }}  id="male" name="gender" value="male" style="margin-top: 5px;
 ">
                                                     <label for="male" style="
     padding-right: 20px;
     padding-left: 20px;
 ">{{ __('Male') }}</label>
                                                     <br>
-                                                    <input type="radio" id="female" name="gender" value="female" style="
+                                                    <input type="radio" id="female" {{ ($user->gender  == 'female') ? 'checked' : '' }} name="gender" value="female" style="
     margin-top: 5px;
 ">
                                                     <label for="female" style="
@@ -150,7 +151,7 @@
     padding-left: 20px;
 ">{{ __('Female') }}</label>
                                                     <br>
-                                                    <input type="radio" id="other" name="gender" value="other" style="
+                                                    <input type="radio" {{ ($user->gender  == 'other') ? 'checked' : '' }} id="other" name="gender" value="other" style="
     margin-top: 5px;
 ">
                                                     <label for="other" style="
@@ -174,11 +175,12 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Date of Birth</label>
-                                                <input class="form-control" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
+                                                <input class="form-control" value="{{$user->dob}}" name="dob" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
                                             </div>
                                         </div>
 
                                     </div>
+                                </div>
                                     <p class="add_top_30">
                                         <input type="submit" value="Submit" class="btn_1 rounded" id="submit-contact">
                                     </p>
@@ -197,33 +199,6 @@
     </main>
 </body>
 
-<script>
-    /*$(function() {
-          'use strict';
-          $('input[name="dates"]').daterangepicker({
-              autoUpdateInput: false,
-              locale: {
-                  cancelLabel: 'Clear'
-              }
-          });
-          $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
-              $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
-          });
-          $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
-              $(this).val('');
-          });
-        });*/
-    $('#datetimepicker6').datetimepicker();
-    $('#datetimepicker7').datetimepicker({
-        useCurrent: false //Important! See issue #1075
-    });
-    $("#datetimepicker6").on("dp.change", function(e) {
-        $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-    });
-    $("#datetimepicker7").on("dp.change", function(e) {
-        $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-    });
-</script>
 
 <script type="text/javascript">
 
