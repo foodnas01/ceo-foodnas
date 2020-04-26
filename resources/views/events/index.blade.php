@@ -19,18 +19,18 @@
 
 @include('frontend/pages/model')
 
-<div class="row laravel-grid" id="user-grid">
+<div class="row laravel-grid" id="event-grid">
     <div class="col-md-12 col-xs-12 col-sm-12">
         <div class="card">
             <div class="card-header">
                 <div class="pull-right">
-                    <h4 class="grid-title">{{ __('Users Management') }}</h4>
+                    <h4 class="grid-title">{{ __('Event Management') }}</h4>
                 </div>
 
                 <div class="pull-left">
 
 
-                            <a href="javascript:void(0)" title="add new user" class="btn btn-success show_modal_form">
+                            <a href="javascript:void(0)" title="add new event" class="btn btn-success show_modal_form">
                                 <i class="fa fa-plus-circle"></i> {{ __('Create') }}
                             </a>
 
@@ -39,68 +39,49 @@
 
             </div>
             <div class="card-body">
-              
-                        
-                  
-               
                 <div class="table-responsive grid-wrapper">
                     <table id="datatable1" style="direction: rtl;" class="table table-bordered table-hover">
                       <thead>
                           <tr>
                               <th>{{ __('No') }}</th>
-                              <th>{{ __('Name') }}</th>
-                              <th>{{ __('Email') }}</th>
-                              <th>{{ __('Phone') }}</th>
-                              <th>{{ __('Roles') }}</th>
-                              <th>{{ __('Status') }}</th>
-                              <th>{{ __('dob') }}</th>
-                              <th>{{ __('gender') }}</th>
+                              <th>{{ __('Title') }}</th>
+                              <th>{{ __('Start Date') }}</th>
+                              <th>{{ __('End Date') }}</th>
+                              <th>{{ __('Seats') }}</th>
+                              <th>{{ __('Rating') }}</th>
+                              <th>{{ __('Host Name') }}</th>
+                              <th>{{ __('Country') }}</th>
+                              <th>{{ __('State') }}</th>
+                              <th>{{ __('City') }}</th>
                               <th>{{ __('image') }}</th>
                               <th width="280px">{{ __('Action') }}</th>
                           </tr>
                       </thead>
                       <tbody>
-                          @foreach ($data as $key => $user)
+                          @foreach ($data as $key => $event)
                           <tr>
                               <td>{{ ++$i }}</td>
-                              <td>{{ $user->name }}</td>
-                              <td>{{ $user->email }}</td>
-                              <td>{{ $user->phone_no }}</td>
-                              <td>
-                                  @if(!empty($user->getRoleNames())) @foreach($user->getRoleNames() as $v)
-                                  <label class="badge badge-success">{{ $v }}</label>
-                                  @endforeach @endif
-                              </td>
-
-                             
-
-
-                              <td>
-                              	@if($user->verified == 1)
-									<label class="badge badge-success">Active</label>
-								@else
-									<label class="badge badge-danger">Inactive</label>
-                              	@endif
-                              	 
-
-                              </td>
-                              <td>{{ $user->dob }}</td>
-                              <td>{{ $user->gender }}</td>
-                              <td><img src={{url('/uploads/profile_images/'.$user->user_image)}} alt="No Image" width="60" height="60" alt=""/></td>
+                              <td>{{ $event->title }}</td>
+                              <td>{{ $event->start_date }}</td>
+                              <td>{{ $event->end_date }}</td>
+                              <td>{{ $event->total_seates }}</td>
+                              <td>{{ $event->rating }}</td>
+                              <td>{{ $event->host_name }}</td>
+                              <td>{{ $event->country }}</td>
+                              <td>{{ $event->state }}</td>
+                              <td>{{ $event->city }}</td>
+                              <td><img src={{url('/uploads/events_images/'.$event->image)}} alt="No Image" width="60" height="60" alt=""/></td>
                               <td>
                                 <div class="pull-left">
-                                    <a href="javascript:void(0)" data-url = "{{ route('users.edit',$user->id) }}" onclick="editPopup(this,'{{$user->id}}')" title="update record" class="btn btn-outline-primary btn-sm grid-row-button">
+                                    <a href="javascript:void(0)" data-url = "{{ route('events.edit',$event->id) }}" onclick="editPopup(this,'{{$event->id}}')" title="update record" class="btn btn-outline-primary btn-sm grid-row-button">
                                         <i class="fa fa-eye"></i> {{ __('Edit') }}
                                     </a>
-                                    @if($obj->checkAdmin($user->id) !=1) 
-	                                    {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'id'=>$user->id,'style'=>'display:inline']) !!} 
-	                                    <button type="button" onclick="deletePopup(this,'{{$user->id}}')" class="data-remote grid-row-button btn btn-outline-danger btn-sm">
+                                   
+	                                    {!! Form::open(['method' => 'DELETE','route' => ['events.destroy', $event->id],'id'=>$event->id,'style'=>'display:inline']) !!} 
+	                                    <button type="button" onclick="deletePopup(this,'{{$event->id}}')" class="data-remote grid-row-button btn btn-outline-danger btn-sm">
 	                                      <i class="fa fa-trash"></i> {{ __('Delete') }}
 	                                      
 	                                    </button>
-
-                                    @endif
-
                                                                   
  									{!! Form::close() !!}
 
@@ -182,11 +163,11 @@
   $(".show_modal_form").click(()=>{
       $.ajax({
            type:'GET',
-           url:"{{ route('users.create') }}",
+           url:"{{ route('events.create') }}",
            success:function(data){
               console.log(data);
 
-              $("#popupTitle").html("{{ __('Create User') }}");
+              $("#popupTitle").html("{{ __('Create Event') }}");
               $("#modalPoppup").modal("show");
               $("#popupBody").html(data);
 
@@ -200,7 +181,7 @@
            type:'GET',
            url:$(obj).attr("data-url"),
            success:function(data){
-              $("#popupTitle").html("{{ __('Update User') }}");
+              $("#popupTitle").html("{{ __('Update Event') }}");
               $("#modalPoppup").modal("show");
               $("#popupBody").html(data);
            }
@@ -208,10 +189,10 @@
  }
 
  deletePopup = (obj,id) =>{
-    $("#popupTitle").html("{{ __('Delete User') }}");
+    $("#popupTitle").html("{{ __('Delete Event') }}");
     $("#modalPoppup").modal("show");
 
-     let myHtml = '<div> {{ __("Are You sure you want to delete the user ?") }}<br />';
+     let myHtml = '<div> {{ __("Are You sure you want to delete the event ?") }}<br />';
         myHtml += '<div class="modal-footer" style="0px solid;margin-top:15px;"><button type="button" id="btnDelete" onclick="confirmDelete('+id+')" class="btn btn-primary">{{ __("Yes") }}</button>';
         myHtml += '<button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __("No") }}</button>';
         myHtml   += '</div></div>';

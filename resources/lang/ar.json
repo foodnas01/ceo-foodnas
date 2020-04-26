@@ -80,7 +80,26 @@
   "My Profile"              : "ملفي",
   "dob"                     : "تاريخ الولادة",
   "gender"                  : "جنس",
-  "image"                   : "صورة"
+  "image"                   : "صورة",
+  "Title"                   : "عنوان",
+  "Start Date"              : "تاريخ البدء",
+  "End Date"                : "تاريخ الانتهاء",
+  "Seats"                   : "المقاعد",
+  "Rating"                  : "تقييم",
+  "Host Name"               : "اسم المضيف",
+  "Country"                 : "بلد",
+  "State"                   : "حالة",
+  "City"                    : "مدينة",
+  "Image"                   : "صورة",
+  "Event Management"        : "أدارة الحدث",
+  "Manage Events"           : "إدارة الأحداث",
+  "Are You sure you want to delete the event ?" : "هل أنت متأكد أنك تريد حذف الحدث؟",
+  "Update Event"            : "حدث التحديث",
+  "Delete Event"            : "حذف الحدث",
+  "Create Event"            : "انشاء حدث",
+  "Event created successfully": "تم إنشاء الحدث بنجاح",
+  "Event updated successfully" : "تم تحديث الحدث بنجاح",
+  "Event deleted successfully": "تم حذف الحدث بنجاح"
 
 
 

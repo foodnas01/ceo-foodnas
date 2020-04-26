@@ -32,12 +32,15 @@ class UserController extends Controller
     }
     public function index(Request $request)
     {
-
-        /*$returnResponse = $this->getRole();
-        print_r($returnResponse);die;*/
+        $obj = $this;
         $data = User::orderBy('id','DESC')->paginate(100);
-        return view('users.index',compact('data'))
+        return view('users.index',compact('data','obj'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
+    }
+
+    function checkAdmin($userid){
+          $userRec = $this->isAdmin($userid);
+          return $userRec;
     }
 
     /**
@@ -184,6 +187,12 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
+        $user = User::find($id);
+        $folder      = 'uploads/profile_images';
+        if (!empty($user->user_image)) {
+            $this->deleteImage($folder, $user->user_image);
+        }
+
         User::find($id)->delete();
         return redirect()->route('users.index')
                         ->with('success',__('User deleted successfully'));

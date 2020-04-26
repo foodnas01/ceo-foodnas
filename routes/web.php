@@ -43,6 +43,7 @@ Route::group(['prefix' => 'admin'], function () {
 	    Route::resource('roles','RoleController');
 	    Route::resource('users','UserController');
 	    Route::resource('products','ProductController');
+	    Route::resource('events','EventController');
 	});
 
 
