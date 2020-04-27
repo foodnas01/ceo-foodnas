@@ -12,6 +12,9 @@ use App\Traits\GuestRole;
 
 use Spatie\Permission\Models\Permission;
 use App\Traits\CommonTrait;
+use App\Country;
+use App\State;
+use App\City;
 
 
 class EventController extends Controller
@@ -38,8 +41,28 @@ class EventController extends Controller
     public function create()
     {
         $obj = $this;
-        return view('events.create',compact('obj'));
+        $countries = Country::all();
+        return view('events.create',compact('obj','countries'));
     }
+
+    public function get_states(Request $request){
+        
+        $countryid  = $request->countryid;
+        $states     = State::where('country_id',$countryid)->get();
+        echo view("events.getState",compact('states'))->render();
+
+
+    }
+
+    public function get_cities(Request $request){ 
+        $stateid  = $request->stateid;
+        $cities     = City::where('state_id',$stateid)->get();
+        echo view("events.getCity",compact('cities'))->render();
+
+
+    }
+
+
 
     /**
      * Store a newly created resource in storage.

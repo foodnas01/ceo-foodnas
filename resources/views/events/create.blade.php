@@ -65,21 +65,36 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>{{ __('Country') }}:</strong>
-            {!! Form::text('country', null, array('required'=> 'required','class' => 'form-control ')) !!}
+            <select name="country" onchange="countryChange(this.value)" class="form-control">
+                <option >Select Country</option>
+                @foreach($countries as $eachCountry)
+                
+                <option  value="{{$eachCountry->id}}">{{$eachCountry->name}}</option>
+
+                @endforeach
+            </select>
+            <!-- {!! Form::text('country', null, array('required'=> 'required','class' => 'form-control ')) !!} -->
         </div>
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>{{ __('State') }}:</strong>
-            {!! Form::text('state', null, array('required'=> 'required','class' => 'form-control ')) !!}
+            <select name="state" id="selectState"  onchange="stateChange(this.value)" class="form-control">
+                <option>Select State</option>
+                
+            </select>
+            <!-- {!! Form::text('state', null, array('required'=> 'required','class' => 'form-control ')) !!} -->
         </div>
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>{{ __('City') }}:</strong>
-            {!! Form::text('city', null, array('required'=> 'required','class' => 'form-control ')) !!}
+            <select name="city" id="selectCity"   class="form-control">
+                <option>Select City</option>
+                
+            </select>
         </div>
     </div>
 
@@ -102,4 +117,40 @@
 </div>
 {!! Form::close() !!}
 
+
+<script type="text/javascript">
+    countryChange = (thisValue) => {
+        $.ajax({
+           type:'POST',
+           url:"{{ route('events.get_states') }}",
+           data: {
+                     countryid: thisValue
+                  },
+           success:function(data){
+            console.log(data);
+            $("#selectState").html(data);
+             
+           }
+        });
+
+        
+
+    }
+
+    stateChange = (thisValue) => {
+        $.ajax({
+           type:'POST',
+           url:"{{ route('events.get_cities') }}",
+           data: {
+                     stateid: thisValue
+                  },
+           success:function(data){
+            console.log(data);
+            $("#selectCity").html(data);
+             
+           }
+        });
+
+    }
+</script>
 @endsection

@@ -44,6 +44,9 @@ Route::group(['prefix' => 'admin'], function () {
 	    Route::resource('users','UserController');
 	    Route::resource('products','ProductController');
 	    Route::resource('events','EventController');
+
+	    Route::post('events/get_states','EventController@get_states')->name('events.get_states');
+	    Route::post('events/get_cities','EventController@get_cities')->name('events.get_cities');
 	});
 
 
