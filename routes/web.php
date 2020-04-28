@@ -33,6 +33,8 @@ Route::post('/login/front_login', 'FrontloginController@front_login')->name('fro
 Route::patch('/update/{user}','FrontloginController@update')->name('update_profile');
 
 Route::get('/my_profile/{mypage?}','FrontloginController@my_profile');
+Route::get('/my_events','FrontloginController@my_events');
+
 Route::get('/pages/{mypage?}','FrontloginController@pages');
 
 Route::group(['prefix' => 'admin'], function () {

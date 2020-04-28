@@ -1,5 +1,5 @@
 
-    <option>Select State</option>
+    <option>Select City</option>
     @foreach($cities as $eachCity)
-    <option value="{{$eachCity->id}}">{{$eachCity->name}}</option>
+    <option  @if(isset($cityid) && ($cityid == $eachCity->id)) selected @endif value="{{$eachCity->id}}">{{$eachCity->name}}</option>
     @endforeach

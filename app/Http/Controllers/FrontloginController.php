@@ -17,6 +17,10 @@ use Redirect;
 use Spatie\Permission\Models\Role;
 use App\Traits\GuestRole;
 use App\Traits\CommonTrait;
+use App\Event;
+use App\Country;
+use App\State;
+use App\City;
 
 class FrontloginController extends Controller
 {
@@ -58,6 +62,12 @@ class FrontloginController extends Controller
       $id = $uesrInfo->id;
       $user = User::find($id);
       echo  view('frontend.pages.my_profile',compact('user'))->render();
+    }
+
+    function my_events(){
+      $country = Country::all();
+      $data = Event::with('countries','states','cities')->orderBy('id','DESC')->get();
+      echo  view('frontend.pages.my_events',compact('data','country'))->render();
     }
 
     function front_login(Request $request){

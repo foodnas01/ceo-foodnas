@@ -1,3 +1,5 @@
+
+
 @extends('layouts.grid')
 
 
@@ -22,6 +24,11 @@
         <div class="form-group">
             <strong>{{ __('Title') }}:</strong>
             {!! Form::text('title', null, array('required'=> 'required','class' => 'form-control')) !!}
+
+            
+
+
+
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -64,8 +71,24 @@
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
+            <strong>{{ __('Gender') }}:</strong>
+            <div style="display: flex;">
+                <input type="radio" @if (old('gender') == 'male') checked="checked" @endif  id="male" name="gender" value="male" style="margin-top: 5px;">
+                <label for="male" style="padding-right: 20px;padding-left: 20px;">{{ __('Male') }}</label>
+                <br>
+                <input type="radio" id="female"  @if (old('gender') == 'female') checked="checked" @endif  name="gender" value="female" style="margin-top: 5px;">
+                <label for="female" style="padding-right: 20px;padding-left: 20px;">{{ __('Female') }}</label>
+                <br>
+                <input type="radio"  id="other"  @if (old('gender') == 'other') checked="checked" @endif name="gender" value="other" style="margin-top: 5px;">
+                <label for="other" style="padding-right: 20px;">{{ __('Other') }}</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
             <strong>{{ __('Country') }}:</strong>
-            <select name="country" onchange="countryChange(this.value)" class="form-control">
+            <select name="country_id" onchange="countryChange(this.value)" class="form-control">
                 <option >Select Country</option>
                 @foreach($countries as $eachCountry)
                 
@@ -80,7 +103,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>{{ __('State') }}:</strong>
-            <select name="state" id="selectState"  onchange="stateChange(this.value)" class="form-control">
+            <select name="state_id" id="selectState"  onchange="stateChange(this.value)" class="form-control">
                 <option>Select State</option>
                 
             </select>
@@ -91,7 +114,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>{{ __('City') }}:</strong>
-            <select name="city" id="selectCity"   class="form-control">
+            <select name="city_id" id="selectCity"   class="form-control">
                 <option>Select City</option>
                 
             </select>
@@ -119,6 +142,25 @@
 
 
 <script type="text/javascript">
+
+
+
+$("#review").rating({
+
+  "click":function (e) {
+
+    console.log(e);// {stars: 3, event: E.Event}
+
+    alert(e.stars);// 3
+
+  }
+
+});
+
+
+
+
+
     countryChange = (thisValue) => {
         $.ajax({
            type:'POST',

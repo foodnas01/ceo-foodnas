@@ -22,9 +22,6 @@ class CreateEventsTable extends Migration
             $table->string('total_seates');
             $table->string('rating');
             $table->string('host_name');
-            $table->string('country');
-            $table->string('state');
-            $table->string('city');
             $table->timestamps();
             $table->softDeletes(); // <-- This will add a deleted_at field
             $table->blameable();

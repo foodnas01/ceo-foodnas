@@ -28,7 +28,7 @@ class EventController extends Controller
     public function index(Request $request)
     {
         $obj = $this;
-        $data = Event::orderBy('id','DESC')->paginate(100);
+        $data = Event::with('countries','states','cities')->orderBy('id','DESC')->paginate(100);
         return view('events.index',compact('data','obj'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
@@ -48,19 +48,22 @@ class EventController extends Controller
     public function get_states(Request $request){
         
         $countryid  = $request->countryid;
+        $stateid    = $request->stateid;
         $states     = State::where('country_id',$countryid)->get();
-        echo view("events.getState",compact('states'))->render();
+        echo view("events.getState",compact('states','stateid'))->render();
 
 
     }
 
     public function get_cities(Request $request){ 
-        $stateid  = $request->stateid;
+        $stateid    = $request->stateid;
+        $cityid    = $request->cityid;
         $cities     = City::where('state_id',$stateid)->get();
-        echo view("events.getCity",compact('cities'))->render();
+        echo view("events.getCity",compact('cities','cityid'))->render();
 
 
     }
+
 
 
 
@@ -80,15 +83,12 @@ class EventController extends Controller
             'total_seates'  => 'required',
             'rating'        => 'required',
             'host_name'     => 'required',
-            'country'       => 'required',
-            'state'         => 'required',
-            'city'          => 'required'
+            'country_id'       => 'required',
+            'state_id'         => 'required',
+            'city_id'          => 'required'
         ]);
 
-
-
         $input = $request->all();
-
         $file = null;
         if ($request->has('image')) {
             $folder      = 'uploads/events_images';
@@ -121,9 +121,13 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        $event = Event::find($id);
-        return view('events.edit',compact('event'));
+        $event      = Event::find($id);
+        $countries  = Country::all();
+        $obj        = $this;
+        return view('events.edit',compact('event','countries','obj'));
     }
+
+
 
     /**
      * Update the specified resource in storage.
@@ -142,9 +146,9 @@ class EventController extends Controller
             'total_seates' => 'required',
             'rating' => 'required',
             'host_name' => 'required',
-            'country' => 'required',
-            'state' => 'required',
-            'city' => 'required'
+            'country_id' => 'required',
+            'state_id' => 'required',
+            'city_id' => 'required'
         ]);
 
 

@@ -1,3 +1,5 @@
+
+
 @extends('layouts.app') 
 
 
@@ -60,6 +62,7 @@
                       <tbody>
                           @foreach ($data as $key => $event)
                           <tr>
+                          
                               <td>{{ ++$i }}</td>
                               <td>{{ $event->title }}</td>
                               <td>{{ $event->start_date }}</td>
@@ -67,9 +70,9 @@
                               <td>{{ $event->total_seates }}</td>
                               <td>{{ $event->rating }}</td>
                               <td>{{ $event->host_name }}</td>
-                              <td>{{ $event->country }}</td>
-                              <td>{{ $event->state }}</td>
-                              <td>{{ $event->city }}</td>
+                              <td>{{ $event->countries->name }}</td>
+                              <td>{{ $event->states->name }}</td>
+                              <td>{{ $event->cities->name }}</td>
                               <td><img src={{url('/uploads/events_images/'.$event->image)}} alt="No Image" width="60" height="60" alt=""/></td>
                               <td>
                                 <div class="pull-left">

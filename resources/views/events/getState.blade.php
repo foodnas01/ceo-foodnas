@@ -1,5 +1,5 @@
 
     <option>Select State</option>
     @foreach($states as $eachState)
-    <option value="{{$eachState->id}}">{{$eachState->name}}</option>
+    <option @if(isset($stateid) && ($stateid == $eachState->id)) selected @endif value="{{$eachState->id}}">{{$eachState->name}}</option>
     @endforeach

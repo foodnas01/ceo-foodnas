@@ -109,4 +109,8 @@
                                             </div>
                                         </div>
 
+                                         <p class="add_top_30">
+                                        <input type="submit" value="Submit" class="btn_1 rounded" id="submit-contact">
+                                    </p>
+
                                     </div>

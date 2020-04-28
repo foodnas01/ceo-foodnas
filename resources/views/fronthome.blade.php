@@ -35,7 +35,7 @@
                     @include('layouts/leftmenus')
                     <div class="col-lg-8" >
                         <section id="description">
-                            <h2>{{ __('My Profile') }}</h2>
+                            <!-- <h2 id="page">{{ __('My Profile') }}</h2> -->
                             <div class="col-lg-12">
 
                                 @if ($message = Session::get('success'))
@@ -180,10 +180,14 @@
                                         </div>
 
                                     </div>
-                                </div>
+
                                     <p class="add_top_30">
                                         <input type="submit" value="Submit" class="btn_1 rounded" id="submit-contact">
                                     </p>
+
+
+                                </div>
+                                    
                                 </form>
                             </div>
                         </section>
@@ -211,6 +215,19 @@
             }
         });
     }
+
+    myEvents = (thisValue) => {
+
+        $.ajax({
+            url: "{{ url('/my_events/') }}",
+            method: 'get',
+            success: function(result) {
+                $("#dynamicContent").html(result);
+
+            }
+        });
+    }
+
     navbarLink = (thisValue) => {
         $.ajax({
             url: "{{ url('/pages/') }}" + "/" + thisValue,
@@ -220,6 +237,27 @@
             }
         });
     }
+
+    $("#btnSubmit").click(function(){
+       let country =  $("#country").val();
+       let state = $("#selectState").val();
+       let city = $("#selectCity").val();
+
+       console.log('sdjfsdkfjkdsl');
+
+       /*$.ajax({
+            url: "{{ url('/my_events/') }}",
+            method: 'get',
+            success: function(result) {
+                $("#dynamicContent").html(result);
+                
+            }
+        });*/
+
+    })
+
+
+
 </script>
 
 <!-- Conent Section end -->
