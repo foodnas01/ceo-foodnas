@@ -50,6 +50,7 @@
                               <th>{{ __('Start Date') }}</th>
                               <th>{{ __('End Date') }}</th>
                               <th>{{ __('Seats') }}</th>
+                              <th>{{ __('Price') }}</th>
                               <th>{{ __('Rating') }}</th>
                               <th>{{ __('Host Name') }}</th>
                               <th>{{ __('Country') }}</th>
@@ -68,6 +69,7 @@
                               <td>{{ $event->start_date }}</td>
                               <td>{{ $event->end_date }}</td>
                               <td>{{ $event->total_seates }}</td>
+                              <td>{{ $event->price }}</td>
                               <td>{{ $event->rating }}</td>
                               <td>{{ $event->host_name }}</td>
                               <td>{{ $event->countries->name }}</td>

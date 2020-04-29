@@ -100,7 +100,8 @@
   "Event created successfully": "تم إنشاء الحدث بنجاح",
   "Event updated successfully" : "تم تحديث الحدث بنجاح",
   "Event deleted successfully": "تم حذف الحدث بنجاح",
-  "Looks For Events"        : "يبدو للأحداث"
+  "Looks For Events"        : "يبدو للأحداث",
+  "Price"                   : "السعر"
 
 
 

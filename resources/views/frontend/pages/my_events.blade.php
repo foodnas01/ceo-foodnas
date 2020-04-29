@@ -5,7 +5,7 @@
         <option>Select Country</option>
 
         @foreach($country as $eachCountry)
-          <option value="{{$eachCountry->id}}">{{$eachCountry->name}}</option>  
+          <option @if(isset($fcountry) && $fcountry == $eachCountry->id) selected='selected'  @endif value="{{$eachCountry->id}}">{{$eachCountry->name}}</option>  
         @endforeach
 
       </select>
@@ -34,12 +34,12 @@
   <div class="col-md-2"  style="float: right;">
 
     <div id="priceDiv">
-      <input type="text" placeholder="Price" name="price" class="form-control" />
+      <input type="text" placeholder="Price" id="price" name="price" class="form-control" />
     </div>
 
   </div>
-  <div class="col-md-1"  style="float: right;margin-top: 5px;">
-    <input type="button"  class="btn btn-primary" id="btnSubmit" name="btnSubmit" value="Submit" />
+  <div class="col-md-1"  style="float: right;">
+    <input type="button"  class="btn btn-primary" onclick="myfunction()" id="btnSubmit" name="btnSubmit" value="Filter" />
   </div>
 
 
@@ -66,6 +66,7 @@
                               <th>{{ __('Start Date') }}</th>
                               <th>{{ __('End Date') }}</th>
                               <th>{{ __('Seats') }}</th>
+                              <th>{{ __('Price') }}</th>
                               <th>{{ __('Rating') }}</th>
                               <th>{{ __('Host Name') }}</th>
                               <th>{{ __('Country') }}</th>
@@ -84,6 +85,7 @@
                               <td>{{ $event->start_date }}</td>
                               <td>{{ $event->end_date }}</td>
                               <td>{{ $event->total_seates }}</td>
+                              <td>{{ $event->price }}</td>
                               <td>{{ $event->rating }}</td>
                               <td>{{ $event->host_name }}</td>
                               <td>{{ $event->countries->name }}</td>
@@ -108,13 +110,15 @@
    countryChange = (thisValue) => {
         $.ajax({
            type:'POST',
-           url:"{{ route('events.get_states') }}",
+           url:"{{ route('get_states') }}",
            data: {
             "_token": "{{ csrf_token() }}",
                      countryid: thisValue
                   },
            success:function(data){
-            console.log(data);
+            if($("#selectCity option:selected").html() !='Select City'){
+              $("#selectCity option:selected").remove();
+            }
             $("#selectState").html(data);
              
            }
@@ -124,7 +128,7 @@
     stateChange = (thisValue) => {
         $.ajax({
            type:'POST',
-           url:"{{ route('events.get_cities') }}",
+           url:"{{ route('get_cities') }}",
            data: {
             "_token": "{{ csrf_token() }}",
                      stateid: thisValue
@@ -138,6 +142,6 @@
 
     }
 
-    
+
 
 </script>

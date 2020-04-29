@@ -26,7 +26,7 @@ class Event extends Model
      * @var array
      */
     protected $fillable = [
-        'title','start_date','end_date', 'total_seates','rating','gender','country_id','state_id','city_id','host_name','image'
+        'title','start_date','end_date', 'total_seates','price','rating','gender','country_id','state_id','city_id','host_name','image'
     ];
 
      public function countries()

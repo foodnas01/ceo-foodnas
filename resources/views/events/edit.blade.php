@@ -47,6 +47,13 @@
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
+            <strong>{{ __('Price') }}:</strong>
+            {!! Form::text('price', null, array('required'=> 'required','class' => 'form-control ')) !!}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
             <strong>{{ __('Rating') }}:</strong>
             {!! Form::text('rating', null, array('required'=> 'required','class' => 'form-control ')) !!}
         </div>

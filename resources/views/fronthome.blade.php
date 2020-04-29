@@ -219,8 +219,12 @@
     myEvents = (thisValue) => {
 
         $.ajax({
-            url: "{{ url('/my_events/') }}",
-            method: 'get',
+
+            type:'POST',
+            url:"{{ route('my_events') }}",
+            data: {
+            "_token": "{{ csrf_token() }}"
+              },
             success: function(result) {
                 $("#dynamicContent").html(result);
 
@@ -238,23 +242,41 @@
         });
     }
 
-    $("#btnSubmit").click(function(){
-       let country =  $("#country").val();
-       let state = $("#selectState").val();
-       let city = $("#selectCity").val();
+    function myfunction(){
 
-       console.log('sdjfsdkfjkdsl');
+       let country =  $("#country option:selected").val();
+       if(!$.isNumeric(country)){
+            country = '';
+       }
+       let state    = $("#selectState option:selected").val();
+       if(!$.isNumeric(state)){
+            state = '';
+       }
+       let city     = $("#selectCity option:selected").val();
+       if(!$.isNumeric(city)){
+            city = '';
+       }
 
-       /*$.ajax({
-            url: "{{ url('/my_events/') }}",
-            method: 'get',
+       let price = $("#price").val();
+       $.ajax({
+            type:'POST',
+            url:"{{ route('fitler_events') }}",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                country: country,
+                state:state,
+                city:city,
+                price:price
+              },
             success: function(result) {
-                $("#dynamicContent").html(result);
-                
-            }
-        });*/
+                $("#event-grid").html(result);
 
-    })
+            }
+        });
+
+
+    }
+   
 
 
 

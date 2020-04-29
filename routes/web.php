@@ -33,9 +33,13 @@ Route::post('/login/front_login', 'FrontloginController@front_login')->name('fro
 Route::patch('/update/{user}','FrontloginController@update')->name('update_profile');
 
 Route::get('/my_profile/{mypage?}','FrontloginController@my_profile');
-Route::get('/my_events','FrontloginController@my_events');
+Route::post('/my_events','FrontloginController@my_events')->name('my_events');
+Route::post('/fitler_events','FrontloginController@fitler_events')->name('fitler_events');
 
 Route::get('/pages/{mypage?}','FrontloginController@pages');
+
+Route::post('get_states','FrontloginController@get_states')->name('get_states');
+Route::post('get_cities','FrontloginController@get_cities')->name('get_cities');
 
 Route::group(['prefix' => 'admin'], function () {
 

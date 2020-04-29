@@ -60,8 +60,6 @@ class EventController extends Controller
         $cityid    = $request->cityid;
         $cities     = City::where('state_id',$stateid)->get();
         echo view("events.getCity",compact('cities','cityid'))->render();
-
-
     }
 
 

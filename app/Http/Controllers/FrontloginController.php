@@ -64,11 +64,67 @@ class FrontloginController extends Controller
       echo  view('frontend.pages.my_profile',compact('user'))->render();
     }
 
-    function my_events(){
-      $country = Country::all();
-      $data = Event::with('countries','states','cities')->orderBy('id','DESC')->get();
-      echo  view('frontend.pages.my_events',compact('data','country'))->render();
+    function my_events(Request $request){
+
+        // \DB::enableQueryLog();
+      
+        $fcountry = $request->country;
+        $fstate   = $request->state;
+        $fcity    = $request->city;
+        $country  = Country::all();
+        $data     = Event::with('countries','states','cities')->orderBy('id','DESC')->get();
+        
+        
+       // $query = \DB::getQueryLog();
+       // print_r(end($query));
+
+        echo  view('frontend.pages.my_events',compact('data','country'))->render();
     }
+
+    function fitler_events(Request $request){
+
+         \DB::enableQueryLog();
+      
+        $fcountry = $request->country;
+        $fstate   = $request->state;
+        $fcity    = $request->city;
+        $price    = $request->price;
+
+        $clauses = ['country_id' => $fcountry];
+        if(isset($fstate)) {
+            $clauses = array_merge($clauses,['state_id' => $fstate]);
+        }
+        if(isset($fcity)) {
+            $clauses = array_merge($clauses,['city_id' => $fcity]);
+        }
+
+        if(isset($price)) {
+            $clauses = array_merge($clauses,['price' => $price]);
+        }
+        
+        $country  = Country::all();
+        $data     = Event::with('countries','states','cities')->where($clauses)->orderBy('id','DESC')->get();
+        echo  view('frontend.pages.events.eventsTable',compact('data','country','fcountry','fstate','fcity'))->render();
+    }
+
+
+    public function get_states(Request $request){
+        $countryid  = $request->countryid;
+        $stateid    = $request->stateid;
+        $states     = State::where('country_id',$countryid)->get();
+        echo view("frontend.pages.events.getState",compact('states','stateid'))->render();
+
+
+    }
+
+    public function get_cities(Request $request){ 
+        $stateid    = $request->stateid;
+        $cityid    = $request->cityid;
+        $cities     = City::where('state_id',$stateid)->get();
+        echo view("frontend.pages.events.getCity",compact('cities','cityid'))->render();
+    }
+
+
 
     function front_login(Request $request){
 

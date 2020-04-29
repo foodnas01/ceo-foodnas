@@ -55,10 +55,17 @@
         </div>
     </div>
 
-      <div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>{{ __('Price') }}:</strong>
+            {!! Form::text('price', null, array('required'=> 'required','class' => 'form-control ')) !!}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>{{ __('Rating') }}:</strong>
-            {!! Form::text('rating', null, array('required'=> 'required','class' => 'form-control ')) !!}
+            {!! Form::text('rating', null, array('required'=> 'required','class' => 'form-control')) !!}
         </div>
     </div>
 
@@ -142,24 +149,6 @@
 
 
 <script type="text/javascript">
-
-
-
-$("#review").rating({
-
-  "click":function (e) {
-
-    console.log(e);// {stars: 3, event: E.Event}
-
-    alert(e.stars);// 3
-
-  }
-
-});
-
-
-
-
 
     countryChange = (thisValue) => {
         $.ajax({
