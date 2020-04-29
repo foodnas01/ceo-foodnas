@@ -1,4 +1,4 @@
- <aside class="col-lg-4" id="sidebar">
+ <aside class="col-lg-3" id="sidebar">
     <div class="box_detail booking">
         <div class="price">
             <span>45$ <small>person</small></span>

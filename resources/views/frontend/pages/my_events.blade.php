@@ -1,8 +1,8 @@
 <div class="col-md-12" style="margin-bottom: 20px;">
-  <div class="col-md-3" style="float: right;">
+  <div class="col-md-2" style="float: right;">
     <div id="countryDiv">
       <select class="form-control" id="country" onchange="countryChange(this.value)">
-        <option>Select Country</option>
+        <option>Country</option>
 
         @foreach($country as $eachCountry)
           <option @if(isset($fcountry) && $fcountry == $eachCountry->id) selected='selected'  @endif value="{{$eachCountry->id}}">{{$eachCountry->name}}</option>  
@@ -12,32 +12,41 @@
     </div>
   </div>
 
-  <div class="col-md-3"  style="float: right;">
+  <div class="col-md-2"  style="float: right;">
 
     <div id="stateDiv">
       <select name="state_id" id="selectState"  onchange="stateChange(this.value)" class="form-control">
-        <option>Select State</option>
+        <option>State</option>
         
     </select>
     </div>
   </div>
 
-  <div class="col-md-3"  style="float: right;">
+  <div class="col-md-2"  style="float: right;">
 
     <div id="cityDiv">
       <select name="city_id" id="selectCity"   class="form-control">
-          <option>Select City</option>
+          <option>City</option>
       </select>
     </div>
   </div>
 
-  <div class="col-md-2"  style="float: right;">
+  <div class="col-md-1"  style="float: right;">
 
     <div id="priceDiv">
-      <input type="text" placeholder="Price" id="price" name="price" class="form-control" />
+      <input type="text" style="width: 49px;" placeholder="Price" id="price" name="price" class="form-control" />
     </div>
 
   </div>
+
+  <div class="col-md-2"  style="float: right;">
+     <input class="form-control" value="" id="start_date" name="start_date" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
+  </div>
+
+  <div class="col-md-2"  style="float: right;">
+     <input class="form-control" value="" id="end_date" name="end_date" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
+  </div>
+
   <div class="col-md-1"  style="float: right;">
     <input type="button"  class="btn btn-primary" onclick="myfunction()" id="btnSubmit" name="btnSubmit" value="Filter" />
   </div>

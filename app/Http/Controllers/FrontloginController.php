@@ -89,6 +89,8 @@ class FrontloginController extends Controller
         $fstate   = $request->state;
         $fcity    = $request->city;
         $price    = $request->price;
+        $start_date = $request->start_date;
+        $end_date = $request->end_date;
 
         $clauses = ['country_id' => $fcountry];
         if(isset($fstate)) {
@@ -101,9 +103,20 @@ class FrontloginController extends Controller
         if(isset($price)) {
             $clauses = array_merge($clauses,['price' => $price]);
         }
-        
+
+      
+
         $country  = Country::all();
         $data     = Event::with('countries','states','cities')->where($clauses)->orderBy('id','DESC')->get();
+        if(isset($start_date)) {
+             $data = $data->where('start_date' ,'>=', $start_date);
+        }
+
+        if(isset($end_date)) {
+             $data = $data->where('end_date' ,'<=', $end_date);
+        }
+
+        
         echo  view('frontend.pages.events.eventsTable',compact('data','country','fcountry','fstate','fcity'))->render();
     }
 

@@ -33,7 +33,7 @@
             <div class="container margin_60_35">
                 <div class="row">
                     @include('layouts/leftmenus')
-                    <div class="col-lg-8" >
+                    <div class="col-lg-9" >
                         <section id="description">
                             <!-- <h2 id="page">{{ __('My Profile') }}</h2> -->
                             <div class="col-lg-12">
@@ -248,6 +248,11 @@
        if(!$.isNumeric(country)){
             country = '';
        }
+
+       if(country == ''){
+        alert('Please choose at least country.')
+        return false;
+       }
        let state    = $("#selectState option:selected").val();
        if(!$.isNumeric(state)){
             state = '';
@@ -256,6 +261,9 @@
        if(!$.isNumeric(city)){
             city = '';
        }
+
+       let startDate = $("#start_date").val();
+       let endDate   =  $("#end_date").val(); 
 
        let price = $("#price").val();
        $.ajax({
@@ -266,7 +274,9 @@
                 country: country,
                 state:state,
                 city:city,
-                price:price
+                price:price,
+                start_date : startDate,
+                end_date : endDate
               },
             success: function(result) {
                 $("#event-grid").html(result);
