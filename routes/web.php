@@ -28,12 +28,18 @@ Route::get('/about', 'AboutController@index');
 Route::get('/home',  'FrontloginController@home')->name('front_home');
 Route::get('/signup', 'FrontloginController@sign_up');
 Route::post('/login/register', 'FrontloginController@register')->name('front_register');
+Route::post('/login/change_user_password', 'FrontloginController@change_user_password')->name('change_user_password');
+
 Route::post('/login/front_login', 'FrontloginController@front_login')->name('front_login');
+Route::post('/login/reset_password', 'FrontloginController@reset_password')->name('reset_password');
+
 
 Route::patch('/update/{user}','FrontloginController@update')->name('update_profile');
 
 Route::get('/my_profile/{mypage?}','FrontloginController@my_profile');
 Route::post('/my_events','FrontloginController@my_events')->name('my_events');
+Route::get('/userslist','FrontloginController@userslist')->name('userslist');
+
 Route::post('/fitler_events','FrontloginController@fitler_events')->name('fitler_events');
 
 Route::get('/pages/{mypage?}','FrontloginController@pages');
@@ -61,5 +67,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 Route::get('/user/verify/{token}', 'FrontloginController@verifyUser');
+Route::get('/user/changePassword/{token}', 'FrontloginController@changePassword');
+
 
 

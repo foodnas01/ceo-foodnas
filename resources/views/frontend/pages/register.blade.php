@@ -51,9 +51,9 @@
 	
 	<nav id="menu" class="fake_menu"></nav>
 	
-	<div id="preloader">
+	<!-- <div id="preloader">
 		<div data-loader="circle-side"></div>
-	</div>
+	</div> -->
 	<!-- End Preload -->
 	
 	<div id="login">
@@ -74,11 +74,11 @@
 
 				<div class="form-group">
 					
-					{{ Form::label(trans('messages.signup_page.Name'), null, ['class' => 'signupLabel']) }}
+					{{ Form::label(trans('messages.signup_page.Name'), null, ['class' => 'signupLabel' ]) }}
 					<span class="required">*</span>
 
 					
-					{!! Form::text('name', old('name', null), ['class' => "form-control inputField $errors->has('name') ? 'has-error' : ''"]) !!}
+					{!! Form::text('name', old('name', null), ['placeholder' => trans('messages.signup_page.Name'),'class' => "form-control inputField $errors->has('name') ? 'has-error' : ''"]) !!}
 
 
 					<!-- <i class="ti-user signUpIcon"></i> -->
@@ -95,7 +95,7 @@
 					{{ Form::label(trans('messages.signup_page.YourPhone'), null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 
-					{!! Form::text('phone_no', old('phone_no', null), ['class' => "form-control inputField $errors->has('phone_no') ? 'has-error' : ''"]) !!}
+					{!! Form::text('phone_no', old('phone_no', null), ['placeholder' => trans('messages.signup_page.YourPhone'),'class' => "form-control inputField $errors->has('phone_no') ? 'has-error' : ''"]) !!}
 
 					<!-- <i class="icon_mail_alt signUpIcon"></i> -->
 
@@ -109,7 +109,7 @@
 					{{ Form::label(trans('messages.signup_page.YourEmail'), null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 
-					{!! Form::text('email', old('email', null), ['class' => "form-control inputField $errors->has('email') ? 'has-error' : ''"]) !!}
+					{!! Form::text('email', old('email', null), ['placeholder' => trans('messages.signup_page.YourEmail'),'class' => "form-control inputField $errors->has('email') ? 'has-error' : ''"]) !!}
 
 					<!-- <i class="icon_mail_alt signUpIcon"></i> -->
 
@@ -123,7 +123,7 @@
 
 					{{ Form::label(trans('messages.signup_page.YourPassword'), null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
-					{!! Form::password('password', ['class' => "form-control inputField $errors->has('password') ? 'has-error' : ''"]) !!}
+					{!! Form::password('password', ['placeholder' => trans('messages.signup_page.YourPassword'),'class' => "form-control inputField $errors->has('password') ? 'has-error' : ''"]) !!}
 					<!-- <i class="icon_lock_alt signUpIcon"></i> -->
 					<span class="text-danger">{!! $errors->first('password', '<span class="help-block">:message</span>') !!}</span>
 				</div>
@@ -133,7 +133,7 @@
 					<span class="required">*</span>
 
 
-					{!! Form::password('password_confirmation', ['class' => "form-control inputField $errors->has('password_confirmation') ? 'has-error' : ''"]) !!}
+					{!! Form::password('password_confirmation', ['placeholder' => trans('messages.signup_page.CnfmPassword'),'class' => "form-control inputField $errors->has('password_confirmation') ? 'has-error' : ''"]) !!}
 
 
 					<!-- <i class="icon_lock_alt signUpIcon"></i> -->
@@ -147,7 +147,7 @@
 					<span class="required">*</span>
 
 
-					 <input class="form-control" value="{{ old('dob') }}" style="padding-right:10px;padding-left:10px;" name="dob" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
+					 <input class="form-control" placeholder="{{__('Date of Birth')}}" value="{{ old('dob') }}" style="padding-right:10px;padding-left:10px;" name="dob" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
 
 					<span class="text-danger">{!! $errors->first('dob', '<span class="help-block">:message</span>') !!}</span>
 				</div>
@@ -157,9 +157,16 @@
 				
 					{{ Form::label(__('Image')  , null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
-					 <input type="file" name="user_image" style="padding-right:0px;padding-left:0px;"  class="form-control-file" id="exampleFormControlFile1">
+					 <input type="file" name="user_image"  onchange="readURL(this);"  id="user_image" placeholder="{{__('Image')}}" style="padding-right:0px;padding-left:0px;"  class="form-control-file" id="exampleFormControlFile1">
+
+
 
 					<span class="text-danger">{!! $errors->first('user_image', '<span class="help-block">:message</span>') !!}</span>
+				</div>
+
+				<div class="imageDiv" style="height: 75px;width: 75px;float: left;margin-top: -70px;">
+
+					<img id="signupImage" src="{{asset('frontend/img/avatar.jpg')}}" style="border-radius: 50%;width: 75px;height: 75px;" data-retina="true" alt="" class="logo_sticky">
 				</div>
 
 					<div class="form-group">
@@ -204,6 +211,28 @@
     
 	<!-- SPECIFIC SCRIPTS -->
     <script src="{{asset('frontend/js/pw_strenght.js')}}"></script>
+
+    <script type="text/javascript">
+
+    	
+
+		     function readURL(input) {
+	            if (input.files && input.files[0]) {
+	                var reader = new FileReader();
+
+	                reader.onload = function (e) {
+	                	//console.log(e.target.result)
+	                    $('#signupImage')
+	                        .attr('src', e.target.result);
+	                };
+
+	                reader.readAsDataURL(input.files[0]);
+	            }
+	        }
+    	
+
+
+    </script>
 	
 	
   

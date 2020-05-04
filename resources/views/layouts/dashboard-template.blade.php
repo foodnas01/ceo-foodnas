@@ -40,6 +40,10 @@
         p{
             font-weight:bold;
         }
+        #forgot_pw {
+
+            min-height: 314px !important;
+        }
     </style>
 
 </head>

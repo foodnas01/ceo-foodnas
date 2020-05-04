@@ -52,6 +52,25 @@ class FrontloginController extends Controller
       return redirect('/')->with('status', $status);
     }
 
+    public function changePassword($token)
+    {
+      
+      $verifyUser = VerifyUser::where('token', $token)->first();
+     
+      if(isset($verifyUser) ){
+
+        $user = $verifyUser->user;
+        return view('frontend.pages.change_password',compact('user'));
+
+      } else {
+        \Session::put('warning', __('Sorry your email cannot be identified.'));
+
+        return redirect('/')->with('warning', __('Sorry your email cannot be identified.'));
+      }
+      \Session::put('status', $status);
+      return redirect('/')->with('status', $status);
+    }
+
     function pages($mypage){
         echo view("frontend.pages.allPages",compact('mypage'))->render();
     }
@@ -67,10 +86,7 @@ class FrontloginController extends Controller
     function my_events(Request $request){
 
         // \DB::enableQueryLog();
-      
-        $fcountry = $request->country;
-        $fstate   = $request->state;
-        $fcity    = $request->city;
+
         $country  = Country::all();
         $data     = Event::with('countries','states','cities')->orderBy('id','DESC')->get();
         
@@ -79,6 +95,14 @@ class FrontloginController extends Controller
        // print_r(end($query));
 
         echo  view('frontend.pages.my_events',compact('data','country'))->render();
+    }
+
+    function userslist(Request $request){
+
+
+
+       $users = DB::connection('mysql2')->select('select * from users');
+        echo  view('frontend.pages.userslist',compact('users'))->render();
     }
 
     function fitler_events(Request $request){
@@ -184,17 +208,38 @@ class FrontloginController extends Controller
     }
 
     public function home(){
+
+        $users = DB::connection('mysql2')->select('select * from users');
         if(\Session::get('isLoggedIn')){
           $uesrInfo = \Session::get('userinfo');
           $id = $uesrInfo->id;
           $user = User::find($id);
-          return view('fronthome',compact('user'));
+          return view('fronthome',compact('user','users'));
         }else{
             return redirect('/')->with('warning', __("You can't access here!"));
         }
          
     }
 
+    public function change_user_password(Request $request){
+        
+        $this->validate($request, [
+            'email'                   => 'required',
+            'password'                => 'required|confirmed|min:6',
+            'password_confirmation'   => 'required'
+        ]);
+        $input = $request->all();
+
+        $user = User::where('email', $request->email)->first();
+        if(isset($user) ){
+            $input['password'] = Hash::make($input['password']);
+            $user = User::find($user->id);
+            $user->update($input);
+            \Session::put('status', __("Your Password has been changed successfully!"));
+            return redirect('/')->with('status', __("Your Password has been changed successfully!"));
+
+        }
+    }
   
      public function register(RegisterRequest $request)
         {
@@ -235,6 +280,39 @@ class FrontloginController extends Controller
             });
         return redirect()->back()
                         ->with('success',__('Verification email has been sent to you please verify!'));
+    }
+
+    function reset_password(Request $request){
+        $email = $request->email_forgot;
+        $userInfo  = User::where('email',$email)->first();
+        $id = $userInfo->id;
+
+        $verifyUser = VerifyUser::where('user_id',$id)->first();
+        if(isset($verifyUser) ){
+            VerifyUser::where('user_id',$id)->delete();
+        }
+
+        
+        $token = sha1(time());
+        $verifyUser = VerifyUser::create([
+            'user_id' => $id,
+            'token' => $token
+        ]);
+
+
+        $to_name  = $userInfo->name;
+        $to_email = 'motivatepakistan@gmail.com';
+        //$to_email = $userInfo->email;
+
+        $data = array('name'=>$request->name, "body" => __('Change Password'),"token"=>$token);
+        \Mail::send('emails.forgetEmail', $data, function($message) use ($to_name, $to_email) {
+        $message->to($to_email, $to_name)
+        ->subject(__('Change Password'));
+        $message->from('no-reply@foodnas.com',__('Change Password'));
+        });
+
+        \Session::put('status', __('Forget Passwrod link has been sent to you please verify!'));
+         return redirect('/')->with('status', __('Forget Passwrod link has been sent to you please verify!'));
     }
 
     public function update(Request $request, $id)

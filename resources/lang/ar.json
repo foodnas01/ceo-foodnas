@@ -101,7 +101,18 @@
   "Event updated successfully" : "تم تحديث الحدث بنجاح",
   "Event deleted successfully": "تم حذف الحدث بنجاح",
   "Looks For Events"        : "يبدو للأحداث",
-  "Price"                   : "السعر"
+  "Price"                   : "السعر",
+  "Please confirm login email below": "يرجى تأكيد البريد الإلكتروني لتسجيل الدخول أدناه",
+  "You will receive an email containing a link allowing you to reset your password to a new preferred one.": "سوف تتلقى رسالة بريد إلكتروني تحتوي على رابط يسمح لك بإعادة تعيين كلمة المرور الخاصة بك إلى واحدة مفضلة جديدة.",
+  "Reset Password": "إعادة تعيين كلمة المرور",
+  "Verify Forget password"  : "تحقق من نسيان كلمة المرور",
+  "Change Password" : "تغيير كلمة المرور",
+  "Forget Passwrod link has been sent to you please verify!": "تم إرسال رابط نسيت كلمة المرور إليك ، يرجى التحقق!",
+  "Please click on the below link to change password account": "يرجى النقر على الرابط أدناه لتغيير حساب كلمة المرور",
+  "Your Password has been changed successfully!": "تم تغيير كلمة مرورك بنجاح!",
+  "Skills" : "مهارات",
+  "Level": "مستوى",
+  "Guest Users" : "المستخدمون الضيوف"
 
 
 

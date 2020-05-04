@@ -106,9 +106,11 @@ return [
         'YourPassword'      => 'كلمه السر',
         'CnfmPassword'      => 'تأكيد كلمة المرور',
         'RegisterNow'       => 'سجل الان',
+        'ChangePassword'    => 'تغيير كلمة المرور',
         'AlreadyAccount'    => 'هل لديك حساب بالفعل؟',
         'SignIn'            => 'تسجيل الدخول',
-        'Foodnas'           => 'فودناس'
+        'Foodnas'           => 'فودناس',
+        "NewPassword"       =>  'كلمة السر الجديدة'
     ],
     'dashboard' => [
         'email'             =>  'البريد الإلكتروني',

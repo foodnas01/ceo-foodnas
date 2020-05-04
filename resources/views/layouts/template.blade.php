@@ -37,6 +37,10 @@
         p{
             font-weight:bold;
         }
+        #forgot_pw {
+
+            min-height: 314px !important;
+        }
     </style>
 
 </head>
@@ -68,7 +72,7 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
             <h3>{{ @trans('messages.signup_page.SignIn') }}</h3>
         </div>
 
-        <form method="POST" action="{{ route('front_login') }}">
+        <form method="POST" id="loginForm" action="{{ route('front_login') }}">
 
             <?php
             if(Session::has('invalidDetails')){  ?>
@@ -119,18 +123,23 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
                     </div>
                 </div>
                 <div class="text-center"><input type="submit" value="{{ @trans('messages.dashboard.Login') }}" class="btn_1 full-width"></div>
+
+                
                 <div class="text-center">
                     {{ @trans('messages.dashboard.dontAccount') }}? <a href="{{URL('signup')}}">{{ @trans('messages.Signup') }}</a>
                 </div>
                 <div id="forgot_pw">
                     <div class="form-group">
-                        <label>Please confirm login email below</label>
-                        <input type="email" class="form-control" name="email_forgot" id="email_forgot">
-                        <i class="icon_mail_alt"></i>
+                        <label>{{ __('Please confirm login email below') }}</label>
+                        <input type="email" class="form-control" name="email_forgot" id="email_forgot" />
+                       <!--  <i class="icon_mail_alt"></i> -->
                     </div>
-                    <p>You will receive an email containing a link allowing you to reset your password to a new preferred one.</p>
-                    <div class="text-center"><input type="submit" value="Reset Password" class="btn_1"></div>
+                    <p>{{ __('You will receive an email containing a link allowing you to reset your password to a new preferred one.') }}</p>
+                    <div class="text-center">
+                        <button type="button" id="resetButton" class="btn_1">{{ __('Reset Password') }}</button>
+                    </div>
                 </div>
+             
             </div>
         </form>
         <!--form -->
@@ -146,6 +155,12 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
 
     <!-- DATEPICKER  -->
     <script>
+    
+    $("#resetButton").on("click",function(){
+        $("#loginForm").attr("action","{{route('reset_password') }}");
+        $("#loginForm").submit();
+    });
+
     $(function() {
       'use strict';
       $('input[name="dates"]').daterangepicker({
