@@ -81,6 +81,8 @@
 
                             <li><a class="nav-link" href="{{ route('events.index') }}">{{ __('Manage Events') }}</a></li>
 
+                            <li><a class="nav-link" href="{{ route('guests.index') }}">{{ __('Guest Users') }}</a></li>
+
                             <li class="mycls nav-item dropdown" id="mycls">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->email }} <span class="caret"></span>

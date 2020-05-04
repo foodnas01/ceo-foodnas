@@ -112,7 +112,15 @@
   "Your Password has been changed successfully!": "تم تغيير كلمة مرورك بنجاح!",
   "Skills" : "مهارات",
   "Level": "مستوى",
-  "Guest Users" : "المستخدمون الضيوف"
+  "Guest Users" : "المستخدمون الضيوف",
+  "First Name": "الاسم الاول",
+  "Guest user created successfully": "تم إنشاء مستخدم ضيف بنجاح",
+  "Create Guest" : "إنشاء ضيف",
+  "Update Guest":"تحديث الضيف",
+  "Guest user updated successfully": "تم تحديث مستخدم الضيف بنجاح",
+  "Delete Guest": "حذف الضيف",
+  "Are You sure you want to delete the guest ?": "هل أنت متأكد أنك تريد حذف الضيف؟",
+  "Guest user deleted successfully": "تم حذف المستخدم الضيف بنجاح"
 
 
 

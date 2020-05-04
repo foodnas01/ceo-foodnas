@@ -1,7 +1,7 @@
 <nav class="secondary_nav sticky_horizontal" style="">
     <div class="container">
         <ul class="clearfix">
-            <li><a href="javascript:void(0)" onclick="UsersList('users')"  class="">{{ __('Guest Users') }}</a></li>
+           
             <li><a href="javascript:void(0)" onclick="myProfile('myprofile')" class="">{{ __('My Profile') }}</a></li>
             <li><a href="javascript:void(0)" onclick="myEvents('events')" class="">{{ __('Looks For Events') }}</a></li>
             <li><a href="javascript:void(0)" onclick="navbarLink('preferences')" class="active">My Preferences</a></li>
