@@ -57,6 +57,9 @@ Route::group(['prefix' => 'admin'], function () {
 	    Route::resource('products','ProductController');
 	    Route::resource('events','EventController');
 	    Route::resource('guests','GuestController');
+	    Route::post('/guests/validateForm','GuestController@validateForm')->name('guests.validateForm');
+	    Route::post('/users/validateForm','UserController@validateForm')->name('users.validateForm');
+	    
 
 	    Route::post('events/get_states','EventController@get_states')->name('events.get_states');
 	    Route::post('events/get_cities','EventController@get_cities')->name('events.get_cities');

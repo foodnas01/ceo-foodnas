@@ -28,8 +28,17 @@
 @endphp
 
 
-{!! Form::model($guest, ['method' => 'PATCH','enctype'=>'multipart/form-data','route' => ['guests.update', $guest->id]]) !!}
+{!! Form::model($guest, ['method' => 'POST','id'=>'guestUsers','enctype'=>'multipart/form-data','route' => ['guests.update', $guest->id]]) !!}
 <div class="row">
+
+  <div class="col-xs-12 col-sm-12 col-md-12">
+
+      <div class="alert alert-danger" style="display: none;">
+        <ul id="errors">
+           
+        </ul>
+      </div>
+    </div>
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
@@ -144,7 +153,9 @@
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-12 text-right">
-          <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i>&nbsp;{{ __('Save') }}</button>
+
+          <button type="button" onclick="checkValidation('edit')" class="btn btn-success"><i class="fa fa-floppy-o"></i>&nbsp;{{ __('Save') }}</button>
+
     </div>
 </div>
 {!! Form::close() !!}

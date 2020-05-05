@@ -153,7 +153,7 @@
 				</div>
 
 
-				<div class="form-group">
+				<!-- <div class="form-group">
 				
 					{{ Form::label(__('Image')  , null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
@@ -167,7 +167,7 @@
 				<div class="imageDiv" style="height: 75px;width: 75px;float: left;margin-top: -70px;">
 
 					<img id="signupImage" src="{{asset('frontend/img/avatar.jpg')}}" style="border-radius: 50%;width: 75px;height: 75px;" data-retina="true" alt="" class="logo_sticky">
-				</div>
+				</div> -->
 
 					<div class="form-group">
 					
@@ -213,6 +213,77 @@
     <script src="{{asset('frontend/js/pw_strenght.js')}}"></script>
 
     <script type="text/javascript">
+
+    	 window.onload = function () {
+		  var backgroundImg=["{{asset('frontend/img/background1.jpg')}}",
+		                    "{{asset('frontend/img/background2.jpg')}}",
+		                    "{{asset('frontend/img/background3.jpg')}}",
+		                    "{{asset('frontend/img/background4.jpg')}}"
+		                    ]
+		  
+		    setInterval(changeImage, 4000);
+		   function changeImage() {   
+		    var i = Math.floor((Math.random() * 4)); 
+		    document.body.style.backgroundImage = "url('"+backgroundImg[i]+"')";
+		    
+		  }
+		}
+
+		//Preload images first 
+/*$.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+var images = Array("{{asset('frontend/img/background1.jpg')}}",
+                   "{{asset('frontend/img/background2.jpg')}}",
+                   "{{asset('frontend/img/background3.jpg')}}",
+                   "{{asset('frontend/img/background4.jpg')}}");
+
+$([images[0],images[1],images[2],images[3]]).preload();
+
+// Usage:
+
+var currimg = 0;
+
+$(document).ready(function(){
+   
+    function loadimg(){
+        
+       $('#register_bg').animate({ opacity: 1 }, 500,function(){
+
+            //finished animating, minifade out and fade new back in           
+            $('#register_bg').animate({ opacity: 0.7 }, 100,function(){
+                
+                currimg++;
+                
+                if(currimg > images.length-1){
+                    
+                    currimg=0;
+                    
+                }
+                
+                var newimage = images[currimg];
+            
+                //swap out bg src                
+                $('#register_bg').css("background-image", "url("+newimage+")"); 
+            
+                //animate fully back in
+                $('#register_bg').animate({ opacity: 1 }, 400,function(){
+
+                    //set timer for next
+                    setTimeout(loadimg,3000);
+
+                });
+
+            });
+        
+        });
+
+     }
+     setTimeout(loadimg,3000);
+  
+});*/
 
     	
 

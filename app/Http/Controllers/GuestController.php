@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Validator;
+use Input;
+use Response;
 
 class GuestController extends Controller
 {
@@ -37,6 +40,7 @@ class GuestController extends Controller
      */
     public function store(Request $request)
     {
+
         $terms = 0;
         if (isset($request->terms)) {
             $terms = 1;
@@ -48,6 +52,22 @@ class GuestController extends Controller
                         ->with('success',__('Guest user created successfully'));
 
     }
+
+    public function validateForm(Request $request){
+        $rules = array('firstName' => 'required', 'city' => 'required', 'email'=> 'required','skills'=>'required','level'=>'required','phoneNumber'=>'required');
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails())
+        {
+            return Response::json(array(
+                'success' => false,
+                'errors' => $validator->getMessageBag()->toArray()
+
+            ), 400); // 400 being the HTTP code for an invalid request.
+        }
+        return Response::json(array('success' => true), 200);
+    }
+
+
 
     /**
      * Display the specified resource.

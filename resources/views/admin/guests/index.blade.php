@@ -163,7 +163,6 @@
            type:'GET',
            url:"{{ route('guests.create') }}",
            success:function(data){
-              console.log(data);
 
               $("#popupTitle").html("{{ __('Create Guest') }}");
               $("#modalPoppup").modal("show");
@@ -174,7 +173,6 @@
   });
 
  editPopup = (obj,id) => {
-  console.log($(obj).attr("data-url"))
     $.ajax({
            type:'GET',
            url:$(obj).attr("data-url"),
@@ -200,6 +198,35 @@
 confirmDelete = (id) => {
   $("#"+id).submit();
 }
+
+ checkValidation = (method) => {
+  
+      $.ajax({
+          type: "POST",
+          url: "{{ route('guests.validateForm') }}",
+          data: $("#guestUsers").serialize(),
+          success: function(msg) {
+            if(method == 'edit'){
+              $("#guestUsers").append('<input name="_method" type="hidden" value="PATCH">')
+            }
+            $("#guestUsers").submit();
+          },
+          error: function(xhr, status, error) 
+          {
+            $("#errors").html("");
+            $.each(xhr.responseJSON.errors, function (key, item) 
+            {
+  
+              $("#errors").append("<li>"+item+"</li>");
+              $("#errors").parent().show();
+            });
+
+          }
+
+      });  
+  }
+
+
 </script>
 
 @endsection

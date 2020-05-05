@@ -221,6 +221,32 @@
 confirmDelete = (id) => {
   $("#"+id).submit();
 }
+
+  checkValidation = (method) => {
+  
+      $.ajax({
+          type: "POST",
+          url: "{{ route('users.validateForm') }}",
+          data: $("#userForm").serialize(),
+          success: function(msg) {
+            if(method == 'edit'){
+              $("#userForm").append('<input name="_method" type="hidden" value="PATCH">')
+            }
+            $("#userForm").submit();
+          },
+          error: function(xhr, status, error) 
+          {
+            $("#errors").html("");
+            $.each(xhr.responseJSON.errors, function (key, item) 
+            {
+              $("#errors").append("<li>"+item+"</li>");
+              $("#errors").parent().show();
+            });
+
+          }
+
+      });  
+  }
 </script>
 
 @endsection

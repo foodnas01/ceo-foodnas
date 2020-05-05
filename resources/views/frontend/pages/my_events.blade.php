@@ -48,7 +48,7 @@
   </div>
 
   <div class="col-md-1"  style="float: right;">
-    <input type="button"  class="btn btn-primary" onclick="myfunction()" id="btnSubmit" name="btnSubmit" value="Filter" />
+    <input type="button"  class="btn_1 full-width purchase" style="width: auto !important;" onclick="myfunction()" id="btnSubmit" name="btnSubmit" value="Filter" />
   </div>
 
 

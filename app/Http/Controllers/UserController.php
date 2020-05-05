@@ -14,6 +14,7 @@ use App\Traits\GuestRole;
 
 use Spatie\Permission\Models\Permission;
 use App\Traits\CommonTrait;
+use Response;
 
 
 class UserController extends Controller
@@ -52,6 +53,28 @@ class UserController extends Controller
     {
         $roles = Role::pluck('name','name')->all();
         return view('users.create',compact('roles'));
+    }
+
+    public function validateForm(Request $request){
+
+
+        $validator = \Validator::make($request->all(), [
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|same:confirm-password',
+            'roles' => 'required'
+        ]);
+
+        if ($validator->fails())
+        {
+            return Response::json(array(
+                'success' => false,
+                'errors' => $validator->getMessageBag()->toArray()
+
+            ), 400); // 400 being the HTTP code for an invalid request.
+        }
+        return Response::json(array('success' => true), 200);
+
     }
 
 

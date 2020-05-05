@@ -187,8 +187,8 @@ class FrontloginController extends Controller
                 'password'  => $request->password,
                 'verified'  => 1
             );
-            $user = User::where('email', '=', $request->email)
-             ->where('verified', '=', 1)->first();
+            //->where('verified', '=', 1)
+            $user = User::where('email', '=', $request->email)->first();
              if (!$user) {
 
                \Session::put('invalidDetails', __('Sorry! Email or password is not valid.')); 
@@ -245,13 +245,13 @@ class FrontloginController extends Controller
         {
 
         $input = $request->all();
-        $folder      = 'uploads/profile_images';
+        /*$folder      = 'uploads/profile_images';
         $file = null;
         if ($request->has('user_image')) {
             $image = $request->file('user_image');
             $file = $this->uploadImage($image,$folder, '');
         }
-        $input['user_image']   = $file;
+        $input['user_image']   = $file;*/
         $input['password'] = Hash::make($input['password']);
     	  $user = User::create($input);
      
@@ -264,22 +264,26 @@ class FrontloginController extends Controller
             'user_id' => $user->id,
             'token' => sha1(time())
         ]);
-        //$view = view("emails.verifyUser",compact('verifyUser','user'))->render();
-        //echo $view;die;
 
-            $to_name  = $request->name;
-            //$to_email = 'motivatepakistan@gmail.com';
-            $to_email = $request->email;
-            $token    = $user->verifyUser->token;
+        $to_name  = $request->name;
+        //$to_email = 'motivatepakistan@gmail.com';
+        $to_email = $request->email;
+        $token    = $user->verifyUser->token;
 
-            $data = array('name'=>$request->name, "body" => __('Verify Signup Email'),"token"=>$token);
-            \Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
-            $message->to($to_email, $to_name)
-            ->subject(__('Verify Signup Email'));
-            $message->from('no-reply@foodnas.com',__('Verify Signup Email'));
-            });
-        return redirect()->back()
-                        ->with('success',__('Verification email has been sent to you please verify!'));
+        $data = array('name'=>$request->name, "body" => __('Verify Signup Email'),"token"=>$token);
+        \Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+        $message->to($to_email, $to_name)
+        ->subject(__('Verify Signup Email'));
+        $message->from('no-reply@foodnas.com',__('Verify Signup Email'));
+        });
+
+        $user = User::where('email', '=', $request->email)->first();
+         \Session::put('isLoggedIn', 1); 
+                    \Session::put('userinfo', $user); 
+        return Redirect::to('home');   
+
+        /*return redirect()->back()
+                        ->with('success',__('Verification email has been sent to you please verify!'));*/
     }
 
     function reset_password(Request $request){

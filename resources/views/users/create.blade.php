@@ -16,8 +16,19 @@
 
 
 
-{!! Form::open(array('route' => 'users.store','method'=>'POST','enctype'=>'multipart/form-data')) !!}
+{!! Form::open(array('route' => 'users.store','id'=>'userForm','method'=>'POST','enctype'=>'multipart/form-data')) !!}
 <div class="row">
+
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="alert alert-danger" style="display: none;">
+        <ul id="errors">
+           
+        </ul>
+      </div>
+    </div>
+
+
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>{{ __('Name') }}:</strong>
@@ -86,11 +97,11 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>{{ __('Role') }}:</strong>
-            {!! Form::select('roles[]', $roles,[], array('required'=> 'required','class' => 'form-control','multiple')) !!}
+            {!! Form::select('roles[]', $roles,[], array('required'=> 'required','class' => 'form-control')) !!}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 text-right">
-        <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i>&nbsp;{{ __('Save') }}</button>
+        <button type="submit"  class="btn btn-success"><i class="fa fa-floppy-o"></i>&nbsp;{{ __('Save') }}</button>
     </div>
 </div>
 {!! Form::close() !!}

@@ -18,19 +18,20 @@
 <body class="rtl">
     <main>
 
-        <section class="hero_in general">
-            <div class="wrapper">
+        <section>
+             <!-- class="hero_in general" -->
+            <!-- <div class="wrapper">
                 <div class="container">
                     <h1 class="fadeInUp"><span></span>
                     Dashboard Page
                     </h1>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <div class="bg_color_1" style="transform: none; position: relative;">
             @include('layouts/navbar')
-            <div class="container margin_60_35">
+            <div class="container margin_80_55">
                 <div class="row">
                     @include('layouts/leftmenus')
                     <div class="col-lg-9" >
