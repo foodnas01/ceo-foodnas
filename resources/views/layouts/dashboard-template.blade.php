@@ -59,6 +59,9 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
 
 
     @include('frontend.partials.front-header')
+
+    
+
     <!-- /header -->
 
     @yield('content')
@@ -168,11 +171,17 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
           $(this).val('');
       });
     });
+
+    
+
+
     </script>
 
     <!-- INPUT QUANTITY  -->
     <script src="{{asset('frontend/js/input_qty.js')}}"></script>
     <script type="text/javascript">
+
+        
 
      
             <?php if(Session::has('invalidDetails')){?>

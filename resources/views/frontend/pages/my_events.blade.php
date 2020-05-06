@@ -1,5 +1,5 @@
-<div class="col-md-12" style="margin-bottom: 20px;">
-  <div class="col-md-2" style="float: right;">
+<!-- <div class="col-md-12" style="margin-bottom: 20px;"> -->
+  <div class="col-md-2" style="float: right;width: 15.666667%">
     <div id="countryDiv">
       <select class="form-control" id="country" onchange="countryChange(this.value)">
         <option>Country</option>
@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class="col-md-2"  style="float: right;">
+  <div class="col-md-2"  style="float: right;width: 15.666667%">
 
     <div id="stateDiv">
       <select name="state_id" id="selectState"  onchange="stateChange(this.value)" class="form-control">
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="col-md-2"  style="float: right;">
+  <div class="col-md-2"  style="float: right;width: 15.666667%">
 
     <div id="cityDiv">
       <select name="city_id" id="selectCity"   class="form-control">
@@ -31,28 +31,49 @@
     </div>
   </div>
 
-  <div class="col-md-1"  style="float: right;">
+  <!-- <div class="col-md-1"  style="float: right;">
 
     <div id="priceDiv">
       <input type="text" style="width: 49px;" placeholder="Price" id="price" name="price" class="form-control" />
     </div>
 
+  </div> -->
+
+  <div class="col-md-1" style="float: right;">
+    <div id="priceDiv" style="margin-right: -14px;">
+      <input type="text" style="width: 64px;" placeholder="Price" id="price" name="price" class="form-control">
+    </div>
   </div>
 
-  <div class="col-md-2"  style="float: right;">
-     <input class="form-control" value="" id="start_date" name="start_date" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
+  <div class="col-md-2"  style="float: right;width: 15.666667%">
+    <!--  <input class="form-control" value="" id="start_date" name="start_date" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' /> -->
+
+      <input class="form-control" type="text" name="date1" placeholder="Start Date">
+            
+
+
   </div>
 
-  <div class="col-md-2"  style="float: right;">
-     <input class="form-control" value="" id="end_date" name="end_date" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
+ 
+
+
+
+  <div class="col-md-2"  style="float: right;width: 15.666667%">
+    <!--  <input class="form-control" value="" id="end_date" name="end_date" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' /> -->
+
+      <input class="form-control" type="text" name="date2" placeholder="End Date">
+
+
   </div>
 
   <div class="col-md-1"  style="float: right;">
-    <input type="button"  class="btn_1 full-width purchase" style="width: auto !important;" onclick="myfunction()" id="btnSubmit" name="btnSubmit" value="Filter" />
+    <input type="button"  class="btn_1 full-width purchase" style="width: auto !important;" onclick="myfunction()" id="btnSubmit" name="btnSubmit" value="{{ __('Filter') }}" />
   </div>
 
+  
 
-</div>
+
+<!-- </div> -->
 <div  style="height: 70px;"></div>
 
 
@@ -150,6 +171,41 @@
         });
 
     }
+
+
+    $(function() {
+      'use strict';
+      $('input[name="date1"]').daterangepicker({
+          autoUpdateInput: false,
+          singleDatePicker: true,
+          locale: {
+              cancelLabel: 'Clear'
+          }
+      });
+      $('input[name="date1"]').on('apply.daterangepicker', function(ev, picker) {
+          $(this).val(picker.startDate.format('DD/MM/YYYY'));
+      });
+      $('input[name="date1"]').on('cancel.daterangepicker', function(ev, picker) {
+          $(this).val('');
+      });
+    });
+
+     $(function() {
+      'use strict';
+      $('input[name="date2"]').daterangepicker({
+          singleDatePicker: true,
+          autoUpdateInput: false,
+          locale: {
+              cancelLabel: 'Clear'
+          }
+      });
+      $('input[name="date2"]').on('apply.daterangepicker', function(ev, picker) {
+          $(this).val(picker.startDate.format('DD/MM/YYYY'));
+      });
+      $('input[name="date2"]').on('cancel.daterangepicker', function(ev, picker) {
+          $(this).val('');
+      });
+    });
 
 
 

@@ -305,8 +305,8 @@ class FrontloginController extends Controller
 
 
         $to_name  = $userInfo->name;
-        $to_email = 'motivatepakistan@gmail.com';
-        //$to_email = $userInfo->email;
+        //$to_email = 'motivatepakistan@gmail.com';
+        $to_email = $userInfo->email;
 
         $data = array('name'=>$request->name, "body" => __('Change Password'),"token"=>$token);
         \Mail::send('emails.forgetEmail', $data, function($message) use ($to_name, $to_email) {
@@ -349,6 +349,8 @@ class FrontloginController extends Controller
 
         $user = User::find($id);
         $user->update($input);
+        \Session::put('userinfo', $user); 
+                
         return redirect()->route('front_home')
                         ->with('success',__('User updated successfully'));
     }

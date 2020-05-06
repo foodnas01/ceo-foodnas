@@ -3404,11 +3404,11 @@ a.box_feat h3 {
   transition: all 0.3s ease-in-out;
 }
 .box_grid figure a:hover img {
-  -webkit-transform: translate(-50%, -50%) scale(1);
+ /* -webkit-transform: translate(-50%, -50%) scale(1);
   -moz-transform: translate(-50%, -50%) scale(1);
   -ms-transform: translate(-50%, -50%) scale(1);
   -o-transform: translate(-50%, -50%) scale(1);
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);*/
 }
 .box_grid .wrapper {
   padding: 25px;

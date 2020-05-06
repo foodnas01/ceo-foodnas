@@ -75,6 +75,25 @@
             .box_1{
                     text-align: right;
             }
+            
+           /* #myyellow img:hover {
+              transform: scale(0);
+            }  */          
+
+            .div4:hover {
+
+                top: 0px;
+                transform: scale(1.07);
+                transition: transform 0.4s linear 0s;
+                vertical-align: top;
+               
+             /* transform: scale(1.07);*/
+            }
+
+            .info-sec {
+                text-align: center;
+                height: 68%;
+            }
 
 
     </style>
@@ -139,7 +158,7 @@
 
         <div class="">
             <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="col-xl-4 col-lg-6 col-md-6 div4">
                     <div class="box_grid">
                         <div class="wrapper box-setting blue-col">
                             <img src="{{asset('frontend/img/Group65.png')}}" class="align-r" />
@@ -155,7 +174,7 @@
                     </div>
                 </div>
                 <!-- /box_grid -->
-                <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="col-xl-4 col-lg-6 col-md-6 div4" >
                     <div class="box_grid">
                          <div class="wrapper box-setting yellow-col" >
                             <img src="{{asset('frontend/img/Group87.png')}}" class="align-r" />
@@ -164,7 +183,7 @@
 
                             <h3 class="head"><a class="anchorCls" href="#">{!! __('messages.Dashboardgrid2') !!}</a></h3>
 
-                            <p class="mg-btm-none">{!! __('messages.Dashboardgridtext2') !!}</p>
+                            <p class="mg-btm-none">{!! __('messages.Dashboardgridtext3') !!}</p>
                         </div>
 
                         <figure>
@@ -173,7 +192,7 @@
                     </div>
                 </div>
                 <!-- /box_grid -->
-                <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="col-xl-4 col-lg-6 col-md-6 div4">
                     <div class="box_grid">
                         <div class="wrapper box-setting red-col">
                             <img src="{{asset('frontend/img/Group51.png')}}" class="align-r" />
@@ -372,7 +391,7 @@
 
 
 
-                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="col-xl-4 col-lg-6 col-md-6 div4">
 
                     <div class="box_grid">
 
@@ -414,7 +433,7 @@
 
 
 
-                <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="col-xl-4 col-lg-6 col-md-6 div4">
 
                     <div class="box_grid">
 
@@ -481,7 +500,7 @@
 
 
                 <!-- /box_grid -->
-                <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="col-xl-4 col-lg-6 col-md-6 div4">
 
                     <div class="box_grid">
 

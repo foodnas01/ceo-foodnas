@@ -120,7 +120,15 @@
   "Guest user updated successfully": "تم تحديث مستخدم الضيف بنجاح",
   "Delete Guest": "حذف الضيف",
   "Are You sure you want to delete the guest ?": "هل أنت متأكد أنك تريد حذف الضيف؟",
-  "Guest user deleted successfully": "تم حذف المستخدم الضيف بنجاح"
+  "Guest user deleted successfully": "تم حذف المستخدم الضيف بنجاح",
+  "Please activate your account.": "يرجى تفعيل حسابك.",
+  "Information" : "معلومات!",
+  "Filter" : "منقي",
+  "My Preferences": "تفضيلاتي",
+  "Become a Host": "كن مضيفًا",
+  "My Messages": "رسائلي",
+  "My Bookings": "حجوزاتي",
+  "Contact Us": "اتصل بنا"
 
 
 

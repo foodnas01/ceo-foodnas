@@ -1,10 +1,12 @@
-@extends('layouts.dashboard-template') @section('style')
+@extends('layouts.dashboard-template') 
+@section('style')
 <style type="text/css">
     #headerText {
         padding-top: 120px;
     }
 </style>
-@stop @section('content')
+@stop 
+@section('content')
 
 <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
@@ -29,12 +31,15 @@
             </div> -->
         </section>
 
+
+       
+
         <div class="bg_color_1" style="transform: none; position: relative;">
             @include('layouts/navbar')
             <div class="container margin_80_55">
                 <div class="row">
                     @include('layouts/leftmenus')
-                    <div class="col-lg-9" >
+                    <div class="col-lg-9" style="margin-top: 15px;">
                         <section id="description">
                             <!-- <h2 id="page">{{ __('My Profile') }}</h2> -->
                             <div class="col-lg-12">
@@ -62,6 +67,13 @@
 
 
                                 <div id="message-contact"></div>
+
+                                @if($user->verified == 0)
+                               <div class="alert alert-danger alert-dismissible fade show">
+                                    <strong>{{ __('Information') }}</strong>{{ __('Please activate your account.') }}
+                                   
+                                </div>
+                                @endif
                              
 
                                     {!! Form::model($user, ['method' => 'PATCH','enctype'=>'multipart/form-data','route' => ['update_profile', $user->id]]) !!}
@@ -206,6 +218,8 @@
 
 
 <script type="text/javascript">
+
+   
 
     myProfile = (thisValue) => {
         $.ajax({

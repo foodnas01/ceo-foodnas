@@ -1,10 +1,12 @@
 <style type="text/css">
     
-   .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
-    color: #fff;
-     background-color: #FFC107; 
-     border-color: #FFC107; 
-}
+   /*.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+        color: #fff;
+         background-color: #FFC107; 
+         border-color: #FFC107; 
+    }*/
+
+
 
 /*
 .btn-secondary {
@@ -46,10 +48,12 @@
                 {{\Session::get('userinfo')->name}}
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Action</button>
+                
+                <a href="javascript:void(0)" class="dropdown-item"  onclick="myProfile('myprofile')" class="">{{ __('My Profile') }}</a>
+
+
                  <div class="dropdown-divider"></div>
-                <button class="dropdown-item" type="button">Another action</button>
-                 <div class="dropdown-divider"></div>
+               
 
                  <a class="dropdown-item" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
