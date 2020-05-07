@@ -19,13 +19,32 @@
 
             @if(\Session::get('isLoggedIn') == 1)
 
+            
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle btn_1 rounded" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn btn-secondary dropdown-toggle btn_1 rounded" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" style="padding: 7px 15px;" aria-expanded="false">
                 {{\Session::get('userinfo')->name}}
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="margin-right: -50px !important;">
                 
-                <a href="javascript:void(0)" class="dropdown-item"  onclick="myProfile('myprofile')" class="">{{ __('My Profile') }}</a>
+                <a href="{{ route('front_home') }}" class="dropdown-item" class="">{{ __('My Profile') }}</a>
+                <div class="dropdown-divider"></div>
+
+                <a href="{{ route('front_home') }}" class="dropdown-item" class="">{{ __('Looks For Events') }}</a>
+                <div class="dropdown-divider"></div>
+
+                <a href="{{ route('front_home') }}" class="dropdown-item" class="">{{ __('My Preferences') }}</a>
+                <div class="dropdown-divider"></div>
+
+                <a href="{{ route('front_home') }}" class="dropdown-item" class="">{{ __('Become a Host') }}</a>
+                <div class="dropdown-divider"></div>
+
+                <a href="{{ route('front_home') }}" class="dropdown-item" class="">{{ __('My Messages') }}</a>
+                <div class="dropdown-divider"></div>
+
+                <a href="{{ route('front_home') }}" class="dropdown-item" class="">{{ __('My Bookings') }}</a>
+                <div class="dropdown-divider"></div>
+
+                <a href="{{ route('front_home') }}" class="dropdown-item" class="">{{ __('Contact Us') }}</a>
 
 
                  <div class="dropdown-divider"></div>
@@ -44,6 +63,7 @@
 
               </div>
             </div>
+            
             @else
 
 

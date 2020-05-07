@@ -84,7 +84,7 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
             if(Session::has('invalidDetails')){  ?>
 
             <div class="alert alert-warning">
-              <strong>Warning!</strong> <?php echo Session::get('invalidDetails'); ?>
+              <strong>{{ __('Warning!') }}</strong> <?php echo Session::get('invalidDetails'); ?>
             </div>
               
             <?php  }?>
@@ -159,7 +159,8 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
     $(function() {
       'use strict';
       $('input[name="dates"]').daterangepicker({
-          autoUpdateInput: false,
+           autoUpdateInput: false,
+
           locale: {
               cancelLabel: 'Clear'
           }
@@ -168,6 +169,26 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
           $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
       });
       $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
+          $(this).val('');
+      });
+    });
+
+
+    $(function() {
+      $('input[name="dob"]').daterangepicker({
+      autoUpdateInput: false,
+      singleDatePicker:true,
+          locale: {
+              cancelLabel: 'Clear',
+              format: "YYYY-MM-DD"
+          }
+      });
+
+      $('input[name="dob"]').on('apply.daterangepicker', function(ev, picker) {
+          $(this).val(picker.startDate.format('YYYY-MM-DD'));
+      });
+
+      $('input[name="dob"]').on('cancel.daterangepicker', function(ev, picker) {
           $(this).val('');
       });
     });

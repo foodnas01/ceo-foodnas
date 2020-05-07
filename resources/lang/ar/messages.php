@@ -116,7 +116,7 @@ return [
         'email'             =>  'البريد الإلكتروني',
         'password'          =>  'كلمه السر',
         'show'              =>  'تبين',
-        'ForgotPassword'    =>  'هل نسيت كلمة المرور',
+        'ForgotPassword'    =>  'هل نسيت كلمة المرور ؟',
         'RememberMe'        =>  'تذكرنى',
         'Login'             =>  'تسجيل الدخول',
         'dontAccount'       =>  'ليس لديك حساب'

@@ -77,10 +77,9 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
             <?php
             if(Session::has('invalidDetails')){  ?>
 
-            <div class="alert alert-warning">
-              <strong>Warning!</strong> <?php echo Session::get('invalidDetails'); ?>
-            </div>
-              
+            <div class="alert alert-danger">
+              <strong>{{ __('Warning!') }} </strong> <?php echo Session::get('invalidDetails'); ?>
+            </div>  
             <?php  }?>
             @csrf
             <div class="sign-in-wrapper">
@@ -89,7 +88,7 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
                 <div class="divider"><span>Or</span></div> -->
                 <div class="form-group">
                     <label for="email">{{ @trans('messages.dashboard.email') }}</label>
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="{{ @trans('messages.dashboard.email') }}" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                     @error('email')
                         <span class="invalid-feedback" role="alert">
@@ -100,7 +99,7 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
 
                  <div class="form-group">
                     <label for="password">{{ @trans('messages.dashboard.password') }} </label>
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="{{ @trans('messages.dashboard.password') }}" name="password" style="padding:10px !important" required autocomplete="current-password">
 
                     @error('password')
                         <span class="invalid-feedback" role="alert">
@@ -119,24 +118,30 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
                         </label>
                     </div>
                     <div class="float-right mt-1">
-                        <a id="forgot" href="javascript:void(0);">{{ @trans('messages.dashboard.ForgotPassword') }}?</a>
+                        <a id="forgot" href="javascript:void(0);">{{ @trans('messages.dashboard.ForgotPassword') }}</a>
                     </div>
                 </div>
                 <div class="text-center"><input type="submit" value="{{ @trans('messages.dashboard.Login') }}" class="btn_1 full-width"></div>
 
                 
-                <div class="text-center">
+                <div class="text-center" style="font-weight: bold;">
                     {{ @trans('messages.dashboard.dontAccount') }}? <a href="{{URL('signup')}}">{{ @trans('messages.Signup') }}</a>
                 </div>
                 <div id="forgot_pw">
                     <div class="form-group">
                         <label>{{ __('Please confirm login email below') }}</label>
-                        <input type="email" class="form-control" name="email_forgot" id="email_forgot" />
+                        <input type="email"  placeholder="{{ @trans('messages.dashboard.email') }}" class="form-control" name="email_forgot" id="email_forgot" />
                        <!--  <i class="icon_mail_alt"></i> -->
                     </div>
                     <p>{{ __('You will receive an email containing a link allowing you to reset your password to a new preferred one.') }}</p>
                     <div class="text-center">
+                       
+
                         <button type="button" id="resetButton" class="btn_1">{{ __('Reset Password') }}</button>
+
+                         <button type="button" id="backButton" class="btn_1">{{ __('Back') }}</button>
+
+
                     </div>
                 </div>
              
@@ -155,10 +160,20 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
 
     <!-- DATEPICKER  -->
     <script>
+
+        $("#backButton").on("click",function(){
+            $("#forgot_pw").hide();
+            $("#loginForm").attr("action","{{route('front_login') }}");
+        })
     
     $("#resetButton").on("click",function(){
-        $("#loginForm").attr("action","{{route('reset_password') }}");
-        $("#loginForm").submit();
+        if($("#email_forgot").val() !=''){
+            $("#loginForm").attr("action","{{route('reset_password') }}");
+            $("#loginForm").submit();
+        }else{
+            $("#email_forgot").css('border','1px solid red');
+        }
+        
     });
 
     $(function() {
@@ -176,6 +191,26 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
           $(this).val('');
       });
     });
+
+
+        $(function() {
+          'use strict';
+          $('input[name="dob"]').daterangepicker({
+              autoUpdateInput: false,
+              singleDatePicker: true,
+              locale: {
+                  cancelLabel: 'Clear'
+              }
+          });
+          $('input[name="dob"]').on('apply.daterangepicker', function(ev, picker) {
+              $(this).val(picker.startDate.format('DD/MM/YYYY'));
+          });
+          $('input[name="dob"]').on('cancel.daterangepicker', function(ev, picker) {
+              $(this).val('');
+          });
+        });
+
+         
     </script>
 
     <!-- INPUT QUANTITY  -->

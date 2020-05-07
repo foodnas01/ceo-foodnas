@@ -1154,7 +1154,9 @@ ul.bullets li:before {
 }
 
 #sign-in-dialog .form-group input.form-control {
-  padding-right: 40px !important;
+  padding-right: 10px !important;
+ /* font-size: 1.1em;
+  font-weight: bold;*/
 }
 
 #sign-in-dialog .form-group i {

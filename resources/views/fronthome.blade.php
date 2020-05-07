@@ -187,8 +187,8 @@
 
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Date of Birth</label>
-                                                <input class="form-control" value="{{$user->dob}}" name="dob" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
+                                                <label>{{ __('Date of Birth') }}</label>
+                                                <input class="form-control" value="{{$user->dob}}" name="dob" type="text" id="dob" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
                                             </div>
                                         </div>
 
@@ -218,8 +218,6 @@
 
 
 <script type="text/javascript">
-
-   
 
     myProfile = (thisValue) => {
         $.ajax({

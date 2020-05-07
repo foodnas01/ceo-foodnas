@@ -146,8 +146,7 @@
 					{{ Form::label(__('Date of Birth') , null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 
-
-					 <input class="form-control" placeholder="{{__('Date of Birth')}}" value="{{ old('dob') }}" style="padding-right:10px;padding-left:10px;" name="dob" type="date" data-date-inline-picker="false" data-date-popover='{"inline": true}' />
+					<input class="form-control" value="{{ old('dob') }}" type="text" name="dob" placeholder="Start Date">
 
 					<span class="text-danger">{!! $errors->first('dob', '<span class="help-block">:message</span>') !!}</span>
 				</div>
@@ -221,11 +220,12 @@
 		                    "{{asset('frontend/img/background4.jpg')}}"
 		                    ]
 		  
-		    setInterval(changeImage, 4000);
+		    setInterval(changeImage, 3000);
 		   function changeImage() {   
 		    var i = Math.floor((Math.random() * 4)); 
 		    document.body.style.backgroundImage = "url('"+backgroundImg[i]+"')";
-		    
+
+		   
 		  }
 		}
 

@@ -7,7 +7,7 @@
           text-align: center;
           display: block;
         }
-        img{
+        #userImage{
              border-radius: 50%;
         }
 
@@ -43,7 +43,7 @@
         <!-- Block parent element -->
         <div class="img-container-block">
              @if (file_exists(public_path().'/uploads/profile_images/'.\Session::get('userinfo')->user_image))
-                <img height="200" width="200" src="{{ asset('uploads/profile_images/'.\Session::get('userinfo')->user_image) }}">
+                <img id="userImage" height="200" width="200" src="{{ asset('uploads/profile_images/'.\Session::get('userinfo')->user_image) }}">
             @else
                 <img height="200" width="200" src="{{ asset('frontend/img/avatar.jpg') }}">
             @endif

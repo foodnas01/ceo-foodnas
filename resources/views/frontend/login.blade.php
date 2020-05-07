@@ -85,7 +85,7 @@
                                     
 <?php if ($errors->all()) { ?>
  <div class="alert alert-warning">
-     <strong>Warning!</strong>
+     <strong>{{ __('Warning!') }}</strong>
     <?php foreach ($errors->all() as $message) { ?>
       <p><?php echo $message; ?></p>
      <?php 
