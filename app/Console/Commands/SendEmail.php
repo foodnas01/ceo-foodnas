@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
 use DB;
+use Illuminate\Support\Facades\Log;
 
 class SendEmail extends Command
 {
@@ -19,7 +20,7 @@ class SendEmail extends Command
 
     public function handle()
     {
-        
+
           $users = DB::connection('mysql2')->select('select * from users');
             foreach ($users as $eachUser) {
                 $to_email = $eachUser->email;
@@ -31,7 +32,13 @@ class SendEmail extends Command
                     $message->to($to_email)->subject('Registraion Email');
 
                 });
-                 DB::connection('mysql2')->update('update users set verfied = 1 where id = '.$eachUser->id.' ');
+
+                // check for failures
+                if (Mail::failures()) {
+                    // return response showing failed emails
+                    Log::info(json_encode(Mail::failures()));
+                }
+                DB::connection('mysql2')->update('update users set verfied = 1 where id = '.$eachUser->id.' ');
             }
         $this->info('The emails are send successfully!');
     }
