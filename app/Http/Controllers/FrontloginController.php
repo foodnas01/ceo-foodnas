@@ -21,14 +21,34 @@ use App\Event;
 use App\Country;
 use App\State;
 use App\City;
+use Intervention\Image\ImageManagerStatic as Image;
+
 
 class FrontloginController extends Controller
 {
     use GuestRole;
     use CommonTrait;
+   
 
     public function sign_up(){
     	return view('frontend.pages.register');
+    }
+
+    public function upload(Request $request)
+    {
+
+        $folderPath = public_path('uploads/profile_images/');
+        $image_parts = explode(";base64,", $request->image);
+        $image_type_aux = explode("image/", $image_parts[0]);
+        $image_type = $image_type_aux[1];
+        $image_base64 = base64_decode($image_parts[1]);
+        $imageName = uniqid() . '.png';
+        $file = $folderPath . $imageName;
+        file_put_contents($file, $image_base64);
+        $this->profileImage = $imageName;
+        \Session::put('profile_image', $imageName);
+         Image::make($folderPath.$imageName)->resize(70, 70)->save($folderPath.'thumbs/'.$imageName);
+        return response()->json(['success'=>'success']);
     }
 
     public function verifyUser($token)
@@ -328,15 +348,9 @@ class FrontloginController extends Controller
             'user_image' => 'image|mimes:jpeg,png,jpg,bmp,gif,svg|max:2048',
         ]);
 
-
         $input = $request->all();
-        $folder      = 'uploads/profile_images';
-      
-        if ($request->has('user_image')) {
-            $user = User::find($id);
-            $image = $request->file('user_image');
-            $file = $this->uploadImage($image,$folder, $user->user_image);
-            $input['user_image']   = $file;
+        if(\Session::get('profile_image') !=''){
+            $input['user_image']   = \Session::get('profile_image');
         }
         
         

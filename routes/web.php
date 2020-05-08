@@ -35,6 +35,8 @@ Route::post('/login/reset_password', 'FrontloginController@reset_password')->nam
 
 
 Route::patch('/update/{user}','FrontloginController@update')->name('update_profile');
+Route::post('image-cropper/upload','FrontloginController@upload');
+
 
 Route::get('/my_profile/{mypage?}','FrontloginController@my_profile');
 Route::post('/my_events','FrontloginController@my_events')->name('my_events');
@@ -68,6 +70,8 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 });
+
+
 
 
 Route::get('/user/verify/{token}', 'FrontloginController@verifyUser');
