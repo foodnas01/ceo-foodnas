@@ -131,7 +131,18 @@
   "Contact Us": "اتصل بنا",
   "Back":"عودة",
   "Date of Birth":"تاريخ الولادة",
-  "Warning!": "تحذير!"
+  "Warning!": "تحذير!",
+  "Record has been added successfully!": "تمت إضافة السجل بنجاح!",
+  "Record has been updated successfully!": "تم تحديث السجل بنجاح!",
+  "Record has been  deleted successfully!": "تم حذف السجل بنجاح!",
+  "Are You sure you want to delete the about us page ?": "هل أنت متأكد أنك تريد حذف صفحة عنا؟",
+  "Delete About": "حذف حول",
+  "Create AboutUs": "إنشاء عنا",
+  "Update AboutUs": "تحديث عنا",
+  "Delete AboutUs": "حذف عنا",
+  "Featured Image": "صورة مميزة",
+  "Content": "المحتوى",
+  "About Us" : "معلومات عنا"
 
 
 

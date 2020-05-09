@@ -158,6 +158,10 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
     <script src="{{asset('frontend/js/main_rtl.js')}}"></script>
     <script src="{{asset('frontend/js/validate.js')}}"></script>
 
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+    <script src="{{ asset('frontend/js/ckfinder.js') }}"></script>
+    
+
     <!-- DATEPICKER  -->
     <script>
 

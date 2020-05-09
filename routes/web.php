@@ -24,7 +24,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/about', 'AboutController@index');
+Route::get('/about', 'FrontaboutController@index');
+
 Route::get('/home',  'FrontloginController@home')->name('front_home');
 Route::get('/signup', 'FrontloginController@sign_up');
 Route::post('/login/register', 'FrontloginController@register')->name('front_register');
@@ -59,6 +60,8 @@ Route::group(['prefix' => 'admin'], function () {
 	    Route::resource('products','ProductController');
 	    Route::resource('events','EventController');
 	    Route::resource('guests','GuestController');
+	    Route::resource('about','AboutController');
+	    
 	    Route::post('/guests/validateForm','GuestController@validateForm')->name('guests.validateForm');
 	    Route::post('/users/validateForm','UserController@validateForm')->name('users.validateForm');
 	    

@@ -28,6 +28,10 @@
 
     <!-- font awesome (required) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <!-- Editor Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+
     <!-- progress bar (not required, but cool) -->
     <link rel="stylesheet" href="{{ asset('frontend/css/nprogress.css') }}" />
     <!-- bootstrap (required) -->
@@ -41,6 +45,10 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css">
+
+   <!--  <link href="{{ asset('frontend/css/wysiwyg.css') }}" rel="stylesheet" /> -->
+
+
 
     
 
@@ -82,6 +90,7 @@
                             <li><a class="nav-link" href="{{ route('events.index') }}">{{ __('Manage Events') }}</a></li>
 
                             <li><a class="nav-link" href="{{ route('guests.index') }}">{{ __('Guest Users') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('about.index') }}">{{ __('About Us') }}</a></li>
 
                             <li class="mycls nav-item dropdown" id="mycls">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -125,7 +134,7 @@
 		<script src="{{ asset('frontend/js/popper.min.js') }}"></script>
 
 		<!-- bootstrap js (required) -->
-		<script src="{{ asset('frontend/js/popper.min.js') }}"></script>
+		<script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
 		
         <!-- pjax js (required) -->
 		<script src="{{ asset('frontend/js/jquery.pjax.min.js') }}"></script>
@@ -144,9 +153,12 @@
         <script src="{{ asset('frontend/js/vfs_fonts.js') }}"></script>
         <script src="{{ asset('frontend/js/buttons.html5.min.js') }}"></script>
         <script src="{{ asset('frontend/js/buttons.print.min.js') }}"></script>
+  <!--       <script src="{{ asset('frontend/js/wysiwyg.js') }}"></script> -->
 
+        <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+		<script src="{{ asset('frontend/js/ckfinder.js') }}"></script>
+        <script>
 
-		<script>
 
 
 		    // send csrf token (see https://laravel.com/docs/5.6/csrf#csrf-x-csrf-token) - this is required
@@ -163,6 +175,10 @@
 		    $(document).on('pjax:end', function () {
 		        NProgress.done();
 		    });
+
+            
+
+
 		</script>
 	
 
