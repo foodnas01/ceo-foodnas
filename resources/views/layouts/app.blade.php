@@ -90,7 +90,7 @@
                             <li><a class="nav-link" href="{{ route('events.index') }}">{{ __('Manage Events') }}</a></li>
 
                             <li><a class="nav-link" href="{{ route('guests.index') }}">{{ __('Guest Users') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('about.index') }}">{{ __('About Us') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('pages.index') }}">{{ __('Pages') }}</a></li>
 
                             <li class="mycls nav-item dropdown" id="mycls">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

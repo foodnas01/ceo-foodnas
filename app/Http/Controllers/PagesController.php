@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\About;
+use App\StaticPage;
 use App\Traits\CommonTrait;
 
-class AboutController extends Controller
+class PagesController extends Controller
 {
 	use CommonTrait;
      /**
@@ -17,8 +17,8 @@ class AboutController extends Controller
     public function index(Request $request)
     {
         $obj = $this;
-        $abouts = About::orderBy('id','DESC')->paginate(100);
-        return view('admin.about.index',compact('abouts','obj'))
+        $pages = StaticPage::orderBy('id','DESC')->paginate(100);
+        return view('admin.static_pages.index',compact('pages','obj'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
@@ -30,8 +30,7 @@ class AboutController extends Controller
     public function create()
     {
         $obj = $this;
-      
-        return view('admin.about.create',compact('obj'));
+        return view('admin.static_pages.create',compact('obj'));
     }
 
 
@@ -46,14 +45,13 @@ class AboutController extends Controller
     	 
         $this->validate($request, [
             'title'         	=> 'required',
-            'featured_image' 	=> 'image|mimes:jpeg,png,jpg,bmp,gif,svg|max:2048',
             'editor1'    		=> 'required'
         ]);
 
         $input = $request->all();
         $file = null;
         if ($request->has('featured_image')) {
-            $folder      = 'uploads/about_images';
+            $folder      = 'uploads/page_images';
             $image       = $request->file('featured_image');
             $file        = $this->uploadImage($image,$folder, '');
         }
@@ -62,8 +60,8 @@ class AboutController extends Controller
         $input['content'] = $request->editor1;
 
         
-        About::create($input);
-        return redirect()->route('about.index')
+        StaticPage::create($input);
+        return redirect()->route('pages.index')
                         ->with('success',__('Record has been added successfully!'));
     }
 
@@ -75,8 +73,7 @@ class AboutController extends Controller
      */
     public function show($id)
     {
-        $About = About::find($id);
-        return view('admin.about.show',compact('About'));
+       
     }
 
     /**
@@ -87,8 +84,8 @@ class AboutController extends Controller
      */
     public function edit($id)
     {
-        $about      = About::find($id);
-        return view('admin.about.edit',compact('about'));
+        $page      = StaticPage::find($id);
+        return view('admin.static_pages.edit',compact('page'));
     }
 
 
@@ -112,10 +109,10 @@ class AboutController extends Controller
 
         $input = $request->all();
         $file = null;
-        $about = About::find($id);
+        $about = StaticPage::find($id);
 
         if ($request->has('featured_image')) {
-            $folder      = 'uploads/about_images';
+            $folder      = 'uploads/page_images';
             $image = $request->file('featured_image');
             $file = $this->uploadImage($image,$folder, $about->featured_image);
             $input['featured_image']   = $file;
@@ -124,7 +121,7 @@ class AboutController extends Controller
 
         $input['content'] = $request->editor1;
         $about->update($input);
-        return redirect()->route('about.index')
+        return redirect()->route('pages.index')
                         ->with('success',__('Record has been updated successfully!'));
     }
 
@@ -136,14 +133,14 @@ class AboutController extends Controller
      */
     public function destroy($id)
     {
-        $about = About::find($id);
-        $folder      = 'uploads/about_images';
-        if (!empty($about->featured_image)) {
-            $this->deleteImage($folder, $about->featured_image);
+        $page = StaticPage::find($id);
+        $folder      = 'uploads/page_images';
+        if (!empty($page->featured_image)) {
+            $this->deleteImage($folder, $page->featured_image);
         }
         
-        About::find($id)->delete();
-        return redirect()->route('about.index')
+        StaticPage::find($id)->delete();
+        return redirect()->route('pages.index')
                         ->with('success',__('Record has been  deleted successfully!'));
     }
 }

@@ -24,7 +24,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/about', 'FrontaboutController@index');
+
 
 Route::get('/home',  'FrontloginController@home')->name('front_home');
 Route::get('/signup', 'FrontloginController@sign_up');
@@ -54,24 +54,19 @@ Route::group(['prefix' => 'admin'], function () {
 
 	Auth::routes();
 	Route::group(['middleware' => ['auth']], function() {
+
 		Route::get('/home', 'HomeController@index')->name('home');
 	    Route::resource('roles','RoleController');
 	    Route::resource('users','UserController');
 	    Route::resource('products','ProductController');
 	    Route::resource('events','EventController');
 	    Route::resource('guests','GuestController');
-	    Route::resource('about','AboutController');
-	    
+	    Route::resource('pages','PagesController');
 	    Route::post('/guests/validateForm','GuestController@validateForm')->name('guests.validateForm');
 	    Route::post('/users/validateForm','UserController@validateForm')->name('users.validateForm');
-	    
-
 	    Route::post('events/get_states','EventController@get_states')->name('events.get_states');
 	    Route::post('events/get_cities','EventController@get_cities')->name('events.get_cities');
 	});
-
-
-
 });
 
 
@@ -79,6 +74,17 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/user/verify/{token}', 'FrontloginController@verifyUser');
 Route::get('/user/changePassword/{token}', 'FrontloginController@changePassword');
+Route::get('/about', 'FrontpagesController@index');
+Route::get('/privacy_policy', 'FrontpagesController@privacy')->name('privacy_policy');
+Route::get('/join_as_host', 'FrontpagesController@join_as_host')->name('join_as_host');
+Route::get('/how_it_works', 'FrontpagesController@how_it_works')->name('how_it_works');
+Route::get('/terms_conditions', 'FrontpagesController@terms_conditions')->name('terms_conditions');
+Route::get('/trust', 'FrontpagesController@trust')->name('trust');
+Route::get('/jobs', 'FrontpagesController@jobs')->name('jobs');
+Route::get('/faqs', 'FrontpagesController@faqs')->name('faqs');
+Route::get('/contact_us', 'FrontpagesController@contact_us')->name('contact_us');
+
+
 
 
 

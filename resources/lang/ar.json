@@ -142,7 +142,19 @@
   "Delete AboutUs": "حذف عنا",
   "Featured Image": "صورة مميزة",
   "Content": "المحتوى",
-  "About Us" : "معلومات عنا"
+  "About Us" : "معلومات عنا",
+  "Pages": "الصفحات",
+  "Type": "نوع",
+  "Privacy Policy": "سياسة الخصوصية",
+  "Select Type": "اختر صنف",
+  "Create Page": "إنشاء صفحة",
+  "Update Page": "تحديث الصفحة",
+  "Delete Page": "حذف الصفحة",
+  "Are You sure you want to delete?": "هل أنت متأكد أنك تريد حذف؟",
+  "Join As Host": "انضم كمضيف",
+  "How It Works": "كيف تعمل",
+  "Terms And Conditions" : "الأحكام والشروط"
+
 
 
 

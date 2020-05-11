@@ -17,14 +17,14 @@
                     <h5>{{ __('messages.UsefulLinks') }}</h5>
                     <ul class="links">
                         <li><a href="{{URL('about')}}">{{ __('messages.AboutFoodnas') }}</a></li>
-                        <li><a href="about.html">{{ __('messages.HowItWorks') }}</a></li>
-                        <li><a href="about.html">{{ __('messages.JoinAsHost') }}</a></li>
-                        <li><a href="about.html">{{ __('messages.TermsConditions') }}</a></li>
-                        <li><a href="about.html">{{ __('messages.PrivacySafetyPolicy') }}</a></li>
-                        <li><a href="about.html">{{ __('messages.ContactUs') }}</a></li>
-                        <li><a href="about.html">{{ __('messages.Trust') }}</a></li>
-                        <li><a href="about.html">{{ __('messages.Jobs') }}</a></li>
-                        <li><a href="about.html">{{ __('messages.FAQ') }}</a></li>
+                        <li><a href="{{URL('privacy_policy')}}">{{ __('messages.PrivacySafetyPolicy') }}</a></li>
+                        <li><a href="{{route('join_as_host')}}">{{ __('messages.JoinAsHost') }}</a></li>
+                        <li><a href="{{route('how_it_works')}}">{{ __('messages.HowItWorks') }}</a></li>
+                        <li><a href="{{route('terms_conditions')}}">{{ __('messages.TermsConditions') }}</a></li>
+                        <li><a href="{{route('contact_us')}}">{{ __('messages.ContactUs') }}</a></li>
+                        <li><a href="{{route('trust')}}">{{ __('messages.Trust') }}</a></li>
+                        <li><a href="{{route('jobs')}}">{{ __('messages.Jobs') }}</a></li>
+                        <li><a href="{{route('faqs')}}">{{ __('messages.FAQ') }}</a></li>
                         
                     </ul>
                 </div>
