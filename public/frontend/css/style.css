@@ -621,7 +621,7 @@ h3.slide_typo {
 
 /*General links color*/
 a {
-  color: #FF0000;
+  color: #FFC107;
   text-decoration: none;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -631,7 +631,7 @@ a {
   outline: none;
 }
 a:hover, a:focus {
-  color: #ffffff;
+  color: #FF0000;
   text-decoration: none;
   outline: none;
 }
@@ -5841,15 +5841,18 @@ a.grid_item.latest_adventure em {
 }
 
 .circleDiv1{
-    background: url(../img/Group29_40x40.png) center center no-repeat;
+    background: url(../img/Group29@2x.png) center center no-repeat;
+    background-size: 50%;
 }
 
 .circleDiv2{
-    background: url(../img/Group44_40x40.png) center center no-repeat;
+    background: url(../img/Group44@2x.png) center center no-repeat;
+    background-size: 50%;
 }
 
 .circleDiv3{
-    background: url(../img/Group30_40x40.png) center center no-repeat;
+    background: url(../img/Group74@2x.png) center center no-repeat;
+    background-size: 50%;
 }
 
 .banner {

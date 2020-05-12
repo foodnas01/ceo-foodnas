@@ -83,6 +83,7 @@ Route::get('/trust', 'FrontpagesController@trust')->name('trust');
 Route::get('/jobs', 'FrontpagesController@jobs')->name('jobs');
 Route::get('/faqs', 'FrontpagesController@faqs')->name('faqs');
 Route::get('/contact_us', 'FrontpagesController@contact_us')->name('contact_us');
+Route::post('/user_contact', 'FrontpagesController@user_contact')->name('user_contact');
 
 
 

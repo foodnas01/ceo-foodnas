@@ -55,8 +55,8 @@
             }
             .circleDiv1,.circleDiv2,.circleDiv3{
                 border-radius: 50%;
-                height: 100px;
-                width: 100px;
+                height: 140px;
+                width: 140px;
                 border: 2px solid #FEA621;
                 margin: 0 auto;
                 margin-bottom: 15px;
@@ -344,10 +344,10 @@
                         <a href="#0" class="boxed_list bxList">
                             <div class="circleDiv1"></div>
                             <h4>{!! __('messages.circleImages.imgLebel1') !!}</h4>
-                            <p>
+                        
                             <span class="circleSpan">{!! __('messages.circleImages.imgText11') !!}</span><br />
                             <span class="circleSpan">{!! __('messages.circleImages.imgText12') !!}</span><br />
-                            </p>
+                          
                         </a>
                     </div>
                     <div class="col-md-4">

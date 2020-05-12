@@ -12,7 +12,12 @@
   </div>
 @endif
 
-
+<style type="text/css">
+  .modal-content{
+        width: 660px;
+        left: 60px;
+  }
+</style>
 
 {!! Form::open(array('route' => 'pages.store','id'=>'guestUsers','method'=>'POST','enctype'=>'multipart/form-data')) !!}
 <div class="row">

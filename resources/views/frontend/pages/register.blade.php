@@ -30,6 +30,11 @@
 
     <!-- YOUR CUSTOM CSS -->
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
+
+     <!-- date picker (required if you need date picker & date range filters) -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/daterangepicker.css') }}"/>
+
+
     <style type="text/css">
     	
     	.registerNow{
@@ -146,7 +151,7 @@
 					{{ Form::label(__('Date of Birth') , null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 
-					<input class="form-control" value="{{ old('dob') }}" type="text" name="dob" placeholder="Start Date">
+					<input class="form-control" value="{{ old('dob') }}" type="text" name="dob" placeholder="{{__('Date of Birth')}}">
 
 					<span class="text-danger">{!! $errors->first('dob', '<span class="help-block">:message</span>') !!}</span>
 				</div>
@@ -211,7 +216,29 @@
 	<!-- SPECIFIC SCRIPTS -->
     <script src="{{asset('frontend/js/pw_strenght.js')}}"></script>
 
+    <!-- datepicker js (required for datepickers) -->
+	<script type="text/javascript" src="{{ asset('frontend/js/daterangepicker.min.js') }}"></script>
+
     <script type="text/javascript">
+
+    	 $(function() {
+	      'use strict';
+	      $('input[name="dob"]').daterangepicker({
+	          autoUpdateInput: false,
+	          singleDatePicker: true,
+	          locale: {
+	              cancelLabel: 'Clear'
+	          }
+	      });
+	      $('input[name="dob"]').on('apply.daterangepicker', function(ev, picker) {
+	          $(this).val(picker.startDate.format('DD/MM/YYYY'));
+	      });
+	      $('input[name="dob"]').on('cancel.daterangepicker', function(ev, picker) {
+	          $(this).val('');
+	      });
+	    });
+
+
 
     	 window.onload = function () {
 		  var backgroundImg=["{{asset('frontend/img/background1.jpg')}}",

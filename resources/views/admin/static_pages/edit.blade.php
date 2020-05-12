@@ -1,6 +1,13 @@
 @extends('layouts.grid')
 
 
+<style type="text/css">
+  .modal-content{
+        width: 660px;
+        left: 60px;
+  }
+</style>
+
 @section('content')
 @if (count($errors) > 0)
   <div class="alert alert-danger">
@@ -46,7 +53,7 @@
                 <option @if($page->type == 'Joinashost') selected='selected' @endif   value="Joinashost">{{ __('Join As Host') }}</option>
                 <option @if($page->type == 'how_it_works') selected='selected' @endif   value="how_it_works">{{ __('How It Works') }}</option>
                  <option @if($page->type == 'terms_conditions') selected='selected' @endif   value="terms_conditions">{{ __('Terms And Conditions') }}</option>
-                 
+
                  <option @if($page->type == 'trust') selected='selected' @endif   value="trust">{{ __('messages.Trust') }}</option>
                  <option @if($page->type == 'jobs') selected='selected' @endif   value="jobs">{{ __('messages.Jobs') }}</option>
 

@@ -9,6 +9,10 @@
         	font-size: 20px;
         }
 
+        label{
+        	text-align: right;
+        }
+
     </style>
 @stop
 @section('content')
@@ -59,25 +63,50 @@
 				<div class="row justify-content-between">
 					<div class="col-lg-5">
 						<div class="map_contact">
+							 <div id="map"></div>
 						</div>
 						<!-- /map -->
 					</div>
 					<div class="col-lg-6">
-						<h4>Send a message</h4>
-						<p>Ex quem dicta delicata usu, zril vocibus maiestatis in qui.</p>
+
+						 @if ($message = Session::get('success'))
+	                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+	                          <strong>{{ __('Success') }}!</strong> {{ $message }}
+	                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	                            <span aria-hidden="true">&times;</span>
+	                          </button>
+	                        </div>
+	                        @endif
+
+	                          @if (count($errors) > 0)
+                                  <div class="alert alert-danger">
+                                    <strong>{{ __('Whoops!') }}</strong>{{ __('There were some problems with your input.') }}<br><br>
+                                    <ul>
+                                       @foreach ($errors->all() as $error)
+                                         <li>{{ $error }}</li>
+                                       @endforeach
+                                    </ul>
+                                  </div>
+                                @endif
+
+
+						<h4>{{__('Call us')}}</h4>
+						<p>{{__('contact message')}}</p>
 						<div id="message-contact"></div>
-						<form method="post" action="assets/contact.php" id="contactform" autocomplete="off">
+
+						{!! Form::open(array('route' => 'user_contact','id'=>'userForm','method'=>'POST','enctype'=>'multipart/form-data')) !!}
+							@csrf
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Name</label>
-										<input class="form-control" type="text" id="name_contact" name="name_contact">
+										<label>{{__('First Name')}}</label>
+										<input class="form-control" type="text" id="first_name" name="first_name">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Last name</label>
-										<input class="form-control" type="text" id="lastname_contact" name="lastname_contact">
+										<label>{{__('Last Name')}}</label>
+										<input class="form-control" type="text" id="last_name" name="last_name">
 									</div>
 								</div>
 							</div>
@@ -85,31 +114,23 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Email</label>
-										<input class="form-control" type="email" id="email_contact" name="email_contact">
+										<label>{{__('Email')}}</label>
+										<input class="form-control" type="email" id="email" name="email">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Telephone</label>
-										<input class="form-control" type="text" id="phone_contact" name="phone_contact">
+										<label>{{__('Phone')}}</label>
+										<input class="form-control" type="text" id="phone" name="phone">
 									</div>
 								</div>
 							</div>
 							<!-- /row -->
 							<div class="form-group">
-								<label>Message</label>
-								<textarea class="form-control" id="message_contact" name="message_contact" style="height:150px;"></textarea>
+								<label>{{__('Message')}}</label>
+								<textarea class="form-control" id="message" name="message" style="height:150px;"></textarea>
 							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label>Are you human? 3 + 1 =</label>
-										<input class="form-control" type="text" id="verify_contact" name="verify_contact">
-									</div>
-								</div>
-							</div>
-							<p class="add_top_30"><input type="submit" value="Submit" class="btn_1 rounded" id="submit-contact"></p>
+							<p class="add_top_30"><input type="submit" value="{{ __('messages.Submit') }}" class="btn_1 rounded" id="submit-contact"></p>
 						</form>
 					</div>
 				</div>
@@ -118,20 +139,34 @@
 			<!-- /container -->
 		</div>
 
-
-
-
-
-		
 		<!--/container-->
 	</main>
-
-
-
 	    <!-- Conent Section end -->
 @endsection
 
 @section('script')
+
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+
+
+    <style type="text/css">
+      html, body, #map { height: 100%; margin: 0; }
+    </style>
+    <script type="text/javascript">
+    	initialize();
+    function initialize() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(
+            document.getElementById('map'));
+        map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+        map.setUIToDefault();
+
+        map.addOverlay(new GMarker(new GLatLng(37.4419, -122.1419)));
+
+      }
+    }
+    </script>
+  </head>
 
 
 @stop

@@ -29,16 +29,7 @@
 <body class="rtl">
     <main>
 
-        <section>
-             <!-- class="hero_in general" -->
-            <!-- <div class="wrapper">
-                <div class="container">
-                    <h1 class="fadeInUp"><span></span>
-                    Dashboard Page
-                    </h1>
-                </div>
-            </div> -->
-        </section>
+      
 
       
 
@@ -97,29 +88,6 @@
                                             </div>
                                         </div>
 
-                                        <!--  <div class="container">
-    <div class='col-md-5'>
-        <div class="form-group">
-            <div class='input-group date' id='datetimepicker6'>
-                <input type='text' class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class='col-md-5'>
-        <div class="form-group">
-            <div class='input-group date' id='datetimepicker7'>
-                <input type='text' class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
- -->
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>{{ __('Email') }}</label>
@@ -146,8 +114,7 @@
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">{{ __('Image') }}</label>
 
-                                        <!--         <input type="file" name="user_image" class="form-control-file" id="exampleFormControlFile1">
- -->
+                                       
                                                 <input type="file" name="image" class="image">
 
 

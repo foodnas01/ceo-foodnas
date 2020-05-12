@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\StaticPage;
+use App\Contact;
 class FrontpagesController extends Controller
 {
     public function index(){
@@ -49,7 +50,23 @@ class FrontpagesController extends Controller
 
     public function contact_us(){
     	return view('frontend.pages.contact_us.contact');
-    }    
+    }   
+
+    public function user_contact(Request $request){
+
+    	$this->validate($request, [
+            'first_name'        => 'required',
+            'last_name'         => 'required',
+            'email'    			=> 'required',
+            'message'  			=> 'required'
+        ]);
+
+        $input = $request->all();
+        Contact::create($input);
+        return redirect()->route('contact_us')
+                        ->with('success',__('Thank You for contacting Us!'));
+
+    } 
    
 
 }

@@ -116,6 +116,7 @@ return [
     'uploaded'    => 'فشل في تحميل الـ :attribute.',
     'url'         => 'صيغة الرابط :attribute غير صحيحة.',
     'uuid'        => ':attribute يجب أن يكون بصيغة UUID سليمة.',
+    'message'     => 'رسالة',
     
 
     /*
@@ -183,6 +184,7 @@ return [
         'size'                  => 'الحجم',
         'dob'                   => 'تاريخ الولادة',
         'gender'                =>  'جنس',
-        'user_image'            =>  'صورة'
+        'user_image'            =>  'صورة',
+        'message'               => 'رسالة',
     ],
 ];

@@ -10,6 +10,7 @@ return [
     'Nova' => 'نوفا',
     'Forge' => 'تشكيل',
     'GitHub' => 'جيثب',
+    
     'Laravel' => 'Laravel Arabic',
     'BOOK_UNIQUE_EXPERIENCES'=>'إكتشف تجارب طعام جديدة يـستضيفها
 طهاة',

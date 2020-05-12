@@ -13,6 +13,13 @@
 
      <title>فودناس</title>
 
+     <style type="text/css">
+         
+        
+
+
+     </style>
+
     <!-- Favicons-->
     <link rel="shortcut icon" href="{{asset('frontend/img/favico.png')}}" type="image/x-icon">
 

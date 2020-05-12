@@ -300,7 +300,9 @@ class FrontloginController extends Controller
         $user = User::where('email', '=', $request->email)->first();
          \Session::put('isLoggedIn', 1); 
                     \Session::put('userinfo', $user); 
-        return Redirect::to('home');   
+         
+
+        return redirect('/');
 
         /*return redirect()->back()
                         ->with('success',__('Verification email has been sent to you please verify!'));*/
