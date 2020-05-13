@@ -631,7 +631,7 @@ a {
   outline: none;
 }
 a:hover, a:focus {
-  color: #FF0000;
+  color: #000000;
   text-decoration: none;
   outline: none;
 }
@@ -4399,7 +4399,8 @@ ul.hotel_facilities li img {
 }
 
 #register_bg {
-  background: url(../img/background3.jpg) center center no-repeat fixed;
+  background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url(../img/background3.jpg) center center no-repeat fixed;
+ /* background: url(../img/background3.jpg) center center no-repeat fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8619,3 +8620,4 @@ h3.head{
     padding-top: 15px;
     padding-bottom: 0px;
 }
+

@@ -27,7 +27,6 @@
     <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/style-rtl.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/vendors.css')}}" rel="stylesheet">
-     <link href="{{asset('frontend/css/fronticons.css')}}" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
@@ -49,31 +48,11 @@
 		   
 		}
 
-		.textDiv1 {
-		    background: url('{{asset('frontend/img/phone02_2_280x500.png')}}') no-repeat top center !important;
-		    height: 37pc;
-		    position: fixed;
-		    /* margin-right: 294px; */
-		    width: 49.66666667%;
-		}
-
-		 h2{
-		  font-family: "NeoSansArabicBold", NeoSansArabic-Regular !important;
-		  font-size: 2.2rem;
-		}
-		.h3Cls {
-		    color: white;
-		}
-		body{
-			/*background: rgba(25, 25, 25, .5);*/
-			transition: background 2s linear;
-		}
-
     </style>
 	
 </head>
 
-<body id="register_bg"  class="rtl">
+<body id="register_bg" class="rtl">
 	
 	<nav id="menu" class="fake_menu"></nav>
 	
@@ -82,7 +61,13 @@
 	</div> -->
 	<!-- End Preload -->
 
+
+	
 	<div id="login">
+		<div style="width:700px">
+			<h1>Hello World</h1>
+
+		</div>
 		<aside>
 			<figure>
 				<a href="{{URL('/')}}"><img src="{{asset('frontend/img/Group101.png')}}" width="155" height="36" data-retina="true" alt="" class="logo_sticky"></a>
@@ -225,46 +210,7 @@
 			{{ Form::close() }}
 			<div class="copy signupLabel">© {{date('Y')}} @lang('messages.signup_page.Foodnas')</div>
 		</aside>
-
 	</div>
-
-	<div>
-
-
-
-		<div class="container">
-                    <div class="main_home">
-
-                    	<div class="col-md-4 iphone" style="float: left;top: 95px;">
-                            <div class="textDiv1"></div>
-                        </div>
-
-                         <div class="col-md-8 iphone" style="float: left;top: 95px;">
-                            <div class="home_text" style="position: fixed;margin-right: 20px;">
-                                <h2 class="text-white " style="line-height: 4.5rem;">سجّل كمحترف طهي وكن<br>جزءاً من مجتمع إبداعي جديد<br>في الشرق الأوسط!</h2>
-                                <h5 class="h3Cls">استضيف تجربة الطعام الخاصة بك الآن! اكتشف فرص
-                                    <br>
-                                    جديدة و تواصل مع مئات الضيوف والزوار في مدينتك.
-                                </h5>
-                            </div>
-
-                           
-                        </div>
-
-
-
-                        
-                       
-                    </div>
-                </div>
-		
-		
-	</div>
-	
-	 
-		
-		
-	 
 	<!-- /login -->
 	
 	
@@ -299,7 +245,7 @@
 	    });
 
 
-
+/*
     	 window.onload = function () {
 		  var backgroundImg=["{{asset('frontend/img/background1.jpg')}}",
 		                    "{{asset('frontend/img/background2.jpg')}}",
@@ -307,21 +253,14 @@
 		                    "{{asset('frontend/img/background4.jpg')}}"
 		                    ]
 		  
-		    setInterval(changeImage, 4000);
+		    setInterval(changeImage, 3000);
 		   function changeImage() {   
 		    var i = Math.floor((Math.random() * 4)); 
-
-		   /* $("#register_bg").fadeTo('slow', 0.9, function()
-			{
-			    $(this).css('background-image', "linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url('"+backgroundImg[i]+"') center center no-repeat fixed");
-			}).delay(1000).fadeTo('slow', 1);*/
-
-
-		    document.body.style.background = "linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url('"+backgroundImg[i]+"') center center no-repeat fixed";
+		    document.body.style.backgroundImage = "url('"+backgroundImg[i]+"')";
 
 		   
 		  }
-		}
+		}*/
 
 		//Preload images first 
 /*$.fn.preload = function() {
@@ -341,21 +280,30 @@ $([images[0],images[1],images[2],images[3]]).preload();
 var currimg = 0;
 
 $(document).ready(function(){
+   
     function loadimg(){
+        
        $('#register_bg').animate({ opacity: 1 }, 500,function(){
+
             //finished animating, minifade out and fade new back in           
             $('#register_bg').animate({ opacity: 0.7 }, 100,function(){
+                
                 currimg++;
+                
                 if(currimg > images.length-1){
+                    
                     currimg=0;
+                    
                 }
                 
                 var newimage = images[currimg];
-
+            
                 //swap out bg src                
-                $('#register_bg').css("background", "linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url('"+newimage+"') center center no-repeat fixed"); 
+                $('#register_bg').css("background-image", "url("+newimage+")"); 
+            
                 //animate fully back in
                 $('#register_bg').animate({ opacity: 1 }, 400,function(){
+
                     //set timer for next
                     setTimeout(loadimg,3000);
 
@@ -368,8 +316,8 @@ $(document).ready(function(){
      }
      setTimeout(loadimg,3000);
   
-});
-*/
+});*/
+
     	
 
 		     function readURL(input) {

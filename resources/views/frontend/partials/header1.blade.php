@@ -1,8 +1,30 @@
 
+<style type="text/css">
+    
+    .dropdown-divider{
+        margin: 0px !important;
+    }
+
+    .dropdown-item.active, .dropdown-item:active {
+        color: red;
+        text-decoration: none;
+        background-color: transparent;
+        font-weight: bold;
+    }
+
+    .dropdown-item:focus, .dropdown-item:hover {
+        color: red;
+        text-decoration: none;
+        background-color: transparent;
+        font-weight: bold;
+    }
+
+
+</style>
 <header class="header menu_fixed">
         <div id="preloader"><div data-loader="circle-side"></div></div><!-- /Page Preload -->
         <div id="logo">
-            <a href="index.html">
+            <a href="{{URL('/')}}">
                 <img src="{{asset('frontend/img/Group130.png')}}" width="185" height="50" alt="" class="logo_normal">
                 <img src="{{asset('frontend/img/Group101.png')}}" width="185" height="50" alt="" class="logo_sticky">
             </a>
@@ -35,8 +57,7 @@
                 <a href="{{ route('front_home') }}" class="dropdown-item" class="">{{ __('My Preferences') }}</a>
                 <div class="dropdown-divider"></div>
 
-                <a href="{{ route('front_home') }}" class="dropdown-item" class="">{{ __('Become a Host') }}</a>
-                <div class="dropdown-divider"></div>
+         
 
                 <a href="{{ route('front_home') }}" class="dropdown-item" class="">{{ __('My Messages') }}</a>
                 <div class="dropdown-divider"></div>

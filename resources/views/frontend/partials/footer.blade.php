@@ -18,7 +18,6 @@
                     <ul class="links">
                         <li><a href="{{URL('about')}}">{{ __('messages.AboutFoodnas') }}</a></li>
                         <li><a href="{{URL('privacy_policy')}}">{{ __('messages.PrivacySafetyPolicy') }}</a></li>
-                        <li><a href="{{route('join_as_host')}}">{{ __('messages.JoinAsHost') }}</a></li>
                         <li><a href="{{route('how_it_works')}}">{{ __('messages.HowItWorks') }}</a></li>
                         <li><a href="{{route('terms_conditions')}}">{{ __('messages.TermsConditions') }}</a></li>
                         <li><a href="{{route('contact_us')}}">{{ __('messages.ContactUs') }}</a></li>
