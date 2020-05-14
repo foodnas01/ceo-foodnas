@@ -75,10 +75,10 @@
             .box_1{
                     text-align: right;
             }
-            
+
            /* #myyellow img:hover {
               transform: scale(0);
-            }  */          
+            }  */
 
             .div4:hover {
 
@@ -86,7 +86,7 @@
                 transform: scale(1.07);
                 transition: transform 0.4s linear 0s;
                 vertical-align: top;
-               
+
              /* transform: scale(1.07);*/
             }
 
@@ -167,7 +167,7 @@
                             <p class="mg-btm-none">{!! __('messages.Dashboardgridtext3') !!}</p>
                         </div>
                         <figure>
-                            <a href="tour-detail.html">
+                            <a href="#">
                                 <img src="{{asset('frontend/img/groupgrid1.png')}}" class="img-fluid" alt="" width="800" height="533">
                             </a>
                         </figure>
@@ -230,7 +230,7 @@
                 </div>
                 <div class="row">
                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <a href="hotel-detail.html" class="grid_item">
+                        <a href="#" class="grid_item">
                             <figure>
                                 <div class="info info-sec">
                                     <h3>@lang('messages.cities.Dubai')</h3>
@@ -242,7 +242,7 @@
                     </div>
                     <!-- /grid_item -->
                     <div class="col-xl-3 col-lg-6 col-md-6">
-                        <a href="hotel-detail.html" class="grid_item">
+                        <a href="#" class="grid_item">
                             <figure>
                                 <div class="info info-sec">
                                     <h3>@lang('messages.cities.Beirut')</h3>
@@ -254,7 +254,7 @@
                     </div>
                     <!-- /grid_item -->
                     <div class="col-xl-3 col-lg-6 col-md-6">
-                        <a href="hotel-detail.html" class="grid_item">
+                        <a href="#" class="grid_item">
                             <figure>
                                 <div class="info info-sec">
                                     <h3>@lang('messages.cities.Amman')</h3>
@@ -344,10 +344,10 @@
                         <a href="#0" class="boxed_list bxList">
                             <div class="circleDiv1"></div>
                             <h4>{!! __('messages.circleImages.imgLebel1') !!}</h4>
-                        
+
                             <span class="circleSpan">{!! __('messages.circleImages.imgText11') !!}</span><br />
                             <span class="circleSpan">{!! __('messages.circleImages.imgText12') !!}</span><br />
-                          
+
                         </a>
                     </div>
                     <div class="col-md-4">
@@ -396,7 +396,7 @@
                     <div class="box_grid">
 
                         <figure>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/img1-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            <a href="#"><img src="{{asset('frontend/img/FoodItems/img1-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
                             <div style="position:absolute;right:10px;bottom:20px;">
                                     <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 50px;width: 50px; border-radius: 50%;">
@@ -407,7 +407,7 @@
                         </figure>
 
                         <div class="wrapper" style="text-align: right;">
-                            <h3><a class="headerTextClass" href="tour-detail.html">Tour Eiffel</a></h3>
+                            <h3><a class="headerTextClass" href="#">Tour Eiffel</a></h3>
                             <p>{!! __('messages.fooditems.text1') !!}
                                 <br />
                                 {!! __('messages.fooditems.text4') !!}
@@ -438,7 +438,7 @@
                     <div class="box_grid">
 
                         <figure>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/FoodItems/img3-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            <a href="#"><img src="{{asset('frontend/img/FoodItems/img3-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533"></a>
 
                             <div style="position:absolute;right:10px;bottom:20px;">
                                     <img src="{{asset('frontend/img/avatar.jpg')}}" style="height: 50px;width: 50px; border-radius: 50%;">
@@ -449,7 +449,7 @@
                         </figure>
 
                         <div class="wrapper" style="text-align: right;">
-                            <h3><a class="headerTextClass"  href="tour-detail.html">Arc Triomphe</a></h3>
+                            <h3><a class="headerTextClass"  href="#">Arc Triomphe</a></h3>
 
                             <p>{!! __('messages.fooditems.text1') !!}
                                 <br />
@@ -505,7 +505,7 @@
                     <div class="box_grid">
 
                         <figure>
-                            <a href="tour-detail.html">
+                            <a href="#">
                                 <img src="{{asset('frontend/img/FoodItems/img2-400-267.jpg')}}" class="img-fluid" alt="" width="800" height="533">
 
 
@@ -519,7 +519,7 @@
                         </figure>
 
                         <div class="wrapper" style="text-align: right;">
-                              <h3><a class="headerTextClass"  href="tour-detail.html">Notredam</a></h3>
+                              <h3><a class="headerTextClass"  href="#">Notredam</a></h3>
 
                             <p>{!! __('messages.fooditems.text1') !!}
                                 <br />
@@ -731,7 +731,7 @@
      <script src="{{ asset('frontend/js/jquery.toast.js') }}"></script>
     <script type="text/javascript">
 
-        
+
         <?php
             if(Session::has('status')){ ?>
                 $.toast({
@@ -759,8 +759,8 @@
 
              }
          ?>
-        
-    
+
+
     </script>
 
     <!-- Conent Section end -->

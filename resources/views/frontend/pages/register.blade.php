@@ -9,7 +9,7 @@
     <meta name="author" content="Ansonika">
      <title>فودناس</title>
 
-  
+
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="{{asset('frontend/img/favico.png')}}" type="image/x-icon">
@@ -37,16 +37,16 @@
 
 
     <style type="text/css">
-    	
+
     	.registerNow{
 	    	font-size: 18px !important;
 		}
 
 		.required {
- 
+
 		    color: red;
 		    padding-right: 5px;
-		   
+
 		}
 
 		.textDiv1 {
@@ -70,13 +70,13 @@
 		}
 
     </style>
-	
+
 </head>
 
 <body id="register_bg"  class="rtl">
-	
+
 	<nav id="menu" class="fake_menu"></nav>
-	
+
 	<!-- <div id="preloader">
 		<div data-loader="circle-side"></div>
 	</div> -->
@@ -99,11 +99,11 @@
 				@csrf
 
 				<div class="form-group">
-					
+
 					{{ Form::label(trans('messages.signup_page.Name'), null, ['class' => 'signupLabel' ]) }}
 					<span class="required">*</span>
 
-					
+
 					{!! Form::text('name', old('name', null), ['placeholder' => trans('messages.signup_page.Name'),'class' => "form-control inputField $errors->has('name') ? 'has-error' : ''"]) !!}
 
 
@@ -114,10 +114,10 @@
 
 
 				</div>
-				
-				
+
+
 				<div class="form-group">
-				
+
 					{{ Form::label(trans('messages.signup_page.YourPhone'), null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 
@@ -131,7 +131,7 @@
 
 
 				<div class="form-group">
-				
+
 					{{ Form::label(trans('messages.signup_page.YourEmail'), null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 
@@ -145,7 +145,7 @@
 
 
 				<div class="form-group">
-					
+
 
 					{{ Form::label(trans('messages.signup_page.YourPassword'), null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
@@ -154,7 +154,7 @@
 					<span class="text-danger">{!! $errors->first('password', '<span class="help-block">:message</span>') !!}</span>
 				</div>
 				<div class="form-group">
-				
+
 					{{ Form::label(trans('messages.signup_page.CnfmPassword'), null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 
@@ -168,7 +168,7 @@
 
 
 				<div class="form-group">
-				
+
 					{{ Form::label(__('Date of Birth') , null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 
@@ -179,7 +179,7 @@
 
 
 				<!-- <div class="form-group">
-				
+
 					{{ Form::label(__('Image')  , null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 					 <input type="file" name="user_image"  onchange="readURL(this);"  id="user_image" placeholder="{{__('Image')}}" style="padding-right:0px;padding-left:0px;"  class="form-control-file" id="exampleFormControlFile1">
@@ -195,7 +195,7 @@
 				</div> -->
 
 					<div class="form-group">
-					
+
 					{{ Form::label(  __('Gender')  , null, ['class' => 'signupLabel']) }}
 					<span class="required">*</span>
 
@@ -217,7 +217,7 @@
 
 
 				</div>
-		
+
 
 			{!!  Form::submit(trans('messages.signup_page.RegisterNow'),['class'=>'btn_1 rounded full-width add_top_30 registerNow']) !!}
 
@@ -236,43 +236,43 @@
                     <div class="main_home">
 
                     	<div class="col-md-4 iphone" style="float: left;top: 95px;">
-                            <div class="textDiv1"></div>
+{{--                            <div class="textDiv1"></div>--}}
                         </div>
 
                          <div class="col-md-8 iphone" style="float: left;top: 95px;">
                             <div class="home_text" style="position: fixed;margin-right: 20px;">
-                                <h2 class="text-white " style="line-height: 4.5rem;">سجّل كمحترف طهي وكن<br>جزءاً من مجتمع إبداعي جديد<br>في الشرق الأوسط!</h2>
+                                <h2 class="text-white " style="line-height: 3.5rem;">سجّل كمحترف طهي وكن<br>جزءاً من مجتمع إبداعي جديد<br>في الشرق الأوسط!</h2>
                                 <h5 class="h3Cls">استضيف تجربة الطعام الخاصة بك الآن! اكتشف فرص
                                     <br>
                                     جديدة و تواصل مع مئات الضيوف والزوار في مدينتك.
                                 </h5>
                             </div>
 
-                           
+
                         </div>
 
 
 
-                        
-                       
+
+
                     </div>
                 </div>
-		
-		
+
+
 	</div>
-	
-	 
-		
-		
-	 
+
+
+
+
+
 	<!-- /login -->
-	
-	
+
+
 	<!-- COMMON SCRIPTS -->
     <script src="{{asset('frontend/js/common_scripts.js')}}"></script>
     <script src="{{asset('frontend/js/main_rtl.js')}}"></script>
     <script src="{{asset('frontend/js/validate.js')}}"></script>
-    
+
 	<!-- SPECIFIC SCRIPTS -->
     <script src="{{asset('frontend/js/pw_strenght.js')}}"></script>
 
@@ -306,10 +306,10 @@
 		                    "{{asset('frontend/img/background3.jpg')}}",
 		                    "{{asset('frontend/img/background4.jpg')}}"
 		                    ]
-		  
+
 		    setInterval(changeImage, 4000);
-		   function changeImage() {   
-		    var i = Math.floor((Math.random() * 4)); 
+		   function changeImage() {
+		    var i = Math.floor((Math.random() * 4));
 
 		   /* $("#register_bg").fadeTo('slow', 0.9, function()
 			{
@@ -319,11 +319,11 @@
 
 		    document.body.style.background = "linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url('"+backgroundImg[i]+"') center center no-repeat fixed";
 
-		   
+
 		  }
 		}
 
-		//Preload images first 
+		//Preload images first
 /*$.fn.preload = function() {
     this.each(function(){
         $('<img/>')[0].src = this;
@@ -343,17 +343,17 @@ var currimg = 0;
 $(document).ready(function(){
     function loadimg(){
        $('#register_bg').animate({ opacity: 1 }, 500,function(){
-            //finished animating, minifade out and fade new back in           
+            //finished animating, minifade out and fade new back in
             $('#register_bg').animate({ opacity: 0.7 }, 100,function(){
                 currimg++;
                 if(currimg > images.length-1){
                     currimg=0;
                 }
-                
+
                 var newimage = images[currimg];
 
-                //swap out bg src                
-                $('#register_bg').css("background", "linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url('"+newimage+"') center center no-repeat fixed"); 
+                //swap out bg src
+                $('#register_bg').css("background", "linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url('"+newimage+"') center center no-repeat fixed");
                 //animate fully back in
                 $('#register_bg').animate({ opacity: 1 }, 400,function(){
                     //set timer for next
@@ -362,15 +362,15 @@ $(document).ready(function(){
                 });
 
             });
-        
+
         });
 
      }
      setTimeout(loadimg,3000);
-  
+
 });
 */
-    	
+
 
 		     function readURL(input) {
 	            if (input.files && input.files[0]) {
@@ -385,12 +385,12 @@ $(document).ready(function(){
 	                reader.readAsDataURL(input.files[0]);
 	            }
 	        }
-    	
+
 
 
     </script>
-	
-	
-  
+
+
+
 </body>
 </html>
