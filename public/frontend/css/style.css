@@ -846,6 +846,9 @@ header.header.sticky {
    .h1Cls {
         font-size: 25px !important;
    }
+   form#newsletter_form{
+        direction: rtl !important;
+   }
   body{
     direction: unset !important;
   }
@@ -2472,6 +2475,7 @@ video {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    direction: rtl;
   }
 }
 .custom-search-input-2 input {
