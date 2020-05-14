@@ -844,10 +844,10 @@ header.header.sticky {
 }
 @media (max-width: 991px) {
    .h1Cls {
-        font-size: 25px;
+        font-size: 25px !important;
    }
   body{
-    direction: unset;
+    direction: unset !important;
   }
   header.header.sticky {
     padding: 15px 15px 5px 15px;
@@ -2360,7 +2360,7 @@ video {
 }
 @media (max-width: 767px) {
   .hero_single.version_2 .wrapper h3 {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
     margin-top: 60px;
   }
 }
