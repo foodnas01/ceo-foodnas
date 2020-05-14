@@ -5875,7 +5875,9 @@ a.grid_item.latest_adventure em {
 }
 @media (max-width: 767px) {
   .banner {
-    background: url(../img/banner_bg_mobile.jpg) center center no-repeat;
+    /*background: url(../img/banner_bg_mobile.jpg) center center no-repeat;*/
+    background: #e0e0e0;
+    height: 375px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
