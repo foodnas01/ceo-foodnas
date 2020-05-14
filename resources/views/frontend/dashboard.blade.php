@@ -1,11 +1,9 @@
 @extends('layouts.template')
 @section('style')
     <style type="text/css">
-
         #headerText{
             /*padding-top: 85px;*/
         }
-
         .hybhTA {
             font-size: 17px;
             font-weight: bold;
@@ -13,7 +11,6 @@
             display: flex;
             margin: 8px 0px 0px;
         }
-
         .gKJFzR {
                 color: red;
                 margin-right: 0.3em;
@@ -21,7 +18,6 @@
             .score{
                 text-align: right;
             }
-
             .headerTextClass:hover, .headerTextClass:focus {
                 color: black;
                 text-decoration: none;
@@ -33,17 +29,11 @@
             .bannerimg{
                 padding-top:45px !important;
             }
-
             h1,h3,h2,h4{
-
                   font-size: 0.875rem;
                   line-height: 1.6;
                   font-family: "NeoSansArabicBold", NeoSansArabic-Regular;
             }
-
-           /* #grid{
-                  background-image: linear-gradient(to bottom,#4D4C48,transparent);
-            }*/
             .h1Cls{
                 font-size: 44px;
                 margin-bottom: 15px;
@@ -75,19 +65,14 @@
             .box_1{
                     text-align: right;
             }
-
-           /* #myyellow img:hover {
-              transform: scale(0);
-            }  */
-
             .div4:hover {
-
                 top: 0px;
                 transform: scale(1.07);
                 transition: transform 0.4s linear 0s;
                 vertical-align: top;
-
-             /* transform: scale(1.07);*/
+            }
+            .div4 {
+                transition: transform 1s;
             }
 
             .info-sec {
@@ -187,7 +172,7 @@
                         </div>
 
                         <figure>
-                            <a href="tour-detail.html"><img src="{{asset('frontend/img/groupgrid2.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
+                            <a href="#"><img src="{{asset('frontend/img/groupgrid2.png')}}" class="img-fluid" alt="" width="800" height="533"></a>
                         </figure>
                     </div>
                 </div>
