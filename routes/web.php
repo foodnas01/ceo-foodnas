@@ -27,6 +27,8 @@ Route::get('/', function () {
 
 
 Route::get('/home',  'FrontloginController@home')->name('front_home');
+Route::get('/review_received',  'FrontloginController@review_received')->name('review_received');
+Route::get('/review_written',  'FrontloginController@review_written')->name('review_written');
 Route::get('/signup', 'FrontloginController@sign_up');
 Route::post('/login/register', 'FrontloginController@register')->name('front_register');
 Route::post('/login/change_user_password', 'FrontloginController@change_user_password')->name('change_user_password');

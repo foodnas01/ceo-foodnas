@@ -372,4 +372,13 @@ class FrontloginController extends Controller
     }
 
 
+    public function review_received(){
+        return view('frontend.pages.review_received');
+    }
+
+    public function review_written(){
+        return view('frontend.pages.review_written');
+    }
+
+
 }

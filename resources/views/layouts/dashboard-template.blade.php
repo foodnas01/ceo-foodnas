@@ -37,6 +37,8 @@
     <!-- YOUR CUSTOM CSS -->
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/cropper.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/select2.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('frontend/css/intlTelInput.css')}}">
 
     @yield('style')
 
@@ -48,6 +50,7 @@
 
             min-height: 314px !important;
         }
+
     </style>
 
 </head>
@@ -159,7 +162,11 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
     <script src="{{asset('frontend/js/common_scripts.js')}}"></script>
     <script src="{{asset('frontend/js/main_rtl.js')}}"></script>
     <script src="{{asset('frontend/js/validate.js')}}"></script>
+    <script src="{{asset('frontend/js/select2.min.js')}}"></script>
+    <script src="{{asset('frontend/js/intlTelInput.min.js')}}"></script>
+    <script src="{{asset('frontend/js/intlTelInput-jquery.min.js')}}"></script>
 
+     
     <!-- DATEPICKER  -->
     <script>
     $(function() {
@@ -263,6 +270,58 @@ if(App::getLocale() == "ar"){  $directionStyle = 'rtl'; }
 
 
 <script>
+
+
+
+
+  var telInput = $("#phone"),
+           errorMsg = $("#error-msg"),
+           validMsg = $("#valid-msg");
+         // initialise plugin
+         telInput.intlTelInput({
+         utilsScript:"{{asset('frontend/js/utils.js')}}",
+         separateDialCode:true,
+         customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+             return "e.g. " + selectedCountryPlaceholder;
+           },
+           initialCountry:'sa'
+         });
+         
+         
+         var reset = function() {
+           telInput.removeClass("error");
+           errorMsg.addClass("hide");
+           validMsg.addClass("hide");
+         };
+         
+         // on blur: validate
+         telInput.blur(function() {
+           reset();
+           if ($.trim(telInput.val())) {
+             if (telInput.intlTelInput("isValidNumber")) {
+               validMsg.removeClass("hide");
+               /* get code here*/
+               var getCode = telInput.intlTelInput('getSelectedCountryData').dialCode;
+               $("#phoneCode").val(getCode);
+               
+             } else {
+               telInput.addClass("error");
+               errorMsg.removeClass("hide");
+             }
+           }
+         });
+
+
+
+  $(document).ready(function(){
+    $("#gender").select2({ width: '100%',height:'100%' });
+    $("#day").select2({ width: '100%',height:'100%' });
+    $("#month").select2({ width: '100%',height:'100%' });
+    $("#year").select2({ width: '100%',height:'100%' });
+    $("#cuisinesCook").select2({ width: '100%',height:'100%' });
+    $("#specialDiets").select2({ width: '100%',height:'100%' });
+    $("#cuisines").select2({ width: '100%',height:'100%' });
+  });
 
 var $modal = $('#modal');
 var image = document.getElementById('image');
